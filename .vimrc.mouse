@@ -1,0 +1,5 @@
+" マウスを全てのモードで有効化
+set mouse=a
+
+" screen対応
+set ttymouse=xterm2

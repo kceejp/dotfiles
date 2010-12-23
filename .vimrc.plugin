@@ -1,0 +1,4 @@
+""""""""""""""""""""
+" svndiff.vim
+""""""""""""""""""""
+noremap <F3> :call Svndiff("next")<CR>

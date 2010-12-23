@@ -1,0 +1,22 @@
+" Ctrl+cをESCのかわりに
+imap <C-C> <ESC>
+
+" インクリメント/デクリメント
+nmap + <C-A>
+nmap - <C-X>
+
+" 矢印キーを全モードで有効に
+map <ESC>[A <Up>
+map <ESC>[B <Down>
+map <ESC>[C <Right>
+map <ESC>[D <Left>
+
+map! <ESC>[A <Up>
+map! <ESC>[B <Down>
+map! <ESC>[C <Right>
+map! <ESC>[D <Left>
+
+map <Up>   <ESC>:tabnew<CR>
+map <Down> <ESC>:tabnew<CR>
+map <Right> :tabn<CR>
+map <Left>  :tabN<CR>

@@ -1,0 +1,146 @@
+" Pressing ,v opens the vimrc file in a new tab.
+" http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/
+let mapleader = ","
+nmap <leader>v :tabedit $MYVIMRC<CR>
+
+" Source the vimrc file after saving it
+" http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+
+" vi完全互換モードではなく、vimモードを使用
+set nocompatible
+set viminfo='20,\"50
+
+" プラグインの使用
+filetype plugin on
+
+" 自動インデント
+set autoindent
+" コメントなどのプログラミング言語を考慮したインデント
+" set si
+set smartindent
+" タブの大きさの半角スペース数
+" set ts
+set tabstop=4
+" >や<でインデントする際のスペース数
+" set sw
+set shiftwidth=4
+" タブをスペースとする
+set expandtab
+
+" コマンド履歴数
+set history=50
+
+" 常にカーソル行を真ん中に
+" set scrolloff=999
+
+""""""""""""""""""""
+" 表示関係
+""""""""""""""""""""
+
+" 行番号表示
+set number
+" 右下にカーソルポジション表示
+set ruler
+" 改行やタブ、スペースを可視化
+set list
+" 改行を$、tabを>-、スペースを-で表示
+set listchars=tab:>-,trail:-
+" 常にステータスバーを表示
+set laststatus=2
+" モードをステータスラインに表示
+set showmode
+
+" テキスト挿入中の自動折り返しを日本語に対応させる
+set formatoptions+=m
+
+" 他で更新があった場合読み込む
+set autoread
+set showcmd
+
+" バックスペースをインデント、改行を超えて動作
+" set bs
+set backspace=indent,eol,start
+
+""""""""""""""""""""
+" コマンド
+""""""""""""""""""""
+
+" コマンド補完
+set wildmenu
+" コマンド補完のオプション
+" 複数の場合はリスト表示して、最初のヒットを選択
+set wildmode=list:full
+
+""""""""""""""""""""
+" ファイル検索
+""""""""""""""""""""
+
+" ackをgrepの代わりに使用
+" http://amaslov.wordpress.com/2009/04/23/vim-ack-instead-of-grep/
+" set grepprg=ack --column
+" set grepformat=%f:%l:%c:%m
+set grepprg=ack\ -a
+au QuickfixCmdPost grep cw
+
+""""""""""""""""""""
+" プログラミング
+""""""""""""""""""""
+
+" 対応する括弧を一瞬ハイライト
+set showmatch
+
+""""""""""""""""""""
+" 文字コード関係
+""""""""""""""""""""
+
+" 文字コード自動認識をステータスに表示
+set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+
+""""""""""""""""""""
+" カレントウィンドウにのみ罫線を引く
+""""""""""""""""""""
+
+" http://nanabit.net/blog/2007/11/03/vim-cursorline/
+augroup cch
+  autocmd! cch
+  autocmd WinLeave * set nocursorcolumn nocursorline
+  autocmd WinEnter,BufRead * set cursorcolumn cursorline
+augroup END
+highlight CursorLine ctermbg=black guibg=gray
+highlight CursorColumn ctermbg=black guibg=gray
+
+" http://d.hatena.ne.jp/cooldaemon/20071114/1195029893
+autocmd FileType * let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i'
+autocmd FileType perl let g:AutoComplPop_CompleteOption = '.,w,b,u,t,k~/.vim/dict/perl.dict'
+autocmd FileType ruby let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/ruby.dict'
+autocmd FileType javascript let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/javascript.dict'
+autocmd FileType erlang let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/erlang.dict'
+
+" http://amix.dk/blog/viewEntry/19021
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
+
+set complete+=k
+let g:AutoComplPop_IgnoreCaseOption = 0
+
+" http://blog.blueblack.net/item_164
+
+" ポップアップメニューのカラーを設定
+hi Pmenu ctermbg=green ctermfg=white guibg=darkgray guifg=white
+hi PmenuSel ctermbg=lightblue ctermfg=white guibg=lightblue guifg=white
+hi PmenuSbar ctermbg=lightyellow ctermfg=lightblue guibg=darkgray guifg=green
+
+"入力モード時、ステータスラインのカラーを変更
+augroup InsertHook
+  autocmd!
+  autocmd InsertEnter * highlight StatusLine guifg=#ccdc90 guibg=#2E4340
+  autocmd InsertLeave * highlight StatusLine guifg=#2E4340 guibg=#ccdc90
+augroup END

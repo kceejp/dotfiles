@@ -1,0 +1,10 @@
+case ${UID} in
+0)
+    PROMPT=$RED'[${USER}@$(echo ${HOST%%.*} | tr "[a-z]" "[2A-Z]")] %(!.#.$) '$DEFAULT
+    RPROMPT=$GREEN'[%~]'$DEFAULT
+;;
+*)
+    PROMPT=$BLUE'[${USER}@$(echo ${HOST%%.*} | tr "[a-z]" "[A-Z]")] %(!.#.$) '$DEFAULT
+    RPROMPT=$GREEN'[%~]'$DEFAULT
+;;
+esac

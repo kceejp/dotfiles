@@ -1,0 +1,23 @@
+" 色付け
+syntax on
+
+" カラーテーマ
+if &term =~ "xterm-256color"
+  colorscheme inkpot
+endif
+
+" desertテーマ
+colorscheme desert
+
+" コメントを緑に
+highlight Comment ctermfg=green
+" 行番号
+highlight LineNr ctermfg=black ctermbg=green
+" 折り畳み
+highlight Folded ctermfg=black ctermbg=blue
+" 全角スペースを視覚化
+highlight ZenkakuSpace cterm=underline ctermfg=lightblue
+match ZenkakuSpace /　/
+" 81文字目以降を強調
+highlight nagasugi ctermfg=black ctermbg=yellow
+match nagasugi /.\%>81v/

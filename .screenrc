@@ -1,0 +1,34 @@
+startup_message off
+
+shelltitle "% |zsh"
+
+#hardstatus on
+#hardstatus alwayslastline
+
+#hardstatus alwayslastline "[%02c] %0`%-w%{=b bw}%n %t%{-}%+w %= %1`"
+hardstatus alwayslastline "[%H] %0`%-w%{=b bw}%n %t%{-}%+w %= %1`""[LoadAvg: %l] [%Y/%m/%d(%D) %02c:%s]"
+#hardstatus string "%{.Wb}.: %-w%{.RW}%n %t%{-}%+w :. %=[%Y-%m-%d(%D) %02c]"
+#caption always "%{b RK} %y/%m/%d(%D)%c:%s %{bu dr} | %-w%{=bu CK}%n %t%{-}%+w"
+
+autodetach on # おまけ: 回線切断時に自動でdetach
+defscrollback 1024 # おまけ: スクロールバッファ行数を増やす
+
+#screen 0
+#screen 1 vi
+
+#caption always "%5n %t%? @%u%?%? [%h]%?%=%c"
+
+bind 'U' eval "encoding utf8" "stuff 'export LANG=ja_JP.UTF-8\012'"
+bind 'E' eval "encoding euc" "stuff 'export LANG=ja_JP.EUC-JP\012'"
+
+# C-a, x = 画面ロック を無効
+bind x xon
+
+# split時に簡単にリサイズできる様に
+# http://www.rubyist.net/~rubikitch/computer/screen/#3.5.1
+bind r eval 'echo "Resize window"' 'command -c resize'
+bind -c resize ^] command
+bind -c resize j eval 'resize +1' 'command -c resize'
+bind -c resize k eval 'resize -1' 'command -c resize'
+
+

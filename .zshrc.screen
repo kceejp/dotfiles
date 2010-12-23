@@ -1,0 +1,16 @@
+# screenのステータスに実行中のプログラム表示
+case "${TERM}" in screen)
+preexec() {
+    echo -ne "\ek#${1%% *}\e\\"
+}
+precmd() {
+    echo -ne "\ek$(basename $(pwd))\e\\"
+}
+esac
+
+# screenを自動でリタッチ
+if [ $SHLVL = 1 ];then
+    if [ -x `which screen` ]; then
+        screen -d -R
+    fi
+fi

@@ -1,0 +1,8 @@
+" インクリメンタルサーチ
+set incsearch
+" 大文字があったらignorecaseを無効化
+set smartcase
+" 最後まで言ったら最初から
+set wrapscan
+" マッチした文字列をハイライト
+set hlsearch

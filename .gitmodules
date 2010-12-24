@@ -13,3 +13,6 @@
 [submodule ".vim/bundle/errormarker"]
 	path = .vim/bundle/errormarker
 	url = https://github.com/vim-scripts/errormarker.vim.git
+[submodule ".vim/bundle/yanktmp"]
+	path = .vim/bundle/yanktmp
+	url = https://github.com/vim-scripts/yanktmp.vim.git

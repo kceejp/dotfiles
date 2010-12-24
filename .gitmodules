@@ -10,3 +10,6 @@
 [submodule ".vim/bundle/pathogen"]
 	path = .vim/bundle/pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+[submodule ".vim/bundle/errormarker"]
+	path = .vim/bundle/errormarker
+	url = https://github.com/vim-scripts/errormarker.vim.git

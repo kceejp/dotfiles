@@ -1,69 +1,69 @@
 """"""""""""""""""""
 " initial
 """"""""""""""""""""
-if filereadable("./.vimrc.initial")
-  source ./.vimrc.initial
+if filereadable($HOME."/.vimrc.initial")
+  source $HOME/.vimrc.initial
 endif
 
 """"""""""""""""""""
 " 一般設定
 """"""""""""""""""""
-if filereadable("./.vimrc.base")
-  source ./.vimrc.base
+if filereadable($HOME."/.vimrc.base")
+  source $HOME/.vimrc.base
 endif
 
 """"""""""""""""""""
 " キーマップ
 """"""""""""""""""""
-if filereadable("./.vimrc.keymap")
-  source ./.vimrc.keymap
+if filereadable($HOME."/.vimrc.keymap")
+  source $HOME/.vimrc.keymap
 endif
 
 """"""""""""""""""""
 " タブ
 """"""""""""""""""""
-if filereadable("./.vimrc.tab")
-  source ./.vimrc.tab
+if filereadable($HOME."/.vimrc.tab")
+  source $HOME/.vimrc.tab
 endif
 
 """"""""""""""""""""
 " 色
 """"""""""""""""""""
-if filereadable("./.vimrc.color")
-  source ./.vimrc.color
+if filereadable($HOME."/.vimrc.color")
+  source $HOME/.vimrc.color
 endif
 
 """"""""""""""""""""
 " マウス
 """"""""""""""""""""
-if filereadable("./.vimrc.mouse")
-  source ./.vimrc.mouse
+if filereadable($HOME."/.vimrc.mouse")
+  source $HOME/.vimrc.mouse
 endif
 
 """"""""""""""""""""
 " Perl
 """"""""""""""""""""
-if filereadable("./.vimrc.perl")
-  source ./.vimrc.perl
+if filereadable($HOME."/.vimrc.perl")
+  source $HOME/.vimrc.perl
 endif
 
 """"""""""""""""""""
 " 検索
 """"""""""""""""""""
-if filereadable("./.vimrc.search")
-  source ./.vimrc.search
+if filereadable($HOME."/.vimrc.search")
+  source $HOME/.vimrc.search
 endif
 
 """"""""""""""""""""
 " キーマップ
 """"""""""""""""""""
-if filereadable("./.vimrc.plugin")
-  source ./.vimrc.plugin
+if filereadable($HOME."/.vimrc.plugin")
+  source $HOME/.vimrc.plugin
 endif
 
 """"""""""""""""""""
 " ローカル設定を読み込みます
 """"""""""""""""""""
-if filereadable("./.vimrc.local")
-  source ./.vimrc.local
+if filereadable($HOME."/.vimrc.local")
+  source $HOME/.vimrc.local
 endif

@@ -15,3 +15,8 @@ if !exists("g:perl_flyquickfixmake")
   let g:perl_flyquickfixmake = 1
   au BufWritePost *.pm,*.pl,*.t silent make
 endif
+
+""""""""""""""""""""
+" smartchr.vim
+""""""""""""""""""""
+inoremap <expr> = smartchr#one_of(' = ', ' == ', '=')

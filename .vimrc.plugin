@@ -19,4 +19,4 @@ endif
 """"""""""""""""""""
 " smartchr.vim
 """"""""""""""""""""
-autocmd FileType actionscript,javascript,perl inoremap <buffer> <expr> =  smartchr#one_of(' = ', ' == ', '=')
+autocmd FileType actionscript,javascript,perl inoremap <buffer> <expr> =  smartchr#one_of(' =', ' ==', '=')

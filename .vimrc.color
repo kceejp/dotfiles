@@ -19,5 +19,5 @@ highlight Folded ctermfg=black ctermbg=blue
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue
 match ZenkakuSpace /　/
 " 81文字目以降を強調
-highlight nagasugi ctermfg=black ctermbg=yellow
-match nagasugi /.\%>81v/
+" highlight nagasugi ctermfg=black ctermbg=yellow
+" match nagasugi /.\%>81v/

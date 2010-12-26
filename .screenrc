@@ -7,7 +7,7 @@ shelltitle "% |zsh"
 
 #hardstatus alwayslastline "[%02c] %0`%-w%{=b bw}%n %t%{-}%+w %= %1`"
 backtick 1 3600 3600 $HOME/dotfiles/script/get_ipaddr.sh
-hardstatus alwayslastline "[%H - %1`] %0`%-w%{=b bw}%n %t%{-}%+w %= %1`""[LoadAvg: %l] [%Y/%m/%d(%D) %02c:%s]"
+hardstatus alwayslastline "[%H - %1`] %0`%-w%{=b bw}%n %t%{-}%+w %= %2`""[LoadAvg: %l] [%Y/%m/%d(%D) %02c:%s]"
 #hardstatus string "%{.Wb}.: %-w%{.RW}%n %t%{-}%+w :. %=[%Y-%m-%d(%D) %02c]"
 #caption always "%{b RK} %y/%m/%d(%D)%c:%s %{bu dr} | %-w%{=bu CK}%n %t%{-}%+w"
 

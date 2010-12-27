@@ -109,34 +109,24 @@ augroup cch
   autocmd WinLeave * set nocursorcolumn nocursorline
   autocmd WinEnter,BufRead * set cursorcolumn cursorline
 augroup END
-highlight CursorLine ctermbg=black guibg=gray
+highlight CursorLine   ctermbg=black guibg=gray
 highlight CursorColumn ctermbg=black guibg=gray
 
-" http://d.hatena.ne.jp/cooldaemon/20071114/1195029893
-autocmd FileType * let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i'
-autocmd FileType perl let g:AutoComplPop_CompleteOption = '.,w,b,u,t,k~/.vim/dict/perl.dict'
-autocmd FileType ruby let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/ruby.dict'
-autocmd FileType javascript let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/javascript.dict'
-autocmd FileType erlang let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/erlang.dict'
-
 " http://amix.dk/blog/viewEntry/19021
-autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType python     set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType c set omnifunc=ccomplete#Complete
+autocmd FileType html       set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css        set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml        set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php        set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c          set omnifunc=ccomplete#Complete
 
 set complete+=k
-let g:AutoComplPop_IgnoreCaseOption = 0
-
-" http://blog.blueblack.net/item_164
 
 " ポップアップメニューのカラーを設定
-hi Pmenu ctermbg=green ctermfg=white guibg=darkgray guifg=white
-hi PmenuSel ctermbg=lightblue ctermfg=white guibg=lightblue guifg=white
-hi PmenuSbar ctermbg=lightyellow ctermfg=lightblue guibg=darkgray guifg=green
+hi Pmenu     ctermbg=green       ctermfg=white     guibg=darkgray  guifg=white
+hi PmenuSel  ctermbg=lightblue   ctermfg=white     guibg=lightblue guifg=white
+hi PmenuSbar ctermbg=lightyellow ctermfg=lightblue guibg=darkgray  guifg=green
 
 "入力モード時、ステータスラインのカラーを変更
 augroup InsertHook

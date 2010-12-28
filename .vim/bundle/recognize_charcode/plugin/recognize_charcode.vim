@@ -1,59 +1,59 @@
 "==============================================================
-" 文字コードの自動認識プラグイン
+" ʸ�������ɤμ�ưǧ���ץ饰����
 " recognize_charcode.vim
 "==============================================================
-" [参考] (感謝)
-" ・コードのほぼ全てを、ずんWikiさんの「文字コードの自動認識」
-"   (http://www.kawaz.jp/pukiwiki/?vim#cb691f26)を使用させて頂いている
-" ・ずんWikiさんのコードに対する修正は、Heavens hellさんの「vim でたまに文字化け」
+" [����] (����)
+" �������ɤΤۤ����Ƥ򡢤���Wiki����Ρ�ʸ�������ɤμ�ưǧ����
+"   (http://www.kawaz.jp/pukiwiki/?vim#cb691f26)����Ѥ�����ĺ���Ƥ���
+" ������Wiki����Υ����ɤ��Ф��뽤���ϡ�Heavens hell����Ρ�vim �Ǥ��ޤ�ʸ��������
 "   (http://d.hatena.ne.jp/heavenshell/20080105/1199536148)
-" ・プラグインの作り方は、KaoriYa.netさんの「Vim日本語ドキュメント」
-"   (http://www.kaoriya.net/vimdoc_j/)からダウンロードしたスナップショット内の
-"   runtime/doc/usr_41.jax 41.11節「プラグインを書く」、
-"   及び、名無しのVIM使いさんの「1ファイルで構成されるプラグインのテンプレート」
-"   (http://nanasi.jp/articles/code/stdplugin/template.html)を参考にした
+" ���ץ饰����κ�����ϡ�KaoriYa.net����Ρ�Vim���ܸ�ɥ�����ȡ�
+"   (http://www.kaoriya.net/vimdoc_j/)�������������ɤ������ʥåץ���å����
+"   runtime/doc/usr_41.jax 41.11��֥ץ饰�����񤯡ס�
+"   �ڤӡ�̵̾����VIM�Ȥ�����Ρ�1�ե�����ǹ��������ץ饰����Υƥ�ץ졼�ȡ�
+"   (http://nanasi.jp/articles/code/stdplugin/template.html)�򻲹ͤˤ���
 "
-" [このプラグインの実行例]
-" (1) このファイルを 任意ディレクトリ/recognize_charcode.vim に保存する
-" (2) ~/.vimrc に 
-"        source 任意ディレクトリ/recognize_charcode.vim
-"     を加える
-"     「任意ディレクトリ」 は 「~/.vim」 とするのが標準らしい
+" [���Υץ饰����μ¹���]
+" (1) ���Υե������ Ǥ�եǥ��쥯�ȥ�/recognize_charcode.vim ����¸����
+" (2) ~/.vimrc �� 
+"        source Ǥ�եǥ��쥯�ȥ�/recognize_charcode.vim
+"     ��ä���
+"     ��Ǥ�եǥ��쥯�ȥ�� �� ��~/.vim�� �Ȥ���Τ�ɸ��餷��
 
 
 "--------------------------------------------------------------
 
-" プラグイン設定
-" プラグインが2回読み込まれることを防止
+" �ץ饰��������
+" �ץ饰����2���ɤ߹��ޤ�뤳�Ȥ��ɻ�
 if exists("loaded_recognize_charcode")
   finish
 endif
 let loaded_recognize_charcode = 1
 
-" ユーザ設定を逃す
+" �桼�������ƨ��
 let s:save_cpo = &cpo
 set cpo&vim
 
-"-------------------- 文字コード認識部 開始 --------------------
+"-------------------- ʸ��������ǧ���� ���� --------------------
 
 if &encoding !=# 'utf-8'
-　set encoding=japan
+  set encoding=japan
   set fileencoding=japan
 endif
 if has('iconv')
   let s:enc_euc = 'euc-jp'
   let s:enc_jis = 'iso-2022-jp'
-  " iconvがeucJP-msに対応しているかをチェック
+  " iconv��eucJP-ms���б����Ƥ��뤫������å�
   if iconv("\x87\x64\x87\x6a", 'cp932', 'eucjp-ms') ==# "\xad\xc5\xad\xcb"
     let s:enc_euc = 'eucjp-ms'
     let s:enc_jis = 'iso-2022-jp-3'
-  " iconvがJISX0213に対応しているかをチェック
+  " iconv��JISX0213���б����Ƥ��뤫������å�
   elseif iconv("\x87\x64\x87\x6a", 'cp932', 'euc-jisx0213') ==# "\xad\xc5\xad\xcb"
     let s:enc_euc = 'euc-jisx0213'
     let s:enc_jis = 'iso-2022-jp-3'
   endif
 
-  " fileencodingsを構築
+  " fileencodings����
   if &encoding ==# 'utf-8'
     
     "(A)
@@ -83,11 +83,11 @@ if has('iconv')
       let &fileencodings = &fileencodings .','. s:enc_euc
     endif
   endif
-  " 定数を処分
+  " ������ʬ
   unlet s:enc_euc
   unlet s:enc_jis
 endif
-" 日本語を含まない場合は fileencoding に encoding を使うようにする
+" ���ܸ��ޤޤʤ����� fileencoding �� encoding ��Ȥ��褦�ˤ���
 if has('autocmd')
   function! AU_ReCheck_FENC()
     if &fileencoding =~# 'iso-2022-jp' && search("[^\x01-\x7e]", 'n') == 0
@@ -96,14 +96,14 @@ if has('autocmd')
   endfunction
   autocmd BufReadPost * call AU_ReCheck_FENC()
 endif
-" 改行コードの自動認識
+" ���ԥ����ɤμ�ưǧ��
 set fileformats=unix,dos,mac
-" □とか○の文字があってもカーソル位置がずれないようにする
+" ���Ȥ�����ʸ�������äƤ⥫��������֤�����ʤ��褦�ˤ���
 if exists('&ambiwidth')
   set ambiwidth=double
 endif
 
-"-------------------- 文字コード認識部 終了 --------------------
+"-------------------- ʸ��������ǧ���� ��λ --------------------
 
-" 逃がしていたユーザの設定を修復
+" ƨ�����Ƥ����桼�����������
 let &cpo = s:save_cpo

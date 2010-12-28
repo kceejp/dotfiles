@@ -1,5 +1,5 @@
 " Ctrl+cをESCのかわりに
-imap <C-C> <ESC>
+imap <c-j> <ESC>
 
 " インクリメント/デクリメント
 nmap + <C-A>
@@ -16,7 +16,5 @@ map! <ESC>[B <Down>
 map! <ESC>[C <Right>
 map! <ESC>[D <Left>
 
-map <Up>   <ESC>:tabnew<CR>
-map <Down> <ESC>:tabnew<CR>
 map <Right> :tabn<CR>
 map <Left>  :tabN<CR>

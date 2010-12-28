@@ -106,7 +106,7 @@ set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V
 " http://nanabit.net/blog/2007/11/03/vim-cursorline/
 augroup cch
   autocmd! cch
-  autocmd WinLeave * set nocursorcolumn nocursorline
+  autocmd WinLeave         * set nocursorcolumn nocursorline
   autocmd WinEnter,BufRead * set cursorcolumn cursorline
 augroup END
 highlight CursorLine   ctermbg=black guibg=gray

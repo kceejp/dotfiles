@@ -78,3 +78,8 @@ function! s:unite_my_settings()"{{{
 endfunction"}}}
 
 let g:unite_source_file_mru_limit = 200
+
+""""""""""""""""""""
+" qtmplsel.vim
+""""""""""""""""""""
+let g:qts_templatedir = "$HOME/.vim/bundle/qtmplsel/template"

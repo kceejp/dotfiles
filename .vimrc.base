@@ -16,6 +16,11 @@ set viminfo='20,\"50
 " プラグインの使用
 filetype plugin on
 
+" swapファイル
+set directory=$HOME/.vim_tmp/swap
+" backupファイル
+set backupdir=$HOME/.vim_tmp/backup
+
 " 自動インデント
 set autoindent
 " コメントなどのプログラミング言語を考慮したインデント

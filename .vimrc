@@ -34,6 +34,13 @@ if filereadable($HOME."/.vimrc.color")
 endif
 
 """"""""""""""""""""
+" シンタックス
+""""""""""""""""""""
+if filereadable($HOME."/.vimrc.syntax")
+  source $HOME/.vimrc.syntax
+endif
+
+""""""""""""""""""""
 " マウス
 """"""""""""""""""""
 if filereadable($HOME."/.vimrc.mouse")

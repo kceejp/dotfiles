@@ -17,9 +17,9 @@ set viminfo='20,\"50
 filetype plugin on
 
 " swapファイル
-set directory=$HOME/.vim_tmp/swap
+set directory=$HOME/.vim/tmp/swap
 " backupファイル
-set backupdir=$HOME/.vim_tmp/backup
+set backupdir=$HOME/.vim/tmp/backup
 
 " 自動インデント
 set autoindent

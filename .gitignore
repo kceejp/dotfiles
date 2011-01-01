@@ -1,1 +1,3 @@
 .vim/.netrwhist
+.vim/tmp/backup/*
+.vim/tmp/swap/*

@@ -2,25 +2,14 @@ package Sample;
 
 use strict;
 use warnings;
+use utf8;
 
-use base qw/Exporter/;
 
-my $constants;
-
-BEGIN {
-    $constants = {
-    };
-}
-
-use constant $constants;
-
-our @EXPORT_OK = keys %{ $constants };
-our @EXPORT    = @EXPORT_OK;
 
 1;
 __END__
 
-=encoding euc-jp
+=encoding utf8
 
 =head1 名前
 

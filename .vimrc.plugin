@@ -17,11 +17,6 @@ if !exists("g:perl_flyquickfixmake")
 endif
 
 """"""""""""""""""""
-" smartchr.vim
-""""""""""""""""""""
-autocmd FileType actionscript,javascript,perl inoremap <buffer> <expr> =  smartchr#one_of(' =', ' ==', '=')
-
-""""""""""""""""""""
 " neocomplcache
 """"""""""""""""""""
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化

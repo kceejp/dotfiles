@@ -1,3 +1,5 @@
 .vim/.netrwhist
 .vim/tmp/backup/*
 .vim/tmp/swap/*
+.vimrc.local
+.zshrc.local

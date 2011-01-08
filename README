@@ -1,0 +1,6 @@
+# Cloning Repository
+git clone git@github.com:KCeejp/dotfiles.git
+git submodule update --init
+
+# Adding Submodules
+git submodule add <repo> <path>

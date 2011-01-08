@@ -2,11 +2,6 @@
 syntax on
 
 " カラーテーマ
-if &term =~ "xterm-256color"
-  colorscheme inkpot
-endif
-
-" desertテーマ
 colorscheme desert
 
 " コメントを緑に

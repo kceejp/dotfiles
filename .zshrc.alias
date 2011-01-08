@@ -1,4 +1,4 @@
-alias vi="vim"
+alias vi="vim -p"
 alias su="su -p"
 alias df="df -h"
 alias mkdir="mkdir -p"

@@ -1,3 +1,19 @@
-.vim/.netrwhist
-.vim/tmp/backup/*
-.vim/tmp/swap/*
+# 全ファイルを一度無視
+# *
+# さらにdotfileを無視
+# .*
+# .zshrc.localや.vimrc.localを無視
+/.*.local
+
+# 無視したくないファイルを![filename]で指定
+
+# globalに無視するtmp系
+.DS_Store
+*.sw[po]
+
+# /.vim以下
+/.vim/.netrwhist
+/.vim/tmp/backup/*
+/.vim/tmp/swap/*
+/.vim/tmp/yankring_history_v2.txt
+/.vim/bundle/*/doc/tags

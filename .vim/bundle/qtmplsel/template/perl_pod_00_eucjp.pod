@@ -1,52 +1,52 @@
 =encoding euc-jp
 
-=head1 名前
+=head1 ̾��
 
-podsample - POD文書のサンプル
+podsample - PODʸ��Υ���ץ�
 
-=head1 概要
+=head1 ����
 
     $here->isa(Piece::Of::Code);
     print <<"END";
-    このインデントされたブロックはフォーマットされた
-    コードか指示のため、走査されずに、スペースは保持
-    されるでしょう。
+    ���Υ���ǥ�Ȥ��줿�֥��å��ϥե����ޥåȤ��줿
+    �����ɤ��ؼ��Τ��ᡢ�������줺�ˡ����ڡ������ݻ�
+    �����Ǥ��礦��
     END
 
-=head1 記述
+=head1 ����
 
-これは標準テキストです。これはB<ボールド>、I<イタリック>、
-U<アンダーライン>、C<$リテラルコード>のテキスト書式を
-内部に含んでいます。
+�����ɸ��ƥ����ȤǤ��������B<�ܡ����>��I<������å�>��
+U<��������饤��>��C<$��ƥ�륳����>�Υƥ����Ƚ񼰤�
+�����˴ޤ�Ǥ��ޤ���
 
-=head2 例の一覧
+=head2 ��ΰ���
 
 =over 4
 
-=item * これは正丸リストです。
+=item * ��������ݥꥹ�ȤǤ���
 
-=item * ここに別口があります。
+=item * �������̸�������ޤ���
 
 =back
 
 =begin html
 
-<img src="Example.png" align="right" alt="範例" />
+<img src="Example.png" align="right" alt="����" />
 <p>
-    ここに、何らかの埋め込まれたHTMLがあります。
-    このブロックでは、画像を入れたり、
-    <span style="color: green">スタイル</span>を
-    適用するか、HTMLで記述しています。PODパーサは
-    HTML出力中にそれを完全に無視することはありません。
+    �����ˡ����餫�������ޤ줿HTML������ޤ���
+    ���Υ֥��å��Ǥϡ����������줿�ꡢ
+    <span style="color: green">��������</span>��
+    Ŭ�Ѥ��뤫��HTML�ǵ��Ҥ��Ƥ��ޤ���POD�ѡ�����
+    HTML������ˤ��������̵�뤹�뤳�ȤϤ���ޤ���
 </p>
 
 =end html
 
-=head1 参照
+=head1 ����
 
 L<perlpod>, L<perldoc>, L<Pod::Parser>.
 
-=head1 著作権
+=head1 ���
 
 Copyright 2005 J. Random Hacker <jrh@cpan.org>.
 

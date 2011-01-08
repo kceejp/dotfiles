@@ -13,6 +13,9 @@ endif
 set nocompatible
 set viminfo='20,\"50
 
+" 常にカーソル行を真ん中に
+" set scrolloff=999
+
 " プラグインの使用
 filetype plugin on
 
@@ -36,7 +39,7 @@ set shiftwidth=4
 set expandtab
 
 " コマンド履歴数
-set history=50
+set history=1000
 
 " 常にカーソル行を真ん中に
 " set scrolloff=999

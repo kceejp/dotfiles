@@ -5,6 +5,7 @@ use warnings;
 
 use Getopt::Long;
 use Pod::Usage;
+use Time::HiRes;
 
 # default values
 my %options = (
@@ -31,6 +32,10 @@ Pod::Usage::pod2usage(
     -verbose => 2,
     -exitval => 1,
 ) if $options{'man' };
+
+my $start_time = Time::HiRes::time;
+
+my $process_time = sprintf('%.2f', Time::HiRes::time - $start_time);
 
 __END__
 

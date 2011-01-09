@@ -1,8 +1,12 @@
 " 色付け
 syntax on
 
+set t_Co=256
+
 " カラーテーマ
 colorscheme desert
+" colorscheme desert256
+" colorscheme inkpot
 
 " コメントを緑に
 highlight Comment ctermfg=green

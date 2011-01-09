@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/vsccommand"]
 	path = .vim/bundle/vsccommand
 	url = https://github.com/vim-scripts/vcscommand.vim.git
+[submodule ".vim/bundle/inkpot"]
+	path = .vim/bundle/inkpot
+	url = https://github.com/ciaranm/inkpot.git

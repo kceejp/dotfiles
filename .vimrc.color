@@ -1,19 +1,30 @@
 " 色付け
 syntax on
 
-set t_Co=256
+" ターミナルタイプによるカラー設定
+if &term =~ "xterm-debian" || &term =~ "xterm-xfree86" || &term =~ "xterm-256color"
+ set t_Co=16
+ set t_Sf=^[[3%dm
+ set t_Sb=^[[4%dm
+ " カラーテーマ
+ " colorscheme desert256
+ colorscheme inkpot
+elseif &term =~ "xterm-color"
+ set t_Co=8
+ set t_Sf=^[[3%dm
+ set t_Sb=^[[4%dm
+ " カラーテーマ
+ colorscheme desert
+endif
 
-" カラーテーマ
 colorscheme desert
-" colorscheme desert256
-" colorscheme inkpot
 
 " コメントを緑に
-highlight Comment ctermfg=green
+" highlight Comment ctermfg=green
 " 行番号
-highlight LineNr  ctermfg=black ctermbg=green
+" highlight LineNr  ctermfg=black ctermbg=green
 " 折り畳み
-highlight Folded  ctermfg=black ctermbg=blue
+" highlight Folded  ctermfg=black ctermbg=blue
 " 全角スペースを視覚化
 highlight DoubleWidthSpace cterm=underline ctermfg=lightblue
 match DoubleWidthSpace /　/

@@ -1,4 +1,7 @@
-local GREEN=$'%{\e[1;32m%}'
-local RED=$'%{\e[1;31m%}'
-local BLUE=$'%{\e[1;34m%}'
-local DEFAULT=$'%{\e[1;m%}'
+autoload -Uz colors
+colors
+
+# local GREEN=$'%{\e[1;32m%}'
+# local RED=$'%{\e[1;31m%}'
+# local BLUE=$'%{\e[1;34m%}'
+# local DEFAULT=$'%{\e[1;m%}'

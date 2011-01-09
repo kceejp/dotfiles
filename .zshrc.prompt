@@ -2,11 +2,11 @@
 
 case ${UID} in
 0)
-    PROMPT=$RED'[${USER}@$(echo ${HOST%%.*} | tr "[a-z]" "[A-Z]")] %(!.#.$) '$DEFAULT
-    RPROMPT=$GREEN'[%~]'$DEFAULT
+    PROMPT="%{$fg[red]%}[${USER}@$(echo ${HOST%%.*} | tr '[a-z]' '[A-Z]')] %(!.#.$) %{$reset_color%}"
+    RPROMPT="%{$fg[green]%}[%~]%{$reset_color%}"
 ;;
 *)
-    PROMPT=$BLUE'[${USER}@$(echo ${HOST%%.*} | tr "[a-z]" "[A-Z]")] %(!.#.$) '$DEFAULT
-    RPROMPT=$GREEN'[%~]'$DEFAULT
+    PROMPT="%{$fg[blue]%}[${USER}@$(echo ${HOST%%.*} | tr '[a-z]' '[A-Z]')] %(!.#.$) %{$reset_color%}"
+    RPROMPT="%{$fg[green]%}[%~]%{$reset_color%}"
 ;;
 esac

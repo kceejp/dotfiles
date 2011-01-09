@@ -6,3 +6,5 @@ set smartcase
 set wrapscan
 " マッチした文字列をハイライト
 set hlsearch
+" Escの2回押しでハイライト消去
+nmap <ESC><ESC> ;nohlsearch<CR><ESC>

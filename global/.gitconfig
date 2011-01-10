@@ -14,4 +14,4 @@
 [alias]
     st = status
     co = checkout
-
+    di = diff

@@ -13,6 +13,7 @@
 
 # /.vim以下
 /.vim/.netrwhist
+/.vim/tmp/.viminfo
 /.vim/tmp/backup/*
 /.vim/tmp/swap/*
 /.vim/tmp/.unite/*

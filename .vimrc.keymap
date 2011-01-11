@@ -1,5 +1,6 @@
 " Ctrl+cをESCのかわりに
 imap <C-j> <ESC>
+imap <C-c> <ESC>
 
 " インクリメント/デクリメント
 nmap + <C-A>

@@ -1,33 +1,30 @@
 [submodule ".vim/bundle/neocomplcache"]
-	path = .vim/bundle/neocomplcache
-	url = https://github.com/Shougo/neocomplcache.git
+    path = .vim/bundle/neocomplcache
+    url = https://github.com/Shougo/neocomplcache.git
 [submodule ".vim/bundle/sorround"]
-	path = .vim/bundle/sorround
-	url = https://github.com/tpope/vim-surround.git
+    path = .vim/bundle/sorround
+    url = https://github.com/tpope/vim-surround.git
 [submodule ".vim/bundle/unite"]
-	path = .vim/bundle/unite
-	url = https://github.com/Shougo/unite.vim.git
+    path = .vim/bundle/unite
+    url = https://github.com/Shougo/unite.vim.git
 [submodule ".vim/bundle/pathogen"]
-	path = .vim/bundle/pathogen
-	url = https://github.com/tpope/vim-pathogen.git
+    path = .vim/bundle/pathogen
+    url = https://github.com/tpope/vim-pathogen.git
 [submodule ".vim/bundle/errormarker"]
-	path = .vim/bundle/errormarker
-	url = https://github.com/vim-scripts/errormarker.vim.git
+    path = .vim/bundle/errormarker
+    url = https://github.com/vim-scripts/errormarker.vim.git
 [submodule ".vim/bundle/yanktmp"]
-	path = .vim/bundle/yanktmp
-	url = https://github.com/vim-scripts/yanktmp.vim.git
+    path = .vim/bundle/yanktmp
+    url = https://github.com/vim-scripts/yanktmp.vim.git
 [submodule ".vim/bundle/smartchr"]
-	path = .vim/bundle/smartchr
-	url = https://github.com/kana/vim-smartchr.git
+    path = .vim/bundle/smartchr
+    url = https://github.com/kana/vim-smartchr.git
 [submodule ".vim/bundle/vsccommand"]
-	path = .vim/bundle/vsccommand
-	url = https://github.com/vim-scripts/vcscommand.vim.git
+    path = .vim/bundle/vsccommand
+    url = https://github.com/vim-scripts/vcscommand.vim.git
 [submodule ".vim/bundle/inkpot"]
-	path = .vim/bundle/inkpot
-	url = https://github.com/ciaranm/inkpot.git
+    path = .vim/bundle/inkpot
+    url = https://github.com/ciaranm/inkpot.git
 [submodule ".vim/bundle/unite-colorscheme"]
-	path = .vim/bundle/unite-colorscheme
-	url = https://github.com/ujihisa/unite-colorscheme.git
-[submodule ".vim/bundle/unite-font"]
-	path = .vim/bundle/unite-font
-	url = https://github.com/ujihisa/unite-font.git
+    path = .vim/bundle/unite-colorscheme
+    url = https://github.com/ujihisa/unite-colorscheme.git

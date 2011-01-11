@@ -20,7 +20,7 @@ endif
 " neocomplcache
 """"""""""""""""""""
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
-let g:NeoComplCache_SnippetsDir = $HOME . '/.vim/snippets'
+let g:NeoComplCache_SnippetsDir = "$HOME/.vim/snippet"
 imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
 """"""""""""""""""""
@@ -45,7 +45,7 @@ map <silent> sP :call YanktmpPaste_P()<CR>
 " unite.vim
 " http://github.com/Shougo/unite.vim/blob/master/doc/unite.jax
 """"""""""""""""""""
-let g:unite_data_directory              = $HOME . "/.vim/tmp/.unite" " absolute path!
+let g:unite_data_directory              = "$HOME/.vim/tmp/.unite" " absolute path!
 let g:unite_source_file_mru_limit       = 200
 let g:unite_source_file_mru_time_format = "%Y/%m/%d %H:%M - "
 
@@ -57,7 +57,6 @@ nnoremap [unite]u :<C-u>Unite<Space>
 " nnoremap <silent> [unite]f :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
 
 " ffでカレントディレクトリ以下の一覧を出す
-" nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=buffer file_mru bookmark file<CR>
 nnoremap <silent> [unite]f :<C-u>UniteWithCurrentDir -buffer-name=files -prompt=:tabnew\  bookmark tab file_mru file<CR>
 nnoremap <silent> [unite]r :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]b :<C-u>Unite bookmark<CR>
@@ -87,4 +86,4 @@ let g:qts_templatedir = "$HOME/.vim/bundle/qtmplsel/template"
 """"""""""""""""""""
 " yankring.vim
 """"""""""""""""""""
-let g:yankring_history_file = '.vim/tmp/yankring_history'
+let g:yankring_history_file = "$HOME/.vim/tmp/yankring_history"

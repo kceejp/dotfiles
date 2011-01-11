@@ -1,5 +1,5 @@
 " Ctrl+cをESCのかわりに
-imap <C-C> <ESC>
+imap <C-j> <ESC>
 
 " インクリメント/デクリメント
 nmap + <C-A>

@@ -142,3 +142,12 @@ augroup InsertHook
   autocmd InsertEnter * highlight StatusLine guifg=#ccdc90 guibg=#2E4340
   autocmd InsertLeave * highlight StatusLine guifg=#2E4340 guibg=#ccdc90
 augroup END
+
+" ファイルの前回閉じたときの場所を記憶
+" http://blog.livedoor.jp/sasata299/archives/51179057.html
+if has("autocmd")
+    autocmd BufReadPost *
+    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+    \   exe "normal! g'\"" |
+    \ endif
+endif

@@ -14,7 +14,7 @@ export PATH
 unset USERNAME
 
 # 文字コード
-export LANG=ja_JP.eucJP
+export LANG=ja_JP.UTF-8
 
 # シェルをzshに
 if [ -n "$PS1" ]; then

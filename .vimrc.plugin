@@ -61,6 +61,7 @@ nnoremap [unite]u :<C-u>Unite<Space>
 nnoremap <silent> [unite]f :<C-u>UniteWithCurrentDir -buffer-name=files -prompt=:tabnew\  bookmark tab file_mru file<CR>
 nnoremap <silent> [unite]r :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]b :<C-u>Unite bookmark<CR>
+nnoremap <silent> [unite]c :<C-u>Unite colorscheme<CR>
 
 autocmd FileType unite call s:unite_my_settings()
 

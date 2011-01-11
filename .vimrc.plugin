@@ -1,9 +1,4 @@
 """"""""""""""""""""
-" svndiff.vim
-""""""""""""""""""""
-noremap <F3> :call Svndiff("next")<CR>
-
-""""""""""""""""""""
 " errormarker.vim
 " http://subtech.g.hatena.ne.jp/secondlife/200807
 """"""""""""""""""""

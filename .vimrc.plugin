@@ -15,7 +15,8 @@ endif
 " neocomplcache
 """"""""""""""""""""
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
-let g:NeoComplCache_SnippetsDir = "$HOME/.vim/snippet"
+let g:NeoComplCache_TemporaryDir = '~/.vim/tmp/.neocon'
+let g:NeoComplCache_SnippetsDir  = '~/.vim/snippet'
 imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
 """"""""""""""""""""
@@ -40,7 +41,7 @@ map <silent> sP :call YanktmpPaste_P()<CR>
 " unite.vim
 " http://github.com/Shougo/unite.vim/blob/master/doc/unite.jax
 """"""""""""""""""""
-let g:unite_data_directory              = "$HOME/.vim/tmp/.unite" " absolute path!
+let g:unite_data_directory              = $HOME . '/.vim/tmp/.unite' " absolute path!
 let g:unite_source_file_mru_limit       = 200
 let g:unite_source_file_mru_time_format = "%Y/%m/%d %H:%M - "
 
@@ -76,9 +77,9 @@ endfunction"}}}
 """"""""""""""""""""
 " qtmplsel.vim
 """"""""""""""""""""
-let g:qts_templatedir = "$HOME/.vim/bundle/qtmplsel/template"
+let g:qts_templatedir = "~/.vim/bundle/qtmplsel/template"
 
 """"""""""""""""""""
 " yankring.vim
 """"""""""""""""""""
-let g:yankring_history_file = "$HOME/.vim/tmp/yankring_history"
+let g:yankring_history_file = ".vim/tmp/yankring_history" " do not specify $HOME since it'll cause error

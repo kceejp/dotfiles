@@ -65,3 +65,6 @@ setopt auto_resume
 
 # スペルチェック
 # setopt correct
+
+# do not error when filename or directory completion gets fail
+setopt nonomatch

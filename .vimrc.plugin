@@ -17,8 +17,8 @@ endif
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 " 1番目の候補を自動選択
 let g:neocomplcache_enable_auto_select = 1
-let g:NeoComplCache_TemporaryDir = '~/.vim/tmp/.neocon'
-let g:neocomplcache_snippets_dir = '~/.vim/snippets'
+let g:neocomplcache_temporary_dir = '~/.vim/tmp/.neocon'
+let g:neocomplcache_snippets_dir  = '~/.vim/snippets'
 imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
 """"""""""""""""""""

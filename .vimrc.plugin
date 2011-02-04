@@ -16,8 +16,8 @@ endif
 """"""""""""""""""""
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 " 1番目の候補を自動選択
-let g:neocomplcache_enable_auto_select = 1
-let g:neocomplcache_temporary_dir = '~/.vim/tmp/.neocon'
+let g:neocomplcache_enable_auto_select = 0
+let g:neocomplcache_temporary_dir = $HOME . '/.vim/tmp/.neocon'
 let g:neocomplcache_snippets_dir  = '~/.vim/snippets'
 imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
@@ -55,8 +55,9 @@ nnoremap [unite]u :<C-u>Unite<Space>
 " nnoremap <silent> [unite]f :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
 
 " ffでカレントディレクトリ以下の一覧を出す
-nnoremap <silent> [unite]f :<C-u>UniteWithCurrentDir -buffer-name=files -prompt=:tabnew\  bookmark tab file_mru file<CR>
-nnoremap <silent> [unite]r :<C-u>Unite file_mru<CR>
+nnoremap <silent> [unite]f :<C-u>Unite -buffer-name=files -prompt=:tabnew\  file<CR>
+" nnoremap <silent> [unite]f :<C-u>Unite -buffer-name=files -prompt=:tabnew\  file file_rec<CR>
+nnoremap <silent> [unite]r :<C-u>UniteWithCurrentDir tab bookmark file_mru<CR>
 nnoremap <silent> [unite]b :<C-u>Unite bookmark<CR>
 nnoremap <silent> [unite]c :<C-u>Unite colorscheme<CR>
 
@@ -67,14 +68,21 @@ function! s:unite_my_settings()"{{{
 
   call unite#custom_default_action('file', 'tabopen')
 
+  imap <buffer> <Tab>      <Plug>(unite_select_next_line)
+  imap <buffer> <S-Tab>    <Plug>(unite_select_previous_line)
+
+  nmap <buffer> <C-w>      <Plug>(unite_delete_backward_path)
+  nmap <buffer> [unite]f   <Plug>(unite_exit)
+  nmap <buffer> <Esc>      <Plug>(unite_exit)
   nmap <buffer> <C-j>      <Plug>(unite_exit)
   nmap <buffer> <C-c>      <Plug>(unite_exit)
-  imap <buffer> jj <Plug>(unite_insert_leave)
+  imap <buffer> jj         <Plug>(unite_insert_leave)
   nnoremap <silent><buffer> <C-k> :<C-u>call unite#mappings#do_action('preview')<CR>
   "imap <buffer> <C-w> <Plug>(unite_delete_backward_path)
 
   " Start insert.
-  " let g:unite_enable_start_insert = 1
+  let g:unite_enable_start_insert       = 0
+  let g:unite_source_file_rec_max_depth = 5
 endfunction"}}}
 
 """"""""""""""""""""

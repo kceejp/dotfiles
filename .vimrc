@@ -29,8 +29,8 @@ endif
 """"""""""""""""""""
 " colorscheme
 """"""""""""""""""""
-if filereadable($HOME."/.vimrc.local.colorscheme")
-  source $HOME/.vimrc.local.colorscheme
+if filereadable($HOME."/.vimrc.colorscheme")
+  source $HOME/.vimrc.colorscheme
 endif
 
 """"""""""""""""""""

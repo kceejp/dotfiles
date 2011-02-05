@@ -19,3 +19,6 @@ map! <ESC>[D <Left>
 
 map <Right> :tabn<CR>
 map <Left>  :tabN<CR>
+
+" Escの2回押しでハイライト消去 & foldのクリア
+nmap <ESC><ESC> :nohlsearch<CR><ESC>zE

@@ -27,6 +27,13 @@ if filereadable($HOME."/.vimrc.tab")
 endif
 
 """"""""""""""""""""
+" colorscheme
+""""""""""""""""""""
+if filereadable($HOME."/.vimrc.local.colorscheme")
+  source $HOME/.vimrc.local.colorscheme
+endif
+
+""""""""""""""""""""
 " 色
 """"""""""""""""""""
 if filereadable($HOME."/.vimrc.color")

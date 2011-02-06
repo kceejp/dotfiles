@@ -71,6 +71,9 @@ function! s:unite_my_settings()"{{{
   nmap <buffer> <Tab>      <Plug>(unite_loop_cursor_down)
   nmap <buffer> <S-Tab>    <Plug>(unite_loop_cursor_up)
 
+  imap <buffer> <Tab>      <Plug>(unite_select_next_line)
+  imap <buffer> <S-Tab>    <Plug>(unite_select_previous_line)
+
   nmap <buffer> <C-w>      <Plug>(unite_delete_backward_path)
   nmap <buffer> [unite]f   <Plug>(unite_exit)
   nmap <buffer> <Esc>      <Plug>(unite_exit)
@@ -83,6 +86,10 @@ function! s:unite_my_settings()"{{{
   " Start insert.
   let g:unite_enable_start_insert       = 0
   let g:unite_source_file_rec_max_depth = 5
+  let g:unite_source_file_mru_filename_format = ''
+  let g:unite_enable_smart_case = 1
+  " let g:unite_enable_ignore_case = 1
+  let g:unite_enable_split_vertically = 0
 endfunction"}}}
 
 """"""""""""""""""""

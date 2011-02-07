@@ -110,8 +110,3 @@ let twitvim_show_header        = 0
 let twitvim_count              = 200
 map <leader>tl :FriendsTwitter<CR><C-w>w
 map <leader>tw :PosttoTwitter<CR>
-
-""""""""""""""""""""
-" simplefold.vim
-""""""""""""""""""""
-nmap <leader>f :Fold<CR>

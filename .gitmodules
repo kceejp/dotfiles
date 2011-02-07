@@ -31,3 +31,6 @@
 [submodule ".vim/bundle/simplefold"]
 	path = .vim/bundle/simplefold
 	url = https://github.com/pangloss/vim-simplefold.git
+[submodule ".vim/bundle/twitvim"]
+	path = .vim/bundle/twitvim
+	url = https://github.com/vim-scripts/TwitVim.git

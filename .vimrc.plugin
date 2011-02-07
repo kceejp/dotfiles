@@ -24,7 +24,7 @@ imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "<Plug>(
 """"""""""""""""""""
 " vcscommand.vim
 """"""""""""""""""""
-map ,di :VCSDiff<CR>
+map <leader>di :VCSDiff<CR>
 
 """"""""""""""""""""
 " svndiff.vim
@@ -68,8 +68,7 @@ function! s:unite_my_settings()"{{{
 
   call unite#custom_default_action('file', 'tabopen')
 
-  nmap <buffer> <Tab>      <Plug>(unite_loop_cursor_down)
-  nmap <buffer> <S-Tab>    <Plug>(unite_loop_cursor_up)
+  nmap <buffer> <Tab>      <Plug>(unite_insert_leave)
 
   imap <buffer> <Tab>      <Plug>(unite_select_next_line)
   imap <buffer> <S-Tab>    <Plug>(unite_select_previous_line)
@@ -101,3 +100,18 @@ let g:qts_templatedir = "~/.vim/bundle/qtmplsel/template"
 " yankring.vim
 """"""""""""""""""""
 let g:yankring_history_file = ".vim/tmp/yankring_history" " do not specify $HOME since it'll cause error
+
+""""""""""""""""""""
+" twitvim.vim
+""""""""""""""""""""
+let twitvim_enable_perl        = 1
+let twitvim_disable_token_file = 0
+let twitvim_show_header        = 0
+let twitvim_count              = 200
+map <leader>tl :FriendsTwitter<CR><C-w>w
+map <leader>tw :PosttoTwitter<CR>
+
+""""""""""""""""""""
+" simplefold.vim
+""""""""""""""""""""
+nmap <leader>f :Fold<CR>

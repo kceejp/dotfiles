@@ -1,7 +1,7 @@
 " 色付け
 syntax on
 
-set t_Co=256
+" set t_Co=256
 
 "  ターミナルタイプによるカラー設定
 "if &term =~ "xterm-debian" || &term =~ "xterm-xfree86" || &term =~ "xterm-256color"

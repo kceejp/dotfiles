@@ -3,33 +3,17 @@ startup_message off
 defbce "on"
 term xterm-256color
 
-# termcapinfo xterm* 'Co#256:pa#32767:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
-
-shelltitle "% |zsh"
-
-#hardstatus on
-#hardstatus alwayslastline
-
-#hardstatus alwayslastline "[%02c] %0`%-w%{=b bw}%n %t%{-}%+w %= %1`"
-backtick 1 3600 3600 $HOME/dotfiles/script/get_ipaddr.sh
-hardstatus alwayslastline "[%H - %1`] %0`%-w%{=b bw}%n %t%{-}%+w %= %2`""[LoadAvg: %l] [%Y/%m/%d(%D) %02c:%s]"
-#hardstatus string "%{.Wb}.: %-w%{.RW}%n %t%{-}%+w :. %=[%Y-%m-%d(%D) %02c]"
-#caption always "%{b RK} %y/%m/%d(%D)%c:%s %{bu dr} | %-w%{=bu CK}%n %t%{-}%+w"
-
 autodetach on # おまけ: 回線切断時に自動でdetach
 defscrollback 1024 # おまけ: スクロールバッファ行数を増やす
+bind x xon  # C-a, x = 画面ロック を無効
 
-#screen 0
-#screen 1 vi
-
-#caption always "%5n %t%? @%u%?%? [%h]%?%=%c"
+backtick 1 3600 3600 $HOME/dotfiles/script/get_ipaddr.sh
+hardstatus alwayslastline "[%H - %1`] %0`%-w%{=b bw}%n %t%{-}%+w %= %2`""[LoadAvg: %l] [%Y/%m/%d %02c]"
 
 bind 'U' eval "encoding utf8" "stuff 'export LANG=ja_JP.UTF-8\012'"
 bind 'E' eval "encoding euc" "stuff 'export LANG=ja_JP.EUC-JP\012'"
 bind 'J' eval "encoding sjis"  "stuff 'export LANG=ja_JP.SJIS\012'"
 
-# C-a, x = 画面ロック を無効
-bind x xon
 
 # split時に簡単にリサイズできる様に
 # http://www.rubyist.net/~rubikitch/computer/screen/#3.5.1

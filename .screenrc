@@ -9,6 +9,7 @@ defscrollback 1024 # おまけ: スクロールバッファ行数を増やす
 
 backtick 1 3600 3600 $HOME/dotfiles/script/get_ipaddr.sh
 hardstatus alwayslastline "[%H - %1`] %0`%-w%{=b bw}%n %t%{-}%+w %= %2`""[LoadAvg: %l] [%m/%d %02c]"
+caption always "%{= dd}%`"
 
 bind 'U' eval "encoding utf8" "stuff 'export LANG=ja_JP.UTF-8\012'"
 bind 'E' eval "encoding euc"  "stuff 'export LANG=ja_JP.EUC-JP\012'"

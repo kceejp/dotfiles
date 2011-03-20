@@ -1,16 +1,34 @@
 # screenのステータスに実行中のプログラム表示
-case "${TERM}" in screen)
-preexec() {
-    echo -ne "\ek#${1%% *}\e\\"
+# case "${TERM}" in screen)
+# preexec() {
+#     echo -ne "\ek#${1%% *}\e\\"
+# }
+# precmd() {
+#     echo -ne "\ek$(basename $(pwd))\e\\"
+# }
+# esac
+
+# http://d.hatena.ne.jp/yanma_4/20080404/1207316545
+preexec () {
+    if [ $TERM = "screen" ]; then
+        1="$1 " # deprecated.
+    lang=`echo $LANG | sed "s/.\+\.\(.\).\+/\1/"`
+        echo -ne "\ek${${(s: :)1}[0]}($lang)\e\\"
+    fi
 }
-precmd() {
-    echo -ne "\ek$(basename $(pwd))\e\\"
-}
-esac
 
 # screenを自動でリタッチ
 if [ $SHLVL = 1 ];then
     if [ -x `which screen` ]; then
         screen -d -R
     fi
+fi
+
+# http://d.hatena.ne.jp/naoya/20051223/1135351050
+function ssh_screen(){
+ eval server=?${$#}
+ screen -t $server ssh "$@"
+}
+if [ x$TERM = xscreen ]; then
+  alias ssh=ssh_screen
 fi

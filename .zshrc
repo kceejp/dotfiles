@@ -19,6 +19,11 @@
 [ -f ~/.zshrc.alias ] && source ~/.zshrc.alias
 
 #------------------------------
+# screen関連設定読み込み
+#------------------------------
+[ -f ~/.zshrc.screen ] && source ~/.zshrc.screen
+
+#------------------------------
 # zshをvimモードで
 #------------------------------
 [ -f ~/.zshrc.vi ] && source ~/.zshrc.vi
@@ -45,8 +50,8 @@ case $LANG in
     ;;
     *)
         #------------------------------
-        # screen関連設定読み込み
+        # EUC-JP用の設定読み込み
         #------------------------------
-        [ -f ~/.zshrc.screen ] && source ~/.zshrc.screen
+        [ -f ~/.zshrc.eucjp ] && source ~/.zshrc.eucjp
     ;;
 esac

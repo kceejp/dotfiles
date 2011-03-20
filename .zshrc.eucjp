@@ -1,1 +1,6 @@
-export LANG=ja_JP.EUC-JP
+# screenを自動でリタッチ
+if [ $SHLVL = 1 ]; then
+    if [ -x `which screen` ]; then
+        screen -D -RR
+    fi
+fi

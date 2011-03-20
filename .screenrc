@@ -3,17 +3,16 @@ startup_message off
 defbce "on"
 term xterm-256color
 
-autodetach on # おまけ: 回線切断時に自動でdetach
+bind x xon         # C-a, x = 画面ロック を無効
+autodetach on      # おまけ: 回線切断時に自動でdetach
 defscrollback 1024 # おまけ: スクロールバッファ行数を増やす
-bind x xon  # C-a, x = 画面ロック を無効
 
 backtick 1 3600 3600 $HOME/dotfiles/script/get_ipaddr.sh
-hardstatus alwayslastline "[%H - %1`] %0`%-w%{=b bw}%n %t%{-}%+w %= %2`""[LoadAvg: %l] [%Y/%m/%d %02c]"
+hardstatus alwayslastline "[%H - %1`] %0`%-w%{=b bw}%n %t%{-}%+w %= %2`""[LoadAvg: %l] [%m/%d %02c]"
 
 bind 'U' eval "encoding utf8" "stuff 'export LANG=ja_JP.UTF-8\012'"
-bind 'E' eval "encoding euc" "stuff 'export LANG=ja_JP.EUC-JP\012'"
-bind 'J' eval "encoding sjis"  "stuff 'export LANG=ja_JP.SJIS\012'"
-
+bind 'E' eval "encoding euc"  "stuff 'export LANG=ja_JP.EUC-JP\012'"
+bind 'J' eval "encoding sjis" "stuff 'export LANG=ja_JP.SJIS\012'"
 
 # split時に簡単にリサイズできる様に
 # http://www.rubyist.net/~rubikitch/computer/screen/#3.5.1

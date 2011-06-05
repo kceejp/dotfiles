@@ -1,5 +1,13 @@
-set rtp+=~/.vim/vundle.git/ 
+""""""""""""""""""""
+" vundle.vim
+""""""""""""""""""""
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
+Bundle 'gmarik/vundle'
 
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
@@ -19,6 +27,8 @@ Bundle 'TwitVim'
 Bundle 'errormarker.vim'
 Bundle 'perl-mauke.vim'
 Bundle 'AutoClose -- Alves'
+
+filetype plugin indent on
 
 """"""""""""""""""""
 " errormarker.vim

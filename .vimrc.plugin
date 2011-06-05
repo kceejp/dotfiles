@@ -125,7 +125,7 @@ endfunction"}}}
 """"""""""""""""""""
 " qtmplsel.vim
 """"""""""""""""""""
-let g:qts_templatedir = "~/.vim/bundle/qtmplsel/template"
+let g:qts_templatedir = "~/.vim/template"
 
 """"""""""""""""""""
 " yankring.vim

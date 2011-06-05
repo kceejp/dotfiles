@@ -12,7 +12,7 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/s
 
 # バックスペースキー
 # bindkey '^[[3~' backward-delete-char
-bindkey "^[[3~" delete-char
+bindkey "[3~" delete-char
 
 # ESC+qでコマンドスタック
 bindkey "^Q" push-line
@@ -57,6 +57,9 @@ setopt auto_pushd
 # ディレクトリ移動履歴をダブらせない
 setopt pushd_ignore_dups
 
+# 語の途中でもカーソル位置で補完
+setopt complete_in_word
+
 # jobsをjobs -lに
 setopt long_list_jobs
 # サスペンド中のコマンドと一致すればresume
@@ -67,3 +70,31 @@ setopt auto_resume
 
 # do not error when filename or directory completion gets fail
 setopt nonomatch
+
+# 文字化け対策
+setopt print_eight_bit
+
+# 色の定義
+# local DEFAULT=$'%{[m%}'
+# local RED=$'%{[1;31m%}'
+# local GREEN=$'%{[1;32m%}'
+# local YELLOW=$'%{[1;33m%}'
+# local BLUE=$'%{[1;34m%}'
+# local PURPLE=$'%{[1;35m%}'
+# local LIGHT_BLUE=$'%{[1;36m%}'
+# local WHITE=$'%{[1;37m%}'
+# 
+# unsetopt sh_wordsplit
+# unsetopt autoremoveslash
+# source ~/.zsh/plugin/auto-fu/auto-fu.zsh; zle-line-init () { auto-fu-init; }; zle -N zle-line-init
+# zstyle ':completion:*' completer _oldlist _complete _match _ignored _approximate
+# zstyle ':completion:*' verbose yes
+# zstyle ':completion:*' completer _expand _complete _match _prefix _approximate _list _history
+# zstyle ':completion:*:messages' format $YELLOW'%d'$DEFAULT
+# zstyle ':completion:*:warnings' format $RED'No matches for:'$YELLOW' %d'$DEFAULT
+# zstyle ':completion:*:descriptions' format $YELLOW'completing %B%d%b'$DEFAULT
+# zstyle ':completion:*:corrections' format $YELLOW'%B%d '$RED'(errors: %e)%b'$DEFAULT
+# zstyle ':completion:*:options' description 'yes'
+# # グループ名に空文字列を指定すると，マッチ対象のタグ名がグループ名に使われる。
+# # したがって，すべての マッチ種別を別々に表示させたいなら以下のようにする
+# zstyle ':completion:*' group-name ''

@@ -1,3 +1,23 @@
+set rtp+=~/.vim/vundle.git/ 
+call vundle#rc()
+
+Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/unite.vim'
+Bundle 'unite-colorscheme'
+Bundle 'vcscommand.vim'
+Bundle 'svndiff'
+Bundle 'svndiff.vim'
+Bundle 'svn-diff.vim'
+Bundle 'yanktmp.vim'
+Bundle 'YankRing.vim'
+Bundle 'qtmplsel.vim'
+Bundle 'Smooth Scroll'
+Bundle 'simplefold'
+Bundle 'smartchr'
+Bundle 'surround.vim'
+Bundle 'TwitVim'
+Bundle 'errormarker.vim'
+
 """"""""""""""""""""
 " errormarker.vim
 " http://subtech.g.hatena.ne.jp/secondlife/200807

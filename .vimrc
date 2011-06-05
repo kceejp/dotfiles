@@ -69,7 +69,7 @@ if filereadable($HOME."/.vimrc.search")
 endif
 
 """"""""""""""""""""
-" キーマップ
+" プラグイン
 """"""""""""""""""""
 if filereadable($HOME."/.vimrc.plugin")
   source $HOME/.vimrc.plugin

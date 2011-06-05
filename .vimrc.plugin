@@ -17,6 +17,8 @@ Bundle 'smartchr'
 Bundle 'surround.vim'
 Bundle 'TwitVim'
 Bundle 'errormarker.vim'
+Bundle 'perl-mauke.vim'
+Bundle 'AutoClose -- Alves'
 
 """"""""""""""""""""
 " errormarker.vim

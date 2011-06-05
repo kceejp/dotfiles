@@ -1,3 +1,7 @@
 [submodule ".zsh/plugin/auto-fu"]
 	path = .zsh/plugin/auto-fu
 	url = https://github.com/hchbaw/auto-fu.zsh.git
+[submodule ".vim/bundle/vundle"]
+	path = .vim/bundle/vundle
+	url = https://github.com/gmarik/vundle.git
+	ignore = untracked

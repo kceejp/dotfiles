@@ -1,6 +1,5 @@
 " Ctrl+cをESCのかわりに
-imap <C-j> <ESC>
-imap <C-c> <ESC>
+imap <C-c> <C-[>
 
 " インクリメント/デクリメント
 nmap + <C-A>
@@ -19,6 +18,3 @@ map! <ESC>[D <Left>
 
 map <Right> :tabn<CR>
 map <Left>  :tabN<CR>
-
-" Escの2回押しでハイライト消去 & foldのクリア
-nmap <ESC><ESC>zE :nohlsearch<CR>

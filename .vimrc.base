@@ -2,6 +2,7 @@
 " http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/
 let mapleader = ","
 nmap <leader>v :tabedit $MYVIMRC<CR>
+nmap <leader>r :source $MYVIMRC<CR>
 
 " Source the vimrc file after saving it
 " http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/
@@ -23,7 +24,6 @@ set directory=$HOME/.vim/tmp/swap
 " backupファイル
 set backupdir=$HOME/.vim/tmp/backup
 " viminfoファイル
-"
 set viminfo='20,\"50,n$HOME/.vim/tmp/.viminfo
 
 " 自動インデント
@@ -141,8 +141,8 @@ hi PmenuSbar ctermbg=lightyellow ctermfg=lightblue guibg=darkgray  guifg=green
 "入力モード時、ステータスラインのカラーを変更
 augroup InsertHook
   autocmd!
-  autocmd InsertEnter * highlight StatusLine guifg=#ccdc90 guibg=#2E4340
-  autocmd InsertLeave * highlight StatusLine guifg=#2E4340 guibg=#ccdc90
+  autocmd InsertEnter * highlight StatusLine ctermfg=white       ctermbg=green
+  autocmd InsertLeave * highlight StatusLine ctermfg=lightyellow ctermbg=lightblue
 augroup END
 
 " ファイルの前回閉じたときの場所を記憶

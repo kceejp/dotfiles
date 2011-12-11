@@ -55,6 +55,13 @@ if filereadable($HOME."/.vimrc.mouse")
 endif
 
 """"""""""""""""""""
+" プラグイン
+""""""""""""""""""""
+if filereadable($HOME."/.vimrc.plugin")
+  source $HOME/.vimrc.plugin
+endif
+
+""""""""""""""""""""
 " Perl
 """"""""""""""""""""
 if filereadable($HOME."/.vimrc.perl")
@@ -66,13 +73,6 @@ endif
 """"""""""""""""""""
 if filereadable($HOME."/.vimrc.search")
   source $HOME/.vimrc.search
-endif
-
-""""""""""""""""""""
-" プラグイン
-""""""""""""""""""""
-if filereadable($HOME."/.vimrc.plugin")
-  source $HOME/.vimrc.plugin
 endif
 
 """"""""""""""""""""

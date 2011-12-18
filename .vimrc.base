@@ -133,18 +133,6 @@ autocmd FileType c          set omnifunc=ccomplete#Complete
 
 set complete+=k
 
-" ポップアップメニューのカラーを設定
-hi Pmenu     ctermbg=green       ctermfg=white     guibg=darkgray  guifg=white
-hi PmenuSel  ctermbg=lightblue   ctermfg=white     guibg=lightblue guifg=white
-hi PmenuSbar ctermbg=lightyellow ctermfg=lightblue guibg=darkgray  guifg=green
-
-"入力モード時、ステータスラインのカラーを変更
-augroup InsertHook
-  autocmd!
-  autocmd InsertEnter * highlight StatusLine ctermfg=white       ctermbg=green
-  autocmd InsertLeave * highlight StatusLine ctermfg=lightyellow ctermbg=lightblue
-augroup END
-
 " ファイルの前回閉じたときの場所を記憶
 " http://blog.livedoor.jp/sasata299/archives/51179057.html
 if has("autocmd")

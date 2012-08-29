@@ -10,6 +10,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neocomplcache-snippets-complete'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimshell'
 Bundle 'Shougo/vimproc'
@@ -35,7 +36,7 @@ Bundle 'Smooth-Scroll'
 " Bundle 'simplefold'
 " Bundle 'smartchr'
 Bundle 'surround.vim'
-Bundle 'mattn/zencoding-vim.git'
+" Bundle 'mattn/zencoding-vim.git'
 Bundle 'vim-scripts/AutoClose--Alves'
 
 " improved perl syntax highlighting
@@ -50,6 +51,12 @@ Bundle 'desert256.vim'
 Bundle 'ciaranm/inkpot'
 Bundle 'newspaper.vim'
 Bundle 'therubymug/vim-pyte'
+
+Bundle 'msanders/cocoa.vim'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'vim-scripts/matchit.zip'
+Bundle 'vim-scripts/ShowMarks'
+Bundle 'vim-scripts/SearchComplete'
 
 filetype plugin indent on
 
@@ -74,7 +81,8 @@ let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 let g:neocomplcache_enable_auto_select = 0
 let g:neocomplcache_temporary_dir = $HOME . '/.vim/tmp/.neocon'
 let g:neocomplcache_snippets_dir  = '~/.vim/snippets'
-imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+" imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 """"""""""""""""""""
 " vcscommand.vim
@@ -183,6 +191,6 @@ call vimfiler#set_execute_file('yml', 'vim')
 """"""""""""""""""""
 " zencoding
 """"""""""""""""""""
-let g:user_zen_settings = {
-    \'indentation' : '    ',
-    \}
+" let g:user_zen_settings = {
+"     \'indentation' : '    ',
+"     \}

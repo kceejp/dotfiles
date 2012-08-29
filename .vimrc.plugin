@@ -55,8 +55,9 @@ Bundle 'therubymug/vim-pyte'
 Bundle 'msanders/cocoa.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-scripts/matchit.zip'
-Bundle 'vim-scripts/ShowMarks'
+" Bundle 'vim-scripts/ShowMarks'
 Bundle 'vim-scripts/SearchComplete'
+Bundle 'Lokaltog/vim-powerline'
 
 filetype plugin indent on
 

@@ -59,6 +59,7 @@ Bundle 'vim-scripts/matchit.zip'
 Bundle 'vim-scripts/SearchComplete'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
+Bundle 'godlygeek/tabular'
 
 filetype plugin indent on
 

@@ -12,3 +12,6 @@ doc/tags
 doc/tags-ja
 
 $ git config --global core.excludesfile ~/.gitignore
+
+$ cd ~/.vim/bundle/vimproc
+$ make -f make_mac.mak

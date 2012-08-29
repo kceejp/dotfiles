@@ -58,6 +58,7 @@ Bundle 'vim-scripts/matchit.zip'
 " Bundle 'vim-scripts/ShowMarks'
 Bundle 'vim-scripts/SearchComplete'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-fugitive'
 
 filetype plugin indent on
 

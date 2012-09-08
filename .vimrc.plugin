@@ -61,6 +61,18 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'godlygeek/tabular'
 
+Bundle 'nathanaelkane/vim-indent-guides.git'
+
+" Syntax
+Bundle 'JavaScript-syntax'
+Bundle 'jQuery'
+Bundle 'nginx.vim'
+Bundle 'tpope/vim-markdown'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'yuroyoro/vim-python'
+
+
+
 filetype plugin indent on
 
 """"""""""""""""""""

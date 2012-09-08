@@ -240,10 +240,6 @@ set guifontwide=Ricty:h10
 " jslint is needed!!
 " npm install jslint -g
 
-let g:syntastic_mode_map = { 'mode': 'active',
-  \ 'active_filetypes':
-['php','css','coffee','html','javascript','json','less','xhtml','ruby','python','yaml'],
-  \ 'passive_filetypes': ['perl'] }
-
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['php','css','coffee','html','javascript','json','less','xhtml','ruby','python','yaml'], 'passive_filetypes': ['perl'] }
 let g:syntastic_enable_signs  = 1
 let g:syntastic_auto_loc_list = 2

@@ -62,6 +62,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'godlygeek/tabular'
 
 Bundle 'nathanaelkane/vim-indent-guides.git'
+Bundle 'scrooloose/syntastic'
+Bundle 'bigfish/vim-js-beautify'
 
 " Syntax
 Bundle 'JavaScript-syntax'
@@ -134,10 +136,11 @@ nmap f [unite]
 " nnoremap <silent> [unite]f :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
 
 " ffでカレントディレクトリ以下の一覧を出す
-nnoremap <silent> [unite]f :<C-u>Unite file_rec/async<CR>
+nnoremap <silent> [unite]f :<C-u>Unite tab file_rec/async<CR>
 " nnoremap <silent> [unite]f :<C-u>Unite -buffer-name=files -prompt=:tabnew\  file file_rec<CR>
 " nnoremap <silent> [unite]b :<C-u>Unite bookmark<CR>
 nnoremap <silent> [unite]r :<C-u>Unite tab bookmark file_mru<CR>
+nnoremap <silent> [unite]t :<C-u>Unite tab<CR>
 nnoremap <silent> [unite]c :<C-u>Unite colorscheme -auto-preview<CR>
 
 autocmd FileType unite call s:unite_my_settings()
@@ -227,3 +230,20 @@ set guifontwide=Ricty:h10
 " let g:Powerline_mode_s = '選択'
 " let g:Powerline_mode_S = '行選択'
 " let g:Powerline_mode_cs = '矩形選択'
+
+
+
+""""""""""""""""""""
+" syntastic
+""""""""""""""""""""
+
+" jslint is needed!!
+" npm install jslint -g
+
+let g:syntastic_mode_map = { 'mode': 'active',
+  \ 'active_filetypes':
+['php','css','coffee','html','javascript','json','less','xhtml','ruby','python','yaml'],
+  \ 'passive_filetypes': ['perl'] }
+
+let g:syntastic_enable_signs  = 1
+let g:syntastic_auto_loc_list = 2

@@ -73,8 +73,6 @@ Bundle 'tpope/vim-markdown'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'yuroyoro/vim-python'
 
-
-
 filetype plugin indent on
 
 """"""""""""""""""""

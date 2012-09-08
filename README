@@ -15,3 +15,6 @@ $ git config --global core.excludesfile ~/.gitignore
 
 $ cd ~/.vim/bundle/vimproc
 $ make -f make_mac.mak
+
+# install all plugins
+$ vim +BundleInstall +qall!

@@ -17,5 +17,5 @@
     co = checkout
     di = diff
 [http]
-	sslcainfo = /etc/pki/tls/certs/ca-bundle.crt
-	sslVerify = false
+    sslcainfo = /etc/pki/tls/certs/ca-bundle.crt
+    sslVerify = false

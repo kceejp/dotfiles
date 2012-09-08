@@ -244,9 +244,10 @@ let g:syntastic_auto_loc_list = 2
 " vim-indent-guides
 """"""""""""""""""""
 
-let g:indent_guides_enable_on_vim_startup  = 1 "vim立ち上げ時に自動的にvim-indent-guidesをオンにする
-let g:indent_guides_auto_colors = 0 "autoにするとよく見えなかったので自動的に色付けするのはストップ
-let g:indent_guides_color_change_percent = 10 "色の変化の幅（？）。パーセンテージらしい
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=darkgray guibg=black ctermbg=1 "インデントの色
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=grey guibg=darkgrey ctermbg=2 "二段階目のインデントの色
-let g:indent_guides_guide_size = 1 "インデントの色付け幅""""""
+let g:indent_guides_enable_on_vim_startup  =  1 "vim立ち上げ時に自動的にvim-indent-guidesをオンにする
+let g:indent_guides_auto_colors            =  0 "autoにするとよく見えなかったので自動的に色付けするのはストップ
+let g:indent_guides_color_change_percent   = 10 "色の変化の幅（？）。パーセンテージらしい
+let g:indent_guides_guide_size             =  1 "インデントの色付け幅
+
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=darkgray guibg=black    ctermbg=1 "インデントの色
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=grey     guibg=darkgrey ctermbg=2 "二段階目のインデントの色

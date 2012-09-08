@@ -148,5 +148,5 @@ if has("autocmd")
     \ endif
 endif
 
-autocmd FileType perl,php,ruby,python set tabstop=4 shiftwidth=4 softtabstop=4
-autocmd BufNewFile,BufRead *.tx,*.css,*.less,*.tmpl,*.html set tabstop=2 shiftwidth=2 softtabstop=2
+" autocmd FileType perl,php,ruby,python set tabstop=4 shiftwidth=4 softtabstop=4
+" autocmd BufNewFile,BufRead *.tx,*.css,*.less,*.tmpl,*.html set tabstop=2 shiftwidth=2 softtabstop=2

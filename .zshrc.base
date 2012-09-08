@@ -1,4 +1,4 @@
-export PATH=$PATH:/usr/sbin:/sbin
+export PATH=/usr/local/bin:$PATH:/usr/sbin:/sbin
 
 autoload -U compinit
 compinit
@@ -98,3 +98,16 @@ setopt print_eight_bit
 # # グループ名に空文字列を指定すると，マッチ対象のタグ名がグループ名に使われる。
 # # したがって，すべての マッチ種別を別々に表示させたいなら以下のようにする
 # zstyle ':completion:*' group-name ''
+
+# tmux があれば tmux を使う。なければ screen にフォールバック
+if [ $SHLVL = 1 ]; then
+    if type tmux > /dev/null 2>&1; then
+        if tmux ls > /dev/null 2>&1; then
+            tmux attach || tmux -f $HOME/.tmux.conf
+        else
+            ssh-agent tmux
+        fi
+    elif type screen > /dev/null 2>&1; then
+        screen -D -RR
+    fi
+fi

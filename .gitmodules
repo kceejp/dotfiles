@@ -5,3 +5,6 @@
 	path = .vim/bundle/vundle
 	url = https://github.com/gmarik/vundle.git
 	ignore = untracked
+[submodule ".tmux/tmux-powerline"]
+	path = .tmux/tmux-powerline
+	url = https://github.com/erikw/tmux-powerline.git

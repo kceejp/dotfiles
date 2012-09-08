@@ -1,7 +1,0 @@
-if tmux ls > /dev/null 2>&1 ; then
-    if [ $SHLVL = 1 ]; then
-      tmux attach || tmux -f $HOME/etc/tmux.conf
-    fi
-else
-  ssh-agent tmux
-fi

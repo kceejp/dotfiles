@@ -84,5 +84,5 @@ if [ -f ~/.zsh/plugin/auto-fu/auto-fu.zsh ]; then
     zstyle ':completion:*' format '%F{green}[%d]%f'
     zstyle ':completion:*' group-name ''
     zstyle ':completion:*' keep-prefix
-    zstyle ':completion:*' completer _oldlist _complete _match _ignored _approximate _list _history
+    zstyle ':completion:*' completer _oldlist _complete _match _ignored _list _history
 fi

@@ -17,14 +17,31 @@ Bundle 'Shougo/vimproc'
 Bundle 'Shougo/vimfiler'
 Bundle 'ujihisa/unite-colorscheme'
 Bundle 'ujihisa/tabpagecolorscheme'
+Bundle 'pasela/unite-webcolorname'
+Bundle 'thinca/vim-unite-history'
+Bundle 'h1mesuke/unite-outline'
+Bundle 't9md/vim-unite-ack'
 
-" Bundle 'vcscommand.vim'
+" Git
+Bundle 'tpope/vim-fugitive'
+Bundle 'int3/vim-extradite'
+Bundle 'gregsexton/gitv'
+
+" Subversion
 Bundle 'vim-scripts/svn-diff.vim'
 "shows diff when commiting changes
 Bundle 'laurentb/vim-svndiff'
+" Bundle 'vcscommand.vim'
 " Bundle 'svndiff'
 " Bundle 'svndiff.vim'
 " Bundle 'svn-diff.vim'
+
+" Twitter
+Bundle 'basyura/TweetVim'
+Bundle 'basyura/twibill.vim'
+Bundle 'basyura/bitly.vim'
+Bundle 'tyru/open-browser.vim'
+Bundle 'mattn/webapi-vim'
 
 Bundle 'yanktmp.vim'
 Bundle 'YankRing.vim'
@@ -47,30 +64,39 @@ Bundle 'errormarker.vim'
 " Bundle 'ywatase/flymake-perl.vim'
 " Bundle 'kana/vim-flymake'
 
+" Colorscheme
 Bundle 'desert256.vim'
 Bundle 'ciaranm/inkpot'
 Bundle 'newspaper.vim'
 Bundle 'therubymug/vim-pyte'
 
+" Objective-C
 Bundle 'msanders/cocoa.vim'
+
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-scripts/matchit.zip'
 " Bundle 'vim-scripts/ShowMarks'
 Bundle 'vim-scripts/SearchComplete'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'tpope/vim-fugitive'
 Bundle 'godlygeek/tabular'
 
 Bundle 'nathanaelkane/vim-indent-guides.git'
 Bundle 'scrooloose/syntastic'
 Bundle 'bigfish/vim-js-beautify'
 
-" Syntax
+" JavaScript
+Bundle 'teramako/jscomplete-vim'
 Bundle 'JavaScript-syntax'
 Bundle 'jQuery'
-Bundle 'nginx.vim'
-Bundle 'tpope/vim-markdown'
 Bundle 'kchmck/vim-coffee-script'
+
+" nginx
+Bundle 'nginx.vim'
+
+" markdown
+Bundle 'tpope/vim-markdown'
+
+" python
 Bundle 'yuroyoro/vim-python'
 
 filetype plugin indent on
@@ -121,25 +147,27 @@ map <silent> sP :call YanktmpPaste_P()<CR>
 " unite.vim
 " http://github.com/Shougo/unite.vim/blob/master/doc/unite.jax
 """"""""""""""""""""
-let g:unite_data_directory              = $HOME . '/.vim/tmp/.unite' " absolute path!
+let g:unite_data_directory                 = $HOME . '/.vim/tmp/.unite' " absolute path!
 let g:unite_source_file_rec_ignore_pattern = '(.git|.svn)'
 let g:unite_source_file_mru_time_format    = ''
 let g:unite_source_file_mru_limit          = 1000
+let g:unite_source_history_yank_enable     = 1 "history/yankの有効化
 
 " The prefix key.
 nnoremap [unite] <Nop>
 nmap f [unite]
 
-" nnoremap [unite]u :<C-u>Unite<Space>
-" nnoremap <silent> [unite]f :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
-
-" ffでカレントディレクトリ以下の一覧を出す
-nnoremap <silent> [unite]f :<C-u>Unite tab file_rec/async<CR>
-" nnoremap <silent> [unite]f :<C-u>Unite -buffer-name=files -prompt=:tabnew\  file file_rec<CR>
-" nnoremap <silent> [unite]b :<C-u>Unite bookmark<CR>
-nnoremap <silent> [unite]r :<C-u>Unite tab bookmark file_mru<CR>
-nnoremap <silent> [unite]t :<C-u>Unite tab<CR>
-nnoremap <silent> [unite]c :<C-u>Unite colorscheme -auto-preview<CR>
+nnoremap <silent> [unite]f  :<C-u>Unite tab file_rec/async<CR>
+nnoremap <silent> [unite]r  :<C-u>Unite tab bookmark file_mru<CR>
+nnoremap <silent> [unite]t  :<C-u>Unite tab<CR>
+nnoremap <silent> [unite]c  :<C-u>Unite colorscheme -auto-preview<CR>
+nnoremap <silent> [unite]cc :<C-u>Unite webcolorname<CR>
+nnoremap <silent> [unite]tw :<C-u>Unite tweetvim<CR>
+nnoremap <silent> [unite]o  :<C-u>Unite outline<CR>
+nnoremap <silent> [unite]y  :<C-u>Unite history/yank<CR>
+nnoremap <silent> [unite]h  :<C-u>Unite history/command<CR>
+nnoremap <silent> [unite]s  :<C-u>Unite history/search<CR>
+nnoremap <silent> [unite]a  :<C-u>Unite ack<CR>
 
 autocmd FileType unite call s:unite_my_settings()
 
@@ -249,5 +277,14 @@ let g:indent_guides_auto_colors            =  0 "autoにするとよく見えな
 let g:indent_guides_color_change_percent   = 10 "色の変化の幅（？）。パーセンテージらしい
 let g:indent_guides_guide_size             =  1 "インデントの色付け幅
 
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=darkgray guibg=black    ctermbg=1 "インデントの色
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=grey     guibg=darkgrey ctermbg=2 "二段階目のインデントの色
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=darkgray guibg=black    "インデントの色
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=grey     guibg=darkgrey "二段階目のインデントの色
+
+""""""""""""""""""""
+" tweetvim
+""""""""""""""""""""
+
+let g:tweetvim_tweet_per_page = 60
+nnoremap <Leader>ts :<C-u>TweetVimSay<CR>
+nnoremap <silent><Leader>tw :<C-u>tabnew <Bar> TweetVimHomeTimeline<CR>
+nnoremap <silent><Leader>tm :<C-u>tabnew <Bar> TweetVimMentions<CR>

@@ -1,10 +1,5 @@
 [user]
-    name  = KCeejp
-    email = stomachache4988@gmail.com
 [core]
-    excludesfile = /home/elohssa/.gitignore
-    pager        = cat
-    editor       = vi
 [color]
     # colorの設定(以下のコマンドは自動で色つける)
     status      = auto

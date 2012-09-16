@@ -20,6 +20,13 @@ if filereadable($HOME."/.vimrc.keymap")
 endif
 
 """"""""""""""""""""
+" プラグイン
+""""""""""""""""""""
+if filereadable($HOME."/.vimrc.plugin")
+  source $HOME/.vimrc.plugin
+endif
+
+""""""""""""""""""""
 " タブ
 """"""""""""""""""""
 if filereadable($HOME."/.vimrc.tab")
@@ -52,13 +59,6 @@ endif
 """"""""""""""""""""
 if filereadable($HOME."/.vimrc.mouse")
   source $HOME/.vimrc.mouse
-endif
-
-""""""""""""""""""""
-" プラグイン
-""""""""""""""""""""
-if filereadable($HOME."/.vimrc.plugin")
-  source $HOME/.vimrc.plugin
 endif
 
 """"""""""""""""""""

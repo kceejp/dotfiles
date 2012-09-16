@@ -1,2 +1,2 @@
 autocmd BufNewFile,BufRead *.tt,*.tmpl set filetype=html
-autocmd BufNewFile,BufRead *.t set filetype=perl
+autocmd BufNewFile,BufRead *.t         set filetype=perl

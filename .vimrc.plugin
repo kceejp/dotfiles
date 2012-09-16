@@ -16,7 +16,7 @@ Bundle 'Shougo/vimshell'
 Bundle 'Shougo/vimproc'
 Bundle 'Shougo/vimfiler'
 Bundle 'ujihisa/unite-colorscheme'
-Bundle 'ujihisa/tabpagecolorscheme'
+" Bundle 'ujihisa/tabpagecolorscheme'
 Bundle 'pasela/unite-webcolorname'
 Bundle 'thinca/vim-unite-history'
 Bundle 'h1mesuke/unite-outline'
@@ -45,14 +45,16 @@ Bundle 'mattn/webapi-vim'
 
 Bundle 'yanktmp.vim'
 Bundle 'YankRing.vim'
+Bundle 'sjl/gundo.vim'
+Bundle 'mbadran/headlights'
 
 " template
-Bundle 'qtmplsel.vim'
+" Bundle 'qtmplsel.vim'
 
 Bundle 'Smooth-Scroll'
 " Bundle 'simplefold'
 " Bundle 'smartchr'
-Bundle 'surround.vim'
+Bundle 'tpope/vim-surround'
 " Bundle 'mattn/zencoding-vim.git'
 Bundle 'vim-scripts/AutoClose--Alves'
 
@@ -65,10 +67,14 @@ Bundle 'errormarker.vim'
 " Bundle 'kana/vim-flymake'
 
 " Colorscheme
+Bundle 'vim-scripts/Color-Sampler-Pack'
 Bundle 'desert256.vim'
 Bundle 'ciaranm/inkpot'
 Bundle 'newspaper.vim'
 Bundle 'therubymug/vim-pyte'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tomasr/molokai'
+Bundle 'wombat256.vim'
 
 " Objective-C
 Bundle 'msanders/cocoa.vim'
@@ -120,8 +126,8 @@ filetype plugin indent on
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 " 1番目の候補を自動選択
 let g:neocomplcache_enable_auto_select = 0
-let g:neocomplcache_temporary_dir = $HOME . '/.vim/tmp/.neocon'
-let g:neocomplcache_snippets_dir  = '~/.vim/snippets'
+let g:neocomplcache_temporary_dir      = $HOME . '/.vim/tmp/.neocon'
+let g:neocomplcache_snippets_dir       = '~/.vim/snippets'
 " imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
@@ -217,20 +223,21 @@ let g:yankring_history_file = ".vim/tmp/yankring_history" " do not specify $HOME
 """"""""""""""""""""
 " vimfiler
 """"""""""""""""""""
-
 map <leader>vf :VimFilerTab<CR>
 
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_edit_action         = 'tabopen'
 
-call vimfiler#set_execute_file('pl', 'vim')
-call vimfiler#set_execute_file('pm', 'vim')
-call vimfiler#set_execute_file('t', 'vim')
-call vimfiler#set_execute_file('css', 'vim')
-call vimfiler#set_execute_file('js', 'vim')
-call vimfiler#set_execute_file('vim', 'vim')
+call vimfiler#set_execute_file('c',    'vim')
+call vimfiler#set_execute_file('h',    'vim')
+call vimfiler#set_execute_file('md',   'vim')
+call vimfiler#set_execute_file('pm',   'vim')
+call vimfiler#set_execute_file('t',    'vim')
+call vimfiler#set_execute_file('css',  'vim')
+call vimfiler#set_execute_file('js',   'vim')
+call vimfiler#set_execute_file('vim',  'vim')
 call vimfiler#set_execute_file('yaml', 'vim')
-call vimfiler#set_execute_file('yml', 'vim')
+call vimfiler#set_execute_file('yml',  'vim')
 
 """"""""""""""""""""
 " zencoding
@@ -285,6 +292,11 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=grey     guibg=darkg
 """"""""""""""""""""
 
 let g:tweetvim_tweet_per_page = 60
-nnoremap <Leader>ts :<C-u>TweetVimSay<CR>
-nnoremap <silent><Leader>tw :<C-u>tabnew <Bar> TweetVimHomeTimeline<CR>
-nnoremap <silent><Leader>tm :<C-u>tabnew <Bar> TweetVimMentions<CR>
+nnoremap <silent><Leader>ts :<C-u>TweetVimSay<CR>
+nnoremap <silent><Leader>tw :<C-u>split <Bar> TweetVimHomeTimeline<CR>
+nnoremap <silent><Leader>tm :<C-u>split <Bar> TweetVimMentions<CR>
+
+""""""""""""""""""""
+" gundo
+""""""""""""""""""""
+nnoremap U :GundoToggle<CR>

@@ -18,6 +18,13 @@ bindkey "[3~" delete-char
 bindkey "^Q" push-line
 bindkey -a 'q' push-line
 
+show_buffer_stack() {
+  POSTDISPLAY="
+  stack: $LBUFFER"
+    zle push-line-or-edit
+}
+zle -N show_buffer_stack
+
 #------------------------------
 # 設定
 #------------------------------

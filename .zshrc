@@ -1,88 +1,69 @@
-#------------------------------
-# 基本設定
-#------------------------------
-[ -f ~/.zshrc.base ] && source ~/.zshrc.base
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
 
-#------------------------------
-# 色設定
-#------------------------------
-[ -f ~/.zshrc.color ] && source ~/.zshrc.color
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="af-magic"
 
-#------------------------------
-# プロンプト
-#------------------------------
-[ -f ~/.zshrc.prompt ] && source ~/.zshrc.prompt
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#------------------------------
-# エイリアス設定読み込み
-#------------------------------
-[ -f ~/.zshrc.alias ] && source ~/.zshrc.alias
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
 
-#------------------------------
-# screen関連設定読み込み
-#------------------------------
-[ -f ~/.zshrc.screen ] && source ~/.zshrc.screen
+# Comment this out to disable bi-weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
 
-#------------------------------
-# zshをvimモードで
-#------------------------------
-[ -f ~/.zshrc.vi ] && source ~/.zshrc.vi
+# Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
+# export UPDATE_ZSH_DAYS=13
 
-#------------------------------
-# 履歴設定
-#------------------------------
-[ -f ~/.zshrc.history ] && source ~/.zshrc.history
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
 
-#------------------------------
-# ローカル設定読み込み
-#------------------------------
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-#------------------------------
-# 文字コード別の設定読み込み
-#------------------------------
-case $LANG in
-    "ja_JP.UTF-8")
-        #------------------------------
-        # UTF-8用の設定読み込み
-        #------------------------------
-        [ -f ~/.zshrc.utf8 ] && source ~/.zshrc.utf8
-    ;;
-    *)
-        #------------------------------
-        # EUC-JP用の設定読み込み
-        #------------------------------
-        [ -f ~/.zshrc.eucjp ] && source ~/.zshrc.eucjp
-    ;;
-esac
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+COMPLETION_WAITING_DOTS="true"
 
-#------------------------------
-# source git-completion.bash
-#------------------------------
-[ -f ~/.zsh/git-completion.bash ] && source ~/.zsh/git-completion.bash
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(
+    git
+    git-remote-branch
 
-#------------------------------
-# source auto-fu.zsh
-#------------------------------
-if [ -f ~/.zsh/plugin/auto-fu/auto-fu.zsh ]; then
-    # precompiled source
-    function () {
-        local A
-        A=~/.zsh/plugin/auto-fu/auto-fu.zsh
-        [[ -e "${A:r}.zwc" ]] && [[ "$A" -ot "${A:r}.zwc" ]] ||
-            zsh -c "source $A; auto-fu-zcompile $A ${A:h}" >/dev/null 2>&1
-    }
-    source ~/.zsh/plugin/auto-fu/auto-fu; auto-fu-install
+    svn
 
-    # initialization and options
-    function zle-line-init () { auto-fu-init }; zle -N zle-line-init
+    brew
+    yum
 
-    # do not display "-azfu-"
-    zstyle ':auto-fu:var' postdisplay ''
+    ruby
+    rails
+    gem
 
-    zstyle ':completion:*' menu select
-    zstyle ':completion:*' format '%F{green}[%d]%f'
-    zstyle ':completion:*' group-name ''
-    zstyle ':completion:*' keep-prefix
-    zstyle ':completion:*' completer _oldlist _complete _match _ignored _list _history
-fi
+    perl
+    cpanm
+
+    python
+    pip
+
+    osx
+    rsync
+    screen
+    coffee
+    ssh-agent
+    supervisor
+
+    zsh-syntax-highlighting
+    history-substring-search
+    )
+
+source $ZSH/oh-my-zsh.sh
+
+# Customize to your needs...
+source $HOME/.zshrc.orig

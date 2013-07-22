@@ -10,7 +10,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neocomplcache-snippets-complete'
+Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimshell'
 Bundle 'Shougo/vimproc'

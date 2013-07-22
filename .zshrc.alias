@@ -1,11 +1,16 @@
-#alias vi="vim -p"
+which vim > /dev/null 2>&1
+if [ $? -eq 0 ]; then
+    alias vi="vim -p"
+    alias -g V="| vim -R -"
+fi
+
 alias su="su -p"
 alias df="df -h"
 alias mkdir="mkdir -p"
 alias mv="mv -v"
 alias cp="cp -v"
 alias rm="rm -iv"
-#alias ls="ls -FGvh"
+alias ls="ls -FGh"
 alias la="ls -la"
 alias ll="ls -l"
 alias ack="ack -a"
@@ -18,4 +23,3 @@ alias wget="wget --content-disposition"
 alias -g L="| less"
 alias -g M="| more"
 alias -g G="| grep"
-alias -g V="| vim -R -"

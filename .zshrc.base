@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:$PATH:/usr/sbin:/sbin
+export PATH=/usr/local/bin:$PATH:/usr/sbin:/sbin:$HOME/local/bin
 
 autoload -U compinit
 compinit

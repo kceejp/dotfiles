@@ -1,13 +1,8 @@
-export PATH=/usr/local/bin:$PATH:/usr/sbin:/sbin:$HOME/local/bin
-
 autoload -U compinit
 compinit
 
 # autoload predict-on; predict-on
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
-
-# http://d.hatena.ne.jp/littlebuddha/20090216/1234785251
-export MAILCHECK=0
 
 #------------------------------
 # キー設定

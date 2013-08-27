@@ -1,7 +1,9 @@
 Cloning Repository
 
+    $ cd ~
     $ git clone git@github.com:KCeejp/dotfiles.git
-    $ git submodule update --init
+    $ cd ~/dotfiles
+    $ sh ./script/sync_dotfiles.sh
 
 Adding Submodules
 
@@ -15,12 +17,3 @@ ignoring untracked content of submodule
     doc/tags-ja
 
     $ git config --global core.excludesfile ~/.gitignore
-
-make vimproc
-
-    $ cd ~/.vim/bundle/vimproc
-    $ make -f make_mac.mak
-
-install all plugins
-
-    $ vim +BundleInstall +qall!

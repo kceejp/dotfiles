@@ -1,9 +1,17 @@
-Cloning Repository
+Install homesick
 
-    $ cd ~
-    $ git clone git@github.com:KCeejp/dotfiles.git
-    $ cd ~/dotfiles
-    $ sh ./script/sync_dotfiles.sh
+    $ gem install homesick
+
+rehash
+
+    $ rbenv rehash
+
+clone homesick
+
+    $ homesick clone KCeejp/dotfiles
+
+Create symlinks
+    $ cd ~ && homesick symlink dotfiles
 
 Adding Submodules
 

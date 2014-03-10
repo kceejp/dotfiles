@@ -1,12 +1,12 @@
 [submodule ".zsh/plugin/auto-fu"]
-	path = .zsh/plugin/auto-fu
+    path = .zsh/plugin/auto-fu
     url = git@github.com:hchbaw/auto-fu.zsh.git
 [submodule ".tmux/tmux-powerline"]
-	path = .tmux/tmux-powerline
+    path = .tmux/tmux-powerline
     url = git@github.com:erikw/tmux-powerline.git
 [submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
-	url = git://github.com/robbyrussell/oh-my-zsh.git
+    path = .oh-my-zsh
+    url = git@github.com:robbyrussell/oh-my-zsh.git
 [submodule ".vim/vundle"]
-	path = .vim/vundle
-	url = https://github.com/gmarik/vundle.git
+    path = .vim/vundle
+    url = git@github.com:gmarik/vundle.git

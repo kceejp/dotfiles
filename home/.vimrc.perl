@@ -12,7 +12,7 @@ map <leader>ptv <Esc>:'<,'>! perltidy<CR>
 autocmd FileType perl  :map <UP>     <ESC>:!/usr/bin/perlcritic %<CR>|cwin
 autocmd FileType perl  :map <DOWN>   <ESC>:!/usr/bin/perl -Ilib %<CR>|cwin
 
-autocmd FileType perl set makeprg=$HOME/.vim/bin/vimparse.pl\ -c\ %\ $*
+autocmd FileType perl set makeprg=$DOTVIM_DIR/bin/vimparse.pl\ -c\ %\ $*
 autocmd FileType perl set errorformat=%f:%l:%m
 autocmd FileType perl set shellpipe=2>&1\ >
 autocmd BufWritePost,FileWritePost *.pm,*.pl,*.t silent make %

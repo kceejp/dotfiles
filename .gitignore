@@ -3,7 +3,7 @@
 # さらにdotfileを無視
 # .*
 # .zshrc.localや.vimrc.localを無視
-/.*.local
+/home/.*.local
 
 # 無視したくないファイルを![filename]で指定
 
@@ -12,11 +12,11 @@
 *.sw[po]
 
 # /.vim以下
-/.vim/.netrwhist
-/.vim/tmp/.viminfo
-/.vim/tmp/backup/*
-/.vim/tmp/swap/*
-/.vim/tmp/.unite/*
-/.vim/tmp/.neocon/*
-/.vim/tmp/yankring_history_v2.txt
-/.vim/bundle/*
+/home/.vim/.netrwhist
+/home/.vim/tmp/.viminfo
+/home/.vim/tmp/backup/*
+/home/.vim/tmp/swap/*
+/home/.vim/tmp/.unite/*
+/home/.vim/tmp/.neocon/*
+/home/.vim/tmp/yankring_history_v2.txt
+/home/.vim/bundle/*

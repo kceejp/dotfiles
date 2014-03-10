@@ -1,2 +1,2 @@
 " recognize_charcode.vim
-source ~/.vim/plugin/recognize_charcode.vim
+source $DOTVIM_DIR/plugin/recognize_charcode.vim

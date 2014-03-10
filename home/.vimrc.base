@@ -20,11 +20,11 @@ set nocompatible
 filetype plugin on
 
 " swapファイル
-set directory=$HOME/.vim/tmp/swap
+set directory=$DOTVIM_DIR/tmp/swap
 " backupファイル
-set backupdir=$HOME/.vim/tmp/backup
+set backupdir=$DOTVIM_DIR/tmp/backup
 " viminfoファイル
-set viminfo='20,\"50,n$HOME/.vim/tmp/.viminfo
+set viminfo='20,\"50,n$DOTVIM_DIR/tmp/.viminfo
 
 " 自動インデント
 set autoindent

@@ -1,18 +1,15 @@
 """"""""""""""""""""
-" vundle.vim
+" neobundle.vim
 """"""""""""""""""""
-set nocompatible
-filetype off
-
-" git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim
-    call neobundle#rc(expand('~/.vim/bundle'))
+    set nocompatible               " Be iMproved
+
+    " Required:
+    set runtimepath+=$DOTVIM_DIR/bundle/neobundle.vim/
 endif
 
-" set rtp+=~/.vim/vundle/
-" call vundle#rc()
-" Bundle 'gmarik/vundle'
+" Required:
+call neobundle#rc(expand($DOTVIM_DIR . "/bundle/"))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -173,7 +170,7 @@ NeoBundleCheck
 " errormarker.vim
 " http://subtech.g.hatena.ne.jp/secondlife/200807
 """"""""""""""""""""
-" set makeprg=$HOME/.vim/bin/vimparse.pl\ -c\ %\ $*
+" set makeprg=$DOTVIM_DIR/bin/vimparse.pl\ -c\ %\ $*
 " set errorformat=%f:%l:%m
 " set shellpipe=2>&1\ >
 " 

@@ -1,3 +1,5 @@
+# Install dotfiles
+
 Install homesick
 
     $ gem install homesick
@@ -25,3 +27,18 @@ ignoring untracked content of submodule
     doc/tags-ja
 
     $ git config --global core.excludesfile ~/.gitignore
+
+# Install apps (on Mac)
+
+Install Homebrew
+    $ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+
+Update brew
+    $ brew update
+
+Install apps
+    $ brew bundle
+
+# Install Vim Plugins
+
+    :BundleInstall

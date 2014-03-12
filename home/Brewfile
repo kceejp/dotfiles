@@ -1,0 +1,85 @@
+# Make sure using latest Homebrew
+update
+
+# Update already-installed formula (takes too much time, I will do it manually later)
+# upgrade
+
+# Add Repository
+tap homebrew/versions || true
+tap phinze/homebrew-cask || true
+tap homebrew/binary || true
+
+# Packages - Base
+install zsh
+install tmux
+install ack
+install nkf
+install wget
+install tree
+
+# Packages - git
+install git
+install git-flow
+install tig
+
+# Packages - Objective-C
+install mogenerator
+
+# Packages - WebDev
+install rbenv
+install node
+install npm
+
+# Packages - Editor
+install vim
+
+# Package - Homebrew-cask
+install brew-cask
+
+# .dmg - Browser
+cask install google-chrome
+
+# .dmg - Music
+cask install google-music
+cask install vlc
+cask install spotify
+
+# .dmg - Messaging
+cask install slack
+cask install skype
+
+# .dmg - E-mail
+cask install sparrow
+
+# .dmg - Twitter
+cask install yorufukurou
+
+# .dmg - Password Manager
+cask install dashlane
+
+# .dmg - Productivity
+cask install alfred
+cask install evernote
+cask install dropbox
+cask install fantastical
+cask install mou
+
+# .dmg - WebDev
+cask install iterm2
+cask install cyberduck
+cask install vagrant
+cask install sketch
+cask install sketchup
+
+# .dmg - Objective-C
+cask install reveal
+cask install testflight
+cask install crashlytics
+cask install dash
+cask install appcode
+
+# .dmg - Utils
+cask install magican
+
+# Remove outdated versions
+cleanup

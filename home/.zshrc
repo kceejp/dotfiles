@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOMESICK_DOTFILES_HOME/.oh-my-zsh
+ZSH=$HOMESICK_DOTFILES_HOME/.zsh/oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/

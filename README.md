@@ -1,3 +1,7 @@
+# Install command line developer tools
+
+    $ xcode-select --install
+
 # Install dotfiles
 
 Install homesick

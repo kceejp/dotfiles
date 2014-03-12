@@ -27,6 +27,7 @@ install mogenerator
 
 # Packages - WebDev
 install rbenv
+install ruby-build
 install node
 install npm
 
@@ -50,6 +51,7 @@ cask install skype
 
 # .dmg - E-mail
 cask install sparrow
+cask install airmail
 
 # .dmg - Twitter
 cask install yorufukurou
@@ -64,12 +66,17 @@ cask install dropbox
 cask install fantastical
 cask install mou
 
-# .dmg - WebDev
+# .dmg - Terminal
+cask install totalterminal
 cask install iterm2
+
+# .dmg - WebDev
 cask install cyberduck
+cask install virtualbox
 cask install vagrant
 cask install sketch
-cask install sketchup
+cask install skitch
+cask install kobito
 
 # .dmg - Objective-C
 cask install reveal
@@ -80,6 +87,15 @@ cask install appcode
 
 # .dmg - Utils
 cask install magican
+cask install keyremap4macbook
+cask install bettertouchtool
+cask install google-japanese-ime
+cask install cheatsheet
+cask install appcleaner
+cask install bartender
+cask install flux
+cask install vmware-fusion
+cask install kindle
 
 # Remove outdated versions
 cleanup

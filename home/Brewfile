@@ -83,7 +83,7 @@ cask install cloud
 
 # .dmg - Terminal
 cask install shuttle
-cask install totalterminal --force
+cask install totalterminal
 cask install iterm2
 
 # .dmg - WebDev
@@ -120,11 +120,12 @@ cask install onyx
 cask install monolingual
 cask install keyremap4macbook
 cask install bettertouchtool
-cask install google-japanese-ime --force
+cask install google-japanese-ime
 cask install bartender
 cask install cheatsheet
 cask install appcleaner
 cask install flux
+cask install hazel
 cask install kindle
 cask install teamviewer
 cask install tunnelbear
@@ -139,6 +140,8 @@ cask install shiori
 cask install handbrake
 cask install fairmount
 cask install ripit
+cask install totalfinder
+# cask install xtrafinder
 
 # Remove outdated versions
 cleanup

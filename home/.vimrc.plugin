@@ -147,7 +147,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'bigfish/vim-js-beautify'
 
 " JavaScript
-NeoBundle 'teramako/jscomplete-vim'
+" NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'JavaScript-syntax'
 NeoBundle 'jQuery'
 NeoBundle 'kchmck/vim-coffee-script'

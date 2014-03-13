@@ -39,11 +39,20 @@ install brew-cask
 
 # .dmg - Browser
 cask install google-chrome
+cask install firefox
+cask install flash
 
 # .dmg - Music
 cask install google-music
 cask install vlc
+cask install vlcstreamer
+cask install mplayer-osx-extended
+cask install mplayerx
 cask install spotify
+cask install flip4mac
+cask install perian
+cask install xbmc
+cask install makemkv
 
 # .dmg - Messaging
 cask install slack
@@ -61,22 +70,41 @@ cask install dashlane
 
 # .dmg - Productivity
 cask install alfred
+cask install fantastical
+cask install Things
+
+# .dmg - Cloud Storage
 cask install evernote
 cask install dropbox
-cask install fantastical
-cask install mou
+cask install google-drive
+cask install bitcasa
+cask install insync
+cask install cloud
 
 # .dmg - Terminal
-cask install totalterminal
+cask install shuttle
+cask install totalterminal --force
 cask install iterm2
 
 # .dmg - WebDev
 cask install cyberduck
+cask install less
+cask install github
+
+# .dmg - Editor
+cask install brackets
+cask install kobito
+cask install mou
+
+# .dmg - Env
+cask install vmware-fusion
 cask install virtualbox
 cask install vagrant
+
+# .dmg - Image
 cask install sketch
+cask install inkscape
 cask install skitch
-cask install kobito
 
 # .dmg - Objective-C
 cask install reveal
@@ -84,18 +112,33 @@ cask install testflight
 cask install crashlytics
 cask install dash
 cask install appcode
+cask install simpholders
 
 # .dmg - Utils
 cask install magican
+cask install onyx
+cask install monolingual
 cask install keyremap4macbook
 cask install bettertouchtool
-cask install google-japanese-ime
+cask install google-japanese-ime --force
+cask install bartender
 cask install cheatsheet
 cask install appcleaner
-cask install bartender
 cask install flux
-cask install vmware-fusion
 cask install kindle
+cask install teamviewer
+cask install tunnelbear
+cask install simplecap
+cask install xmind
+cask install adobe-air
+cask install adobe-creative-cloud
+cask install adobe-reader
+cask install tinyumbrella
+cask install delibar
+cask install shiori
+cask install handbrake
+cask install fairmount
+cask install ripit
 
 # Remove outdated versions
 cleanup

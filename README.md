@@ -1,15 +1,15 @@
-# Setting up dotfiles
-=====================
+Setting up dotfiles
+===================
 
-# Install command line developer tools
---------------------------------------
+Install command line developer tools
+------------------------------------
 
 ```bash
 xcode-select --install
 ```
 
-# Install dotfiles
-------------------
+Install dotfiles
+----------------
 
 Install homesick
 
@@ -35,8 +35,8 @@ Create symlinks
 cd ~ && homesick symlink dotfiles
 ```
 
-# Install apps (on Mac)
------------------------
+Install apps (on Mac)
+---------------------
 
 Install Homebrew
 
@@ -56,8 +56,8 @@ Install apps
 brew bundle
 ```
 
-# Install Vim Plugins
----------------------
+Install Vim Plugins
+-------------------
 
 ```bash
 vi +NeoBundleInstall +qall!

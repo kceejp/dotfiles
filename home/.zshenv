@@ -1,24 +1,24 @@
-# PATH
+### PATH
 export PATH=/usr/local/bin:$PATH:/usr/sbin:/sbin:$HOME/local/bin
 
-# environment
+### environment
 export LANG=ja_JP.UTF-8
 
-# http://d.hatena.ne.jp/littlebuddha/20090216/1234785251
+### http://d.hatena.ne.jp/littlebuddha/20090216/1234785251
 export MAILCHECK=0
 
-# homesick
+### homesick
 export HOMESICK_DOTFILES="$HOME/.homesick/repos/dotfiles"
 export HOMESICK_DOTFILES_HOME="$HOME/.homesick/repos/dotfiles/home"
 
-# vim
+### vim
 export DOTVIM_DIR="$HOMESICK_DOTFILES_HOME/.vim"
 
-# rbenv
+### rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# npm
+### npm
 export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH=$HOME/.npm/bin:$PATH
 export NODE_PATH=$HOME/.npm/libraries:$NODE_PATH
@@ -27,5 +27,8 @@ export PATH="$(npm bin):$PATH"
 
 export PATH="/usr/bin:$PATH"
 
-# ZSH
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+### ZSH
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters

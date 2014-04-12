@@ -36,11 +36,29 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
     git
     git-remote-branch
+    git-flow
+
+    pod
+    xcode
+
+    rbenv
+    rsync
+    sudo
 
     svn
 
+    supervisor
+
     brew
+    brew-cask
     yum
+
+    aws
+    heroku
+
+    bower
+    gradle
+    bundler
 
     ruby
     rails
@@ -60,7 +78,19 @@ plugins=(
     supervisor
 
     zsh-syntax-highlighting
+    history
     history-substring-search
+    last-working-dir
+    z
+    dirhistory
+    dircycle
+    command-not-found
+    zsh_reload
+
+    docker
+    vagrant
+
+    tmux
     )
 
 source $ZSH/oh-my-zsh.sh

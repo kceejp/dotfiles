@@ -86,3 +86,6 @@ esac
 #    zstyle ':completion:*' keep-prefix
 #    zstyle ':completion:*' completer _oldlist _complete _match _ignored _list _history
 #fi
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fpath=(/usr/local/share/zsh-completions $fpath)

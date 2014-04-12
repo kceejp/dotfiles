@@ -11,6 +11,8 @@ tap homebrew/binary || true
 
 # Packages - Base
 install zsh
+install zsh-completions
+install zsh-syntax-highlighting
 install tmux
 install ack
 install nkf
@@ -33,6 +35,10 @@ install npm
 
 # Packages - Editor
 install vim
+
+# Packages - Jenkins
+install jenkins
+install mono
 
 # Package - Homebrew-cask
 install brew-cask
@@ -90,6 +96,7 @@ cask install iterm2
 cask install cyberduck
 cask install less
 cask install github
+cask install heroku-toolbelt
 
 # .dmg - Editor
 cask install brackets
@@ -102,7 +109,7 @@ cask install virtualbox
 cask install vagrant
 
 # .dmg - Image
-cask install sketch
+# cask install sketch
 cask install inkscape
 cask install skitch
 
@@ -141,7 +148,10 @@ cask install handbrake
 cask install fairmount
 cask install ripit
 cask install totalfinder
+cask install stackroom
+cask install android-studio
 # cask install xtrafinder
+# cask install obsidian-menu-bar-mountain-lion
 
 # Remove outdated versions
 cleanup

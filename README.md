@@ -1,51 +1,65 @@
-# Install command line developer tools
+# Setting up dotfiles
+=====================
 
-    $ xcode-select --install
+# Install command line developer tools
+--------------------------------------
+
+```bash
+xcode-select --install
+```
 
 # Install dotfiles
+------------------
 
 Install homesick
 
-    $ gem install homesick
+```bash
+gem install homesick
+```
 
 rehash
 
-    $ rbenv rehash
+```bash
+rbenv rehash
+```
 
 clone homesick
 
-    $ homesick clone KCeejp/dotfiles
+```bash
+homesick clone KCeejp/dotfiles
+```
 
 Create symlinks
-    $ cd ~ && homesick symlink dotfiles
 
-Adding Submodules
-
-    $ git submodule add <repo> <path>
-
-ignoring untracked content of submodule
-.gitignore should contain something like:
-
-    doc/
-    doc/tags
-    doc/tags-ja
-
-    $ git config --global core.excludesfile ~/.gitignore
+```bash
+cd ~ && homesick symlink dotfiles
+```
 
 # Install apps (on Mac)
+-----------------------
 
 Install Homebrew
 
-    $ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+```bash
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+```
 
 Update brew
 
-    $ brew update
+```bash
+brew update
+```
 
 Install apps
 
-    $ brew bundle
+```bash
+brew bundle
+```
 
 # Install Vim Plugins
+---------------------
 
-    :BundleInstall
+```bash
+vi +NeoBundleInstall +qall!
+```
+

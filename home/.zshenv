@@ -17,3 +17,15 @@ export DOTVIM_DIR="$HOMESICK_DOTFILES_HOME/.vim"
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# npm
+export PATH="/usr/local/share/npm/bin:$PATH"
+export PATH=$HOME/.npm/bin:$PATH
+export NODE_PATH=$HOME/.npm/libraries:$NODE_PATH
+export MANPATH=$HOME/.npm/man:$MANPATH
+export PATH="$(npm bin):$PATH"
+
+export PATH="/usr/bin:$PATH"
+
+# ZSH
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters

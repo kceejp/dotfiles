@@ -1,0 +1,161 @@
+tap caskroom/cask
+install brew-cask
+
+# .dmg - Browser
+cask install google-chrome 2> /dev/null
+cask install firefox 2> /dev/null
+cask install flash 2> /dev/null
+
+# .dmg - Music
+# cask install google-music 2> /dev/null
+cask install radiant-player 2> /dev/null
+cask install vlc 2> /dev/null
+cask install vlcstreamer 2> /dev/null
+cask install mplayer-osx-extended 2> /dev/null
+cask install mplayerx 2> /dev/null
+cask install spotify 2> /dev/null
+cask install flip4mac 2> /dev/null
+cask install perian 2> /dev/null
+cask install xbmc 2> /dev/null
+cask install makemkv 2> /dev/null
+cask install kensington-trackball-works 2> /dev/null
+
+# .dmg - Messaging
+cask install slack 2> /dev/null
+cask install skype 2> /dev/null
+cask install google-hangouts 2> /dev/null
+
+# .dmg - E-mail
+# cask install sparrow 2> /dev/null // USE Mac App Store ver.
+cask install airmail 2> /dev/null
+
+# .dmg - Twitter
+cask install yorufukurou 2> /dev/null
+
+# .dmg - Password Manager
+cask install dashlane 2> /dev/null
+cask install authy-bluetooth 2> /dev/null
+
+# .dmg - Productivity
+cask install alfred 2> /dev/null
+
+# .dmg - Calender
+cask install fantastical 2> /dev/null
+cask install day-o 2> /dev/null
+
+# .dmg - ToDo
+cask install things 2> /dev/null
+
+# .dmg - Cloud Storage
+cask install evernote 2> /dev/null
+cask install dropbox 2> /dev/null
+cask install google-drive 2> /dev/null
+cask install bitcasa 2> /dev/null
+cask install insync 2> /dev/null
+cask install cloud 2> /dev/null
+
+# .dmg - Terminal
+cask install shuttle 2> /dev/null
+cask install totalterminal 2> /dev/null
+cask install iterm2 2> /dev/null
+
+# .dmg - WebDev
+cask install cyberduck 2> /dev/null
+cask install less 2> /dev/null
+cask install github 2> /dev/null
+cask install heroku-toolbelt 2> /dev/null
+cask install atom 2> /dev/null
+
+# .dmg - Editor
+cask install brackets 2> /dev/null
+cask install kobito 2> /dev/null
+cask install mou 2> /dev/null
+cask install lightpaper 2> /dev/null
+cask install notational-velocity 2> /dev/null
+cask install nvalt 2> /dev/null
+cask install atext 2> /dev/null
+cask install macdown 2> /dev/null
+
+# .dmg - Env
+cask install vmware-fusion 2> /dev/null
+cask install virtualbox 2> /dev/null
+cask install vagrant 2> /dev/null
+
+# .dmg - Image
+# cask install sketch 2> /dev/null // USE Mac App Store ver.
+cask install inkscape 2> /dev/null
+cask install skitch 2> /dev/null
+
+# .dmg - Objective-C
+cask install reveal 2> /dev/null
+cask install testflight 2> /dev/null
+cask install crashlytics 2> /dev/null
+# cask install dash 2> /dev/null // USE Mac App Store ver.
+cask install appcode 2> /dev/null
+cask install simpholders 2> /dev/null
+
+# .dmg - Utils
+cask install magican 2> /dev/null
+cask install onyx 2> /dev/null
+cask install monolingual 2> /dev/null
+# cask install keyremap4macbook 2> /dev/null
+cask install karabiner 2> /dev/null
+cask install bettertouchtool 2> /dev/null
+cask install jitouch 2> /dev/null
+
+# .dmg - Japanese inputs
+cask install google-japanese-ime 2> /dev/null
+cask install bartender 2> /dev/null
+cask install cheatsheet 2> /dev/null
+cask install appcleaner 2> /dev/null
+cask install flux 2> /dev/null
+cask install hazel 2> /dev/null
+cask install notifyr 2> /dev/null
+cask install bittorrent-sync 2> /dev/null
+
+#
+cask install kindle 2> /dev/null
+
+#
+cask install teamviewer 2> /dev/null
+
+# VPN
+cask install tunnelbear 2> /dev/null
+
+#
+cask install simplecap 2> /dev/null
+cask install xmind 2> /dev/null
+cask install adobe-air 2> /dev/null
+cask install adobe-creative-cloud 2> /dev/null
+cask install adobe-reader 2> /dev/null
+cask install tinyumbrella 2> /dev/null
+
+
+# Pinboard.in
+cask install shiori 2> /dev/null
+cask install delibar 2> /dev/null
+
+# DVD
+cask install handbrake 2> /dev/null
+cask install fairmount 2> /dev/null
+cask install burn 2> /dev/null
+cask install ripit 2> /dev/null
+
+#
+cask install totalfinder 2> /dev/null
+cask install stackroom 2> /dev/null
+cask install android-studio 2> /dev/null
+# cask install xtrafinder 2> /dev/null
+# cask install obsidian-menu-bar-mountain-lion 2> /dev/null
+cask install reeder 2> /dev/null
+cask install bathyscaphe 2> /dev/null
+cask install cloudytabs 2> /dev/null
+cask install deathtodsstore 2> /dev/null
+cask install invisionsync 2> /dev/null
+cask install ember 2> /dev/null
+
+cask install fluid 2> /dev/null
+cask install ifunbox 2> /dev/null
+
+cask alfred link 2> /dev/null
+

@@ -1,3 +1,6 @@
+" use multi-byte charactors
+scriptencoding utf-8
+
 """"""""""""""""""""
 " initial
 """"""""""""""""""""

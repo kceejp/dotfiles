@@ -88,14 +88,14 @@ NeoBundle 'laurentb/vim-svndiff'
 " NeoBundle 'svn-diff.vim'
 
 " Twitter
-NeoBundleLazy 'basyura/TweetVim', 'dev', {
-            \   'depends' : ['basyura/twibill.vim', 'tyru/open-browser.vim' ],
-            \   'autoload' : {
-            \       'commands' : [ "TweetVimHomeTimeline", "TweetVimSay", "TweetVimUserStream", "TweetVimUserTimeline" ]
-            \   }
-            \}
-NeoBundle 'basyura/bitly.vim'
-NeoBundle 'mattn/webapi-vim'
+" NeoBundleLazy 'basyura/TweetVim', 'dev', {
+"             \   'depends' : ['basyura/twibill.vim', 'tyru/open-browser.vim' ],
+"             \   'autoload' : {
+"             \       'commands' : [ "TweetVimHomeTimeline", "TweetVimSay", "TweetVimUserStream", "TweetVimUserTimeline" ]
+"             \   }
+"             \}
+" NeoBundle 'basyura/bitly.vim'
+" NeoBundle 'mattn/webapi-vim'
 
 NeoBundle 'pbrisbin/html-template-syntax'
 

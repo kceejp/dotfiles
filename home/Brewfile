@@ -1,23 +1,39 @@
-# Make sure using latest Homebrew
+#update homebrew
 update
+#doctor
 
-# Update already-installed formula (takes too much time, I will do it manually later)
-# upgrade
+#upgrade already installed homebrew packages
+upgrade
+
+#install my standard packages
+tap homebrew/versions
 
 # Add Repository
-tap homebrew/versions || true
-tap phinze/homebrew-cask || true
-tap homebrew/binary || true
+tap caskroom/homebrew-cask
+tap homebrew/binary
+
+
+# Packages brew-file
+install rcmdnk/file/brew-file
+
+# Packages - Go
+install go
 
 # Packages - Base
+install bash
 install zsh
 install zsh-completions
 install zsh-syntax-highlighting
+
 install tmux
+install screen
+
 install ack
 install nkf
+install gnu-sed
 install wget
 install tree
+install libdvdcss
 
 # Packages - git
 install git
@@ -26,6 +42,7 @@ install tig
 
 # Packages - Objective-C
 install mogenerator
+#install appledoc
 
 # Packages - WebDev
 install rbenv
@@ -40,118 +57,6 @@ install vim
 install jenkins
 install mono
 
-# Package - Homebrew-cask
-install brew-cask
-
-# .dmg - Browser
-cask install google-chrome
-cask install firefox
-cask install flash
-
-# .dmg - Music
-cask install google-music
-cask install vlc
-cask install vlcstreamer
-cask install mplayer-osx-extended
-cask install mplayerx
-cask install spotify
-cask install flip4mac
-cask install perian
-cask install xbmc
-cask install makemkv
-
-# .dmg - Messaging
-cask install slack
-cask install skype
-
-# .dmg - E-mail
-cask install sparrow
-cask install airmail
-
-# .dmg - Twitter
-cask install yorufukurou
-
-# .dmg - Password Manager
-cask install dashlane
-
-# .dmg - Productivity
-cask install alfred
-cask install fantastical
-cask install Things
-
-# .dmg - Cloud Storage
-cask install evernote
-cask install dropbox
-cask install google-drive
-cask install bitcasa
-cask install insync
-cask install cloud
-
-# .dmg - Terminal
-cask install shuttle
-cask install totalterminal
-cask install iterm2
-
-# .dmg - WebDev
-cask install cyberduck
-cask install less
-cask install github
-cask install heroku-toolbelt
-
-# .dmg - Editor
-cask install brackets
-cask install kobito
-cask install mou
-
-# .dmg - Env
-cask install vmware-fusion
-cask install virtualbox
-cask install vagrant
-
-# .dmg - Image
-# cask install sketch
-cask install inkscape
-cask install skitch
-
-# .dmg - Objective-C
-cask install reveal
-cask install testflight
-cask install crashlytics
-cask install dash
-cask install appcode
-cask install simpholders
-
-# .dmg - Utils
-cask install magican
-cask install onyx
-cask install monolingual
-cask install keyremap4macbook
-cask install bettertouchtool
-cask install google-japanese-ime
-cask install bartender
-cask install cheatsheet
-cask install appcleaner
-cask install flux
-cask install hazel
-cask install kindle
-cask install teamviewer
-cask install tunnelbear
-cask install simplecap
-cask install xmind
-cask install adobe-air
-cask install adobe-creative-cloud
-cask install adobe-reader
-cask install tinyumbrella
-cask install delibar
-cask install shiori
-cask install handbrake
-cask install fairmount
-cask install ripit
-cask install totalfinder
-cask install stackroom
-cask install android-studio
-# cask install xtrafinder
-# cask install obsidian-menu-bar-mountain-lion
-
-# Remove outdated versions
+# Remove outdated versions from the cellar
 cleanup
+

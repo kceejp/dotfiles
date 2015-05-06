@@ -6,7 +6,11 @@
 [alias]
     st = status
     di = diff
+
+    # http://suzuken.hatenablog.jp/entry/2015/04/07/134847
+    delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
 [push]
     default = simple
 [core]
     editor = vim -c \"set fenc=utf-8\"
+

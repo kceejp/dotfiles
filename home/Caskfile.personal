@@ -1,0 +1,52 @@
+tap caskroom/cask
+install brew-cask
+
+# DVD
+cask install handbrake 2> /dev/null
+cask install fairmount 2> /dev/null
+cask install burn 2> /dev/null
+cask install ripit 2> /dev/null
+
+cask install tinyumbrella 2> /dev/null
+
+# VPN
+cask install tunnelbear 2> /dev/null
+
+cask install ifunbox 2> /dev/null
+
+cask install bathyscaphe 2> /dev/null
+
+cask install stackroom 2> /dev/null
+
+cask install xbmc 2> /dev/null
+
+cask install spotify 2> /dev/null
+
+cask install skype 2> /dev/null
+cask install google-hangouts 2> /dev/null
+cask install makemkv 2> /dev/null
+#cask install fantastical 2> /dev/null
+
+# .dmg - ToDo
+cask install things 2> /dev/null
+
+#cask install bitcasa 2> /dev/null
+cask install insync 2> /dev/null
+
+cask install magican 2> /dev/null
+cask install onyx 2> /dev/null
+cask install monolingual 2> /dev/null
+
+cask install xmind 2> /dev/null
+cask install adobe-air 2> /dev/null
+cask install adobe-creative-cloud 2> /dev/null
+
+cask install bittorrent-sync 2> /dev/null
+
+#
+cask install kindle 2> /dev/null
+
+#
+cask install teamviewer 2> /dev/null
+
+cask alfred link 2> /dev/null

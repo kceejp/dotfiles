@@ -6,15 +6,8 @@ set t_Co=256
 let g:solarized_termcolors = 256
 let g:molokai_original     = 1
 
-colorscheme default
-
-set background=dark
-colorscheme solarized
-colorscheme inkpot
-colorscheme newspaper
-colorscheme pyte
-colorscheme desert256
-
+color dracula
+color desert256
 
 "  ターミナルタイプによるカラー設定
 if &term =~ "xterm-debian" || &term =~ "xterm-xfree86" || &term =~ "xterm-256color"

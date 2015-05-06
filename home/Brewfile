@@ -29,11 +29,15 @@ install tmux
 install screen
 
 install ack
+install ag
 install nkf
 install gnu-sed
 install wget
 install tree
 install libdvdcss
+install colordiff
+install ansible
+#install compass
 
 # Packages - git
 install git
@@ -54,7 +58,7 @@ install npm
 install vim
 
 # Packages - Jenkins
-install jenkins
+# install jenkins
 install mono
 
 # Remove outdated versions from the cellar

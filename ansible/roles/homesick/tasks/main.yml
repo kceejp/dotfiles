@@ -1,0 +1,9 @@
+---
+- name: install gems
+  gem: name={{ item }} state=present
+  with_items:
+    - homesick
+- name: homesick clone
+  command: homesick clone KCeejp/dotfiles
+- name: homesick symlink
+  shell: homesick symlink dotfiles chdir=~/

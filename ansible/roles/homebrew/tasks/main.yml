@@ -1,0 +1,47 @@
+---
+- name: tap
+  homebrew_tap: tap={{ item }} state=present
+  with_items:
+    - peco/peco
+    - motemen/ghq
+- name: update
+  homebrew: update_homebrew=yes
+- name: upgrade
+  homebrew: upgrade_all=yes
+- name: Install libraries with homebrew
+  homebrew: name={{ item }} state=latest
+  with_items:
+    # git
+    - git
+    - tig
+    - git-flow
+    # shells
+    - bash
+    - zsh
+    - fish
+    # editors
+    - vim
+    # go
+    - go
+    # ruby
+    - rbenv
+    - ruby-build
+    # node
+    - node
+    - npm
+    # miscellaneous
+    - wget
+    - tree
+    - tmux
+    - screen
+    - ack
+    - ag
+    - nkf
+    - gnu-sed
+    - colordiff
+    - ansible
+    - mogenerator
+    - boot2docker
+    - peco
+    - ghq
+

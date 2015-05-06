@@ -1,0 +1,10 @@
+---
+- hosts: dotfiles
+  connection: local
+  sudo: no
+  gather_facts: false
+  roles:
+    - mac
+    - homebrew
+    - homebrew-cask
+    - homesick

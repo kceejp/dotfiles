@@ -36,3 +36,7 @@ export NODE_PATH=$HOME/.npm/libraries:$NODE_PATH
 export MANPATH=$HOME/.npm/man:$MANPATH
 export PATH="$(npm bin):$PATH"
 
+### boot2docker
+if [ "`boot2docker status`" = "running" ]; then
+    $(boot2docker shellinit)
+fi

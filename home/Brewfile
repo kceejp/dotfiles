@@ -3,7 +3,7 @@ update
 #doctor
 
 #upgrade already installed homebrew packages
-upgrade
+#upgrade
 
 #install my standard packages
 tap homebrew/versions
@@ -11,10 +11,15 @@ tap homebrew/versions
 # Add Repository
 tap caskroom/homebrew-cask
 tap homebrew/binary
-
+tap sanemat/font
 
 # Packages brew-file
-install rcmdnk/file/brew-file
+#install rcmdnk/file/brew-file
+
+# font
+install automake
+install pkg-config
+# install ricty https://gist.githubusercontent.com/KCeejp/47ad19620119cc328fb1/raw/315d2ff6a23e251fb1aea222befb181f24d170b0/ricty.rb
 
 # Packages - Go
 install go
@@ -26,7 +31,7 @@ install zsh-completions
 install zsh-syntax-highlighting
 
 install tmux
-install screen
+# install screen
 
 install ack
 install ag
@@ -38,14 +43,20 @@ install libdvdcss
 install colordiff
 install ansible
 #install compass
+install jq
+install colordiff
+
+install mysql
 
 # Packages - git
 install git
 install git-flow
 install tig
 
+install ansible
+
 # Packages - Objective-C
-install mogenerator
+# install mogenerator
 #install appledoc
 
 # Packages - WebDev
@@ -54,12 +65,20 @@ install ruby-build
 install node
 install npm
 
+# Packages - WebDev
+install awscli
+
 # Packages - Editor
 install vim
 
 # Packages - Jenkins
 # install jenkins
-install mono
+# install mono
+
+# Docker
+install docker
+install boot2docker
+install packer
 
 # Remove outdated versions from the cellar
 cleanup

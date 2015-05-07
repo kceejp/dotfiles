@@ -40,6 +40,15 @@ cask install mailbox 2> /dev/null
 
 # .dmg - Twitter
 cask install yorufukurou 2> /dev/null
+cask install goofy 2> /dev/null
+
+# .dmg - Password Manager
+cask install dashlane 2> /dev/null
+cask install 1password 2> /dev/null
+cask install authy-bluetooth 2> /dev/null
+
+# .dmg - Productivity
+cask install alfred 2> /dev/null
 
 # .dmg - Calender
 cask install day-o 2> /dev/null
@@ -48,6 +57,8 @@ cask install day-o 2> /dev/null
 cask install evernote 2> /dev/null
 cask install dropbox 2> /dev/null
 cask install google-drive 2> /dev/null
+#cask install bitcasa 2> /dev/null
+cask install insync 2> /dev/null
 cask install cloud 2> /dev/null
 
 # .dmg - Terminal
@@ -74,8 +85,8 @@ cask install macdown 2> /dev/null
 
 # .dmg - Env
 cask install vmware-fusion 2> /dev/null
-cask install virtualbox 2> /dev/null
-cask install vagrant 2> /dev/null
+# cask install virtualbox 2> /dev/null
+# cask install vagrant 2> /dev/null
 
 # .dmg - Image
 # cask install sketch 2> /dev/null // USE Mac App Store ver.
@@ -102,6 +113,16 @@ cask install appcleaner 2> /dev/null
 cask install flux 2> /dev/null
 cask install hazel 2> /dev/null
 cask install notifyr 2> /dev/null
+cask install bittorrent-sync 2> /dev/null
+
+#
+# cask install kindle 2> /dev/null
+
+#
+cask install teamviewer 2> /dev/null
+
+# VPN
+cask install tunnelbear 2> /dev/null
 
 #
 cask install simplecap 2> /dev/null
@@ -117,12 +138,17 @@ cask install totalfinder 2> /dev/null
 # cask install xtrafinder 2> /dev/null
 # cask install obsidian-menu-bar-mountain-lion 2> /dev/null
 cask install reeder 2> /dev/null
+# cask install reeder 2> /dev/null
+cask install bathyscaphe 2> /dev/null
 cask install cloudytabs 2> /dev/null
 cask install deathtodsstore 2> /dev/null
 cask install invisionsync 2> /dev/null
 cask install ember 2> /dev/null
 
 cask install fluid 2> /dev/null
+cask install ifunbox 2> /dev/null
+cask install xquartz 2> /dev/null
+cask install duet 2> /dev/null
 
 cask alfred link 2> /dev/null
 

@@ -1,0 +1,9 @@
+# デフォルトの bind generic G !git gc を無効化する
+bind generic G none
+
+set tab-size = 2
+set main-view = id date author commit-title:graph=yes,refs=yes
+set split-view-height = 80%
+
+bind generic <Ctrl-f> scroll-page-down
+bind generic <Ctrl-b> scroll-page-up

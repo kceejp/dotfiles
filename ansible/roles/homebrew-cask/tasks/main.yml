@@ -64,7 +64,7 @@
     #- sketch
     # ios dev
     - reveal
-    - testflight
+    #- testflight
     - crashlytics
     - appcode
     - simpholders
@@ -86,6 +86,6 @@
     - ember
     - fluid
     # twitter
-    - yorufukurou
+    # - yorufukurou
 
 

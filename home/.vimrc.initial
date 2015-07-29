@@ -1,2 +1,6 @@
+if $SHELL =~ '/fish$'
+  set shell=zsh
+endif
+
 " recognize_charcode.vim
 source $DOTVIM_DIR/plugin/recognize_charcode.vim

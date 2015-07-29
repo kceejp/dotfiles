@@ -93,4 +93,4 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 #------------------------------
 # anyframe
 #------------------------------
-bindkey '^p' anyframe-widget-put-history
+bindkey '^h' anyframe-widget-put-history

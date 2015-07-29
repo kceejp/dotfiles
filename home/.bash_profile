@@ -18,8 +18,10 @@ export LANG=ja_JP.UTF-8
 
 # シェルをzshに
 if [ -n "$PS1" ]; then
-    SHELL=/bin/zsh
-    exec /bin/zsh -l
+    # SHELL=/bin/zsh
+    # exec /bin/zsh -l
+    SHELL=/usr/local/bin/fish
+    exec /usr/local/bin/fish -l
 fi
 
 if [ -e /usr/share/terminfo/x/xterm-256color ]; then

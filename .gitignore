@@ -11,7 +11,12 @@
 .DS_Store
 *.sw[po]
 
-# /.vim以下
+# fish 系
+home/.config/fish/fish_history
+home/.config/fish/fishd.*
+home/.config/fish/generated_completions
+
+# /.vim 以下
 /home/.vim/.netrwhist
 /home/.vim/tmp/.viminfo
 /home/.vim/tmp/backup/*

@@ -44,8 +44,9 @@ set -gx PATH /usr/sbin $PATH
 set -gx PATH /usr/local/bin $PATH
 set -gx PATH /usr/local/sbin $PATH
 set -gx PATH $HOME/local/bin $PATH
-set -gx PATH $HOME/.rbenv/bin $PATH # rbenv
-# eval "rbenv init -"
+set -gx PATH $HOME/.rbenv/bin $PATH
+set -gx PATH $HOME/.rbenv/shims $PATH
+rbenv rehash >/dev/null ^&1
 set -gx PATH $GOPATH/bin $PATH # go
 set -gx PATH /usr/local/heroku/bin $PATH # heroku toolbelt
 

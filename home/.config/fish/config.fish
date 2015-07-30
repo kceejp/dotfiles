@@ -14,7 +14,6 @@ Plugin 'theme'
 Plugin 'z'
 Plugin 'peco'
 Plugin 'bundler'
-Plugin 'emoji-clock'
 Plugin 'tmux'
 Plugin 'ssh'
 Plugin 'osx'
@@ -65,4 +64,3 @@ set -gx MANPATH $HOME/.npm/man $MANPATH
 alias vi "vim -p"
 
 test $TERM != "screen"; and exec tmux -2
-

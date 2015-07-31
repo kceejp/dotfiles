@@ -20,6 +20,8 @@ Plugin 'osx'
 Plugin 'brew'
 # Plugin 'better-alias'
 
+# set fish_greeting to null, so that the message won't appear
+set fish_greeting
 # Env values
 set -gx LANG ja_JP.UTF-8
 
@@ -64,3 +66,6 @@ set -gx MANPATH $HOME/.npm/man $MANPATH
 alias vi "vim -p"
 
 test $TERM != "screen"; and exec tmux -2
+
+set -gx fish_key_bindings
+fish_user_key_bindings

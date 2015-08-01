@@ -12,6 +12,7 @@
   with_items:
     - peco/peco
     - motemen/ghq
+    - neovim/neovim
 # - name: update
 #   homebrew: update_homebrew=yes
 # - name: upgrade
@@ -29,6 +30,7 @@
     - fish
     # editors
     - vim
+    - neovim
     # go
     - go
     # ruby

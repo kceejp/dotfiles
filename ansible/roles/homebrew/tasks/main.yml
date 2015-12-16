@@ -30,7 +30,7 @@
     - fish
     # editors
     - vim
-    - neovim
+    # - neovim
     # go
     - go
     # ruby

@@ -65,7 +65,7 @@ set -gx MANPATH $HOME/.npm/man $MANPATH
 
 alias vi "vim -p"
 
-test $TERM != "screen"; and exec tmux -2
+#test $TERM != "screen"; and exec tmux -2
 
 set -gx fish_key_bindings
 fish_user_key_bindings

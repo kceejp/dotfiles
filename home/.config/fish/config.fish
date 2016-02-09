@@ -67,5 +67,5 @@ alias vi "vim -p"
 
 #test $TERM != "screen"; and exec tmux -2
 
-set -gx fish_key_bindings
-fish_user_key_bindings
+#set -gx fish_key_bindings
+#fish_user_key_bindings

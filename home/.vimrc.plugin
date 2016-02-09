@@ -13,7 +13,7 @@ if has('vim_starting')
 endif
 
 " Required:
-call neobundle#rc(expand($DOTVIM_DIR . "/bundle/"))
+call neobundle#begin(expand($DOTVIM_DIR . "/bundle/"))
 
 " Let NeoBundle manage NeoBundle
 " Required:
@@ -153,6 +153,8 @@ NeoBundle 'nginx.vim'
 
 " python
 " NeoBundle 'yuroyoro/vim-python'
+
+call neobundle#end()
 
 " Required:
 filetype plugin indent on

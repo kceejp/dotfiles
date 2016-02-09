@@ -1,7 +1,4 @@
 ---
-- name: Upgrade homebrew cask
-  homebrew: name=brew-cask state=latest
-
 - name: Install libraries with homebrew-cask
   homebrew_cask: name={{ item }} state=present
   with_items:
@@ -67,7 +64,7 @@
     #- sketch
     # ios dev
     - reveal
-    - fabric
+      #- fabric
     #- testflight
     - crashlytics
     - appcode
@@ -91,5 +88,4 @@
     - fluid
     # twitter
     # - yorufukurou
-
-
+    - google-photos-backup

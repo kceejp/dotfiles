@@ -1,50 +1,29 @@
 " 色付け
 syntax enable
 
-set t_Co=256
-
-let g:solarized_termcolors = 256
-let g:molokai_original     = 1
-
-color dracula
-color desert256
-
-"  ターミナルタイプによるカラー設定
-if &term =~ "xterm-debian" || &term =~ "xterm-xfree86" || &term =~ "xterm-256color"
-    set t_Co=16
-    set t_Sf=^[[3%dm
-    set t_Sb=^[[4%dm
-elseif &term =~ "xterm-color"
-    set t_Co=8
-    set t_Sf=^[[3%dm
-    set t_Sb=^[[4%dm
+if !has('gui_running')
+    set t_Co=256
 endif
 
-" コメントを緑に
-" highlight Comment ctermfg=green
-" 行番号
-" highlight LineNr  ctermfg=lightyellow ctermbg=lightblue
+" colorscheme
+colorscheme inkpot
+colorscheme wombat256mod
 
-" 折り畳み
-" highlight Folded  ctermfg=black ctermbg=blue
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"⭤":""}',
+      \ },
+      \ 'separator': { 'left': '⮀', 'right': '⮂' },
+      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+      \ }
+
 " 全角スペースを視覚化
 highlight DoubleWidthSpace cterm=underline
 match DoubleWidthSpace /　/
 " 79文字目以降を強調
 highlight LineLength cterm=underline
 match LineLength /.\%>79v/
-
-" ポップアップメニューのカラーを設定
-" hi Pmenu     ctermbg=green       ctermfg=white     guibg=darkgray  guifg=white
-" hi PmenuSel  ctermbg=lightblue   ctermfg=white     guibg=lightblue guifg=white
-" hi PmenuSbar ctermbg=lightyellow ctermfg=lightblue guibg=darkgray  guifg=green
-
-"入力モード時、ステータスラインのカラーを変更
-" augroup InsertHook
-"   autocmd!
-"   autocmd InsertEnter * highlight StatusLine ctermfg=white       ctermbg=green
-"   autocmd InsertLeave * highlight StatusLine ctermfg=lightyellow ctermbg=lightblue
-" augroup END
 
 " ,cで色見本を出す
 nmap <leader>c :so $VIMRUNTIME/syntax/colortest.vim<CR>

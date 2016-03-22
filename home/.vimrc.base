@@ -13,12 +13,6 @@ endif
 " vi完全互換モードではなく、vimモードを使用
 set nocompatible
 
-" 常にカーソル行を真ん中に
-" set scrolloff=999
-
-" プラグインの使用
-filetype plugin on
-
 " swapファイル
 set directory=$DOTVIM_DIR/tmp/swap
 " backupファイル
@@ -148,5 +142,6 @@ if has("autocmd")
     \ endif
 endif
 
-" autocmd FileType perl,php,ruby,python set tabstop=4 shiftwidth=4 softtabstop=4
-" autocmd BufNewFile,BufRead *.tx,*.css,*.less,*.tmpl,*.html set tabstop=2 shiftwidth=2 softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set expandtab

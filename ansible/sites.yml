@@ -4,7 +4,7 @@
   sudo: no
   gather_facts: false
   roles:
-      #- mac
-      #- homebrew
+    - mac
+    - homebrew
     - homebrew-cask
-      #- homesick
+    - homesick

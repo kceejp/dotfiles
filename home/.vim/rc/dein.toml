@@ -1,0 +1,146 @@
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+
+[[plugins]]
+# Ctrl-b / Ctrl-f
+repo = 'Smooth-Scroll'
+
+# Yank
+[[plugins]]
+# super yank
+repo = 'yanktmp.vim'
+
+[[plugins]]
+# ctrl-p continuously
+repo = 'YankRing.vim'
+
+[[plugins]]
+# ds' = delete sorrounding ' / S' = sorround selected text with ' / change sorrounding quote char
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides.git'
+
+[[plugins]]
+# ,,sa = find a
+repo = 'Lokaltog/vim-easymotion'
+
+[[plugins]]
+# :Tabularize/=
+repo = 'godlygeek/tabular'
+
+[[plugins]]
+repo = 'vim-scripts/matchit.zip'
+
+[[plugins]]
+repo = 'errormarker.vim'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+repo = 'osyo-manga/vim-watchdogs'
+
+[[plugins]]
+repo = 'osyo-manga/shabadou.vim'
+
+[[plugins]]
+repo = 'rking/ag.vim'
+
+[[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
+
+[[plugins]]
+repo = 'justinmk/vim-dirvish'
+
+[[plugins]]
+repo = 'terryma/vim-multiple-cursors'
+
+# Git
+# 'tpope/vim-fugitive'
+# 'int3/vim-extradite'
+# 'gregsexton/gitv'
+
+# Subversion
+# 'vim-scripts/svn-diff.vim'
+#shows diff when commiting changes
+# 'laurentb/vim-svndiff'
+# 'vcscommand.vim'
+# 'svndiff'
+# 'svndiff.vim'
+# 'svn-diff.vim'
+
+# HTML::Template
+# 'pbrisbin/html-template-syntax'
+
+# 'mbadran/headlights'
+# 'sjl/gundo.vim' " Graphical undo
+
+# template
+# 'qtmplsel.vim'
+
+# 'simplefold'
+# 'smartchr'
+# 'mattn/zencoding-vim.git'
+
+# 'yoppi/perl5lib'
+# 'ywatase/flymake-perl.vim'
+# 'kana/vim-flymake'
+
+# 'vim-scripts/ShowMarks'
+# 'vim-scripts/SearchComplete'
+
+# Syntax checker
+# 'scrooloose/syntastic'
+
+[[plugins]]
+repo = 'nginx.vim'
+
+# colorscheme
+[[plugins]]
+repo = 'zenorocha/dracula-theme'
+
+[[plugins]]
+repo = 'ciaranm/inkpot'
+
+[[plugins]]
+repo = '29decibel/codeschool-vim-theme'
+
+[[plugins]]
+repo = 'vim-scripts/darktango.vim'
+
+[[plugins]]
+repo = 'jonathanfilip/vim-lucius'
+
+[[plugins]]
+repo = 'vim-scripts/phd'
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'desert256.vim'
+
+[[plugins]]
+repo = 'vim-scripts/Color-Sampler-Pack'
+
+[[plugins]]
+repo = 'ciaranm/inkpot'
+
+[[plugins]]
+repo = 'newspaper.vim'
+
+[[plugins]]
+repo = 'therubymug/vim-pyte'
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'wombat256.vim'

@@ -1,0 +1,52 @@
+
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+on_i = 1 # on insert
+
+# Ruby
+[[plugins]]
+repo = 'tpope/vim-endwise'
+on_ft = ['ruby']
+
+# Perl
+[[plugins]]
+repo = 'perl-mauke.vim'
+on_ft = ['perl']
+
+# JavaScript
+[[plugins]]
+repo = 'bigfish/vim-js-beautify'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'JavaScript-syntax'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'jQuery'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'mattn/jscomplete-vim'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+on_ft = ['coffee']
+
+# golang
+[[plugins]]
+repo  = 'vim-jp/vim-go-extra'
+on_ft = ['go']
+
+# python
+[[plugins]]
+repo  = 'yuroyoro/vim-python'
+on_ft = ['python']
+
+# markdown
+repo  = 'tpope/vim-markdown'
+on_ft = ['markdown']
+
+# Objective-C
+# 'msanders/cocoa.vim'

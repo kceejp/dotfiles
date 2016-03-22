@@ -6,8 +6,7 @@ if !has('gui_running')
 endif
 
 " colorscheme
-colorscheme inkpot
-colorscheme wombat256mod
+colorscheme dracula
 
 let g:lightline = {
       \ 'colorscheme': 'wombat',

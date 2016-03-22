@@ -1,24 +1,13 @@
-# Path to your oh-my-fish.
-set fish_path $HOME/.oh-my-fish
+# Path to Oh My Fish install.
+set -gx OMF_PATH "/Users/kceejp/.local/share/omf"
 
-# Path to your custom folder (default path is ~/.oh-my-fish/custom)
-#set fish_custom $HOME/dotfiles/oh-my-fish
+# Customize Oh My Fish configuration path.
+#set -gx OMF_CONFIG "/Users/kceejp/.config/omf"
+set -g Z_SCRIPT_PATH (brew --prefix)/etc/profile.d/z.sh
 
 # Load oh-my-fish configuration.
-. $fish_path/oh-my-fish.fish
+source $OMF_PATH/init.fish
 
-# Custom plugins and themes may be added to ~/.oh-my-fish/custom
-# Plugins and themes can be found at https://github.com/oh-my-fish/
-# Theme 'robbyrussell'
-Plugin 'theme'
-Plugin 'z'
-Plugin 'peco'
-Plugin 'bundler'
-Plugin 'tmux'
-Plugin 'ssh'
-Plugin 'osx'
-Plugin 'brew'
-# Plugin 'better-alias'
 
 # set fish_greeting to null, so that the message won't appear
 set fish_greeting
@@ -69,3 +58,10 @@ alias vi "vim -p"
 
 #set -gx fish_key_bindings
 #fish_user_key_bindings
+
+function fish_user_key_bindings
+    bind \cp peco_select_history
+end
+function peco
+    command peco --layout=bottom-up $argv
+end

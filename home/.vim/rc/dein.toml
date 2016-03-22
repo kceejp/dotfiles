@@ -94,7 +94,8 @@ repo = 'terryma/vim-multiple-cursors'
 # 'vim-scripts/SearchComplete'
 
 # Syntax checker
-# 'scrooloose/syntastic'
+[[plugins]]
+repo = 'scrooloose/syntastic'
 
 [[plugins]]
 repo = 'nginx.vim'
@@ -102,6 +103,7 @@ repo = 'nginx.vim'
 # colorscheme
 [[plugins]]
 repo = 'zenorocha/dracula-theme'
+rtp = 'vim/'
 
 [[plugins]]
 repo = 'ciaranm/inkpot'

@@ -18,10 +18,5 @@ home/.config/fish/generated_completions
 
 # /.vim 以下
 /home/.vim/.netrwhist
-/home/.vim/tmp/.viminfo
-/home/.vim/tmp/backup/*
-/home/.vim/tmp/swap/*
-/home/.vim/tmp/.unite/*
-/home/.vim/tmp/.neocon/*
-/home/.vim/tmp/yankring_history_v2.txt
+/home/.vim/tmp/
 /home/.vim/bundle/*

@@ -17,17 +17,19 @@
 #   homebrew: update_homebrew=yes
 # - name: upgrade
 #   homebrew: upgrade_all=yes
+
 - name: Install vim with Lua and Python3
   homebrew: name=vim state=latest install_options=with-lua,with-python3,override-system-vi
 
 - name: Install libraries with homebrew
   homebrew: name={{ item }} state=latest
   with_items:
+    # database
     - mysql
     # git
     - git
     - tig
-    - git-flow
+    # - git-flow
     # shells
     - bash
     - zsh
@@ -46,19 +48,21 @@
     - tree
     - tmux
     # - screen
+    - ansible
+    - boot2docker
+    - docker
+    #
+    - mogenerator
+    # data recovery
+    - testdisk
+    # utils
     - ack
     - ag
     - nkf
     - gnu-sed
     - colordiff
-    - ansible
-    - mogenerator
-    - boot2docker
     - z
     - peco
     - ghq
     - jq
     - httpie
-    - docker
-    - testdisk
-

@@ -16,7 +16,7 @@
     - flash
     # codecs
     - flip4mac
-    - perian
+    # - perian
     # messaging / conferencing
     - slack
     - skype
@@ -26,7 +26,7 @@
     - radiant-player
     - mplayerx
     # emailing
-    - mailbox
+    # - mailbox
     # calendars
     - day-o
     # cloud
@@ -40,7 +40,7 @@
     # editors
     - atom
     - brackets
-    - kobito
+    # - kobito
     - mou
     - lightpaper
     - notational-velocity
@@ -64,9 +64,9 @@
     #- sketch
     # ios dev
     - reveal
-      #- fabric
-    #- testflight
-    - crashlytics
+    # - fabric
+    # - testflight
+    # - crashlytics
     - appcode
     - simpholders
     # pinboard.in

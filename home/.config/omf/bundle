@@ -1,7 +1,16 @@
-
+ 
 package brew
 package bundler
+package config
+package gem
+package https://github.com/oh-my-fish/plugin-bak
 package osx
 package peco
+package python
+package rails
+package rbenv
+package ssh-config.d
+package ssh-term-helper
+package tmux-zen
 package z
 theme default

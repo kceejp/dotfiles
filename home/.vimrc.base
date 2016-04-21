@@ -145,3 +145,6 @@ endif
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+" デフォルトで fold を全部展開しちゃう
+set foldlevelstart=20

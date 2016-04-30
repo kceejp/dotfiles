@@ -72,13 +72,6 @@ if filereadable($HOME."/.vimrc.perl")
 endif
 
 """"""""""""""""""""
-" Ruby
-""""""""""""""""""""
-if filereadable($HOME."/.vimrc.ruby")
-  source $HOME/.vimrc.ruby
-endif
-
-""""""""""""""""""""
 " 検索
 """"""""""""""""""""
 if filereadable($HOME."/.vimrc.search")

@@ -1,0 +1,7 @@
+- name: Install libraries with homebrew-cask
+  homebrew_cask: name={{ item }} state=present
+  tags:
+    - home
+  with_items:
+    - google-photos-backup
+    - obs # broadcasting tool

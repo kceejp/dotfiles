@@ -1,1 +1,1 @@
-ansible-playbook -i hosts sites.yml
+ansible-playbook -i hosts sites.yml -t work

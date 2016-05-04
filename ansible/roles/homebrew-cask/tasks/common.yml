@@ -1,0 +1,119 @@
+- name: Install libraries with homebrew-cask
+  homebrew_cask: name={{ item }} state=present
+  with_items:
+    # japanese input
+    - google-japanese-ime
+
+    # launcher
+    - alfred
+
+    # security
+    - 1password
+
+    # browsers
+    - google-chrome
+    - firefox
+    - flash
+
+    # calendars
+    - day-o
+
+    # avoid .DS_Store creation
+    - deathtodsstore
+
+    # messaging / conferencing
+    - slack
+    #- skype
+    #- zoomus
+
+    # terminals
+    - shuttle
+    - totalterminal
+
+    # media players
+    - vlc
+    - mplayerx
+    - radiant-player # google play music
+
+    # screen capture
+    - simplecap
+
+    # device drivers
+    - kensington-trackball-works
+
+    # cloud
+    - evernote
+    - dropbox
+    - google-drive
+    - cloud
+
+    # codecs
+    # - flip4mac
+    # - perian
+
+    # emailing
+    # - mailbox
+
+    # editors
+    #- atom
+    #- brackets
+
+    # markdown editors
+    - macdown
+    #- kobito
+    #- mou
+    #- lightpaper
+    #- notational-velocity
+    #- nvalt
+    #- atext
+
+    # scp, ftp, sftp
+    - cyberduck
+
+    # virtual envs
+    - vmware-fusion
+    - virtualbox
+    - vagrant
+    - vagrant-manager
+    - vagrant-bar
+
+    # utils
+    # - bettertouchtool
+    - karabiner
+    #- jitouch
+    #- keyremap4macbook
+
+    # image editors
+    #- skitch
+    #- sketch
+    #- ember # visual scrapbook
+    #- inkscape
+
+    # ios dev
+    - reveal
+    - appcode
+    - simpholders
+    # - fabric
+    # - testflight
+    # - crashlytics
+
+    # pinboard.in
+    # - shiori
+
+    # twitter
+    # - yorufukurou
+
+    # prototyping
+    - invisionsync
+
+    # miscellaneous
+    - totalfinder
+    - appcleaner
+    - flux # display light
+    - hazel
+    #- adobe-reader
+    #- bartender
+    #- cheatsheet
+    #- notifyr
+    #- cloudytabs
+    #- fluid

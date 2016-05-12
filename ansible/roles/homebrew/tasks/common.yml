@@ -59,8 +59,9 @@
     # - screen
 
     - ansible
-    - boot2docker
     - docker
+    - docker-compose
+    - boot2docker
 
     #
     - mogenerator
@@ -74,6 +75,7 @@
     - gnu-sed
     - colordiff
     - z
+    - thefuck
     - peco
     - ghq
     - jq

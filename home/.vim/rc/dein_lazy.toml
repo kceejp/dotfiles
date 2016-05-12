@@ -80,3 +80,7 @@ on_ft = 'ruby'
 repo = 'nsf/gocode'
 rtp = 'vim'
 on_ft = 'go'
+
+[[plugins]]
+repo  = 'avakhov/vim-yaml'
+on_ft = 'yaml'

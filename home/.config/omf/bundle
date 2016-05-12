@@ -1,6 +1,7 @@
  
 package brew
 package bundler
+package composer
 package config
 package gem
 package https://github.com/oh-my-fish/plugin-bak
@@ -11,6 +12,7 @@ package rails
 package rbenv
 package ssh-config.d
 package ssh-term-helper
+package thefuck
 package tmux-zen
 package z
 theme default

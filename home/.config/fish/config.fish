@@ -1,5 +1,5 @@
 # Path to Oh My Fish install.
-set -gx OMF_PATH "/Users/kceejp/.local/share/omf"
+set -gx OMF_PATH $HOME/.local/share/omf
 
 # Customize Oh My Fish configuration path.
 #set -gx OMF_CONFIG "/Users/kceejp/.config/omf"
@@ -25,7 +25,7 @@ set -gx HOMESICK_DOTFILES_HOME $HOME/.homesick/repos/dotfiles/home
 set -gx DOTVIM_DIR $HOMESICK_DOTFILES_HOME/.vim
 
 ### go
-set -gx GOPATH ~/go
+set -gx GOPATH $HOME/go
 
 ### PATH
 
@@ -89,24 +89,14 @@ function peco_kill
 end
 
 # https://gist.github.com/patorash/6e8b33efd4f67690f016
-function peco_select_history
-  if set -q $argv
-    history | peco | read line; commandline $line
-  else
-    history | peco --query $argv | read line; commandline $line
-  end
-  set -e line
-end
-
-# https://gist.github.com/patorash/6e8b33efd4f67690f016
-function peco_select_history
-  if set -q $argv
-    history | peco | read line; commandline $line
-  else
-    history | peco --query $argv | read line; commandline $line
-  end
-  set -e line
-end
+#function peco_select_history
+#  if set -q $argv
+#    history | peco | read line; commandline $line
+#  else
+#    history | peco --query $argv | read line; commandline $line
+#  end
+#  set -e line
+#end
 
 # http://qiita.com/unlovingly/items/99999271df7eea7bc953
 # https://github.com/yoshiori/fish-peco_select_ghq_repository/blob/master/peco_select_ghq_repository.fish
@@ -125,14 +115,15 @@ function peco_select_ghq_repository
   end
 end
 
+function save_history --on-event fish_preexec
+    history --save
+end
+
 fish_default_key_bindings
 
 function fish_user_key_bindings
     bind \c] peco_select_ghq_repository
     bind \cr peco_select_history
+    bind \e\e 'thefuck-command-line'  # Bind EscEsc to thefuck
     bind \ck peco_kill
-end
-
-function save_history --on-event fish_preexec
-    history --save
 end

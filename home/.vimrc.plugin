@@ -14,19 +14,18 @@ endif
 " 設定開始
 call dein#begin(s:dein_dir)
 
-" プラグインリストを収めた TOML ファイル
-let s:toml      = '~/.vim/rc/dein.toml'
-let s:lazy_toml = '~/.vim/rc/dein_lazy.toml'
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
 
-" TOML を読み込み、キャッシュしておく
-if dein#load_cache([expand('<sfile>'), s:toml, s:lazy_toml])
+  " 管理するプラグインを記述したファイル
+  let s:toml      = '~/.vim/rc/dein.toml'
+  let s:lazy_toml = '~/.vim/rc/dein_lazy.toml'
   call dein#load_toml(s:toml,      {'lazy': 0})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
-  call dein#save_cache()
-endif
 
-" 設定終了
-call dein#end()
+  call dein#end()
+  call dein#save_state()
+endif
 
 " もし、未インストールものものがあったらインストール
 if dein#check_install()
@@ -278,10 +277,19 @@ map <Leader> <Plug>(easymotion-prefix)
 " lightline
 """"""""""""""""""""
 let g:lightline = {
-    \ 'colorscheme': 'wombat',
-    \ 'component': {
-    \   'readonly': '%{&readonly?"x":""}',
-    \ },
-    \ 'separator': { 'left': '', 'right': '' },
-    \ 'subseparator': { 'left': '|', 'right': '|' }
-    \ }
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component': {
+      \   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}'
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
+      \ },
+      \ 'separator': { 'left': '⮀', 'right': '⮂' },
+      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+      \ }

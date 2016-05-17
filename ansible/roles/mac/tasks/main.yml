@@ -1,3 +1,6 @@
 ---
 - name: install homebrew
   shell: ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+
+- name: install oh-my-fish
+  shell: curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish

@@ -18,11 +18,18 @@ repo = 'yanktmp.vim'
 repo = 'YankRing.vim'
 
 [[plugins]]
+# ,cc to comment out, ,cu to uncomment
+repo = 'scrooloose/nerdcommenter'
+
+[[plugins]]
 # ds' = delete sorrounding ' / S' = sorround selected text with ' / change sorrounding quote char
 repo = 'tpope/vim-surround'
 
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides.git'
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
 # ,,sa = find a
@@ -53,11 +60,15 @@ repo = 'rking/ag.vim'
 [[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
 
+# filer
 [[plugins]]
 repo = 'justinmk/vim-dirvish'
 
 [[plugins]]
 repo = 'terryma/vim-multiple-cursors'
+
+[[plugin]]
+repo = 'tell-k/vim-browsereload-mac'
 
 # Git
 # 'tpope/vim-fugitive'
@@ -99,6 +110,18 @@ repo = 'scrooloose/syntastic'
 
 [[plugins]]
 repo = 'nginx.vim'
+
+[[plugins]]
+repo = 'othree/html5.vim'
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+
+[[plugins]]
+repo = 'jelera/vim-javascript-syntax'
+
+[[plugins]]
+repo = 'hokaccha/vim-html5validator'
 
 # colorscheme
 [[plugins]]

@@ -2,7 +2,7 @@
 set -gx OMF_PATH $HOME/.local/share/omf
 
 # Customize Oh My Fish configuration path.
-#set -gx OMF_CONFIG "/Users/kceejp/.config/omf"
+#set -gx OMF_CONFIG "$HOME/.config/omf"
 set -g Z_SCRIPT_PATH (brew --prefix)/etc/profile.d/z.sh
 
 # Load oh-my-fish configuration.
@@ -64,55 +64,55 @@ end
 
 # https://gist.github.com/patorash/6e8b33efd4f67690f016
 function peco_delete_branch
-  git branch | peco | read line
-  set -l branch_name (echo $line | awk '{print $1}')
-  if test "$branch_name" != "*"
-    git branch -d $branch_name
-  else
-    echo "Can't delete current branch."
-  end
+    git branch | peco | read line
+    set -l branch_name (echo $line | awk '{print $1}')
+    if test "$branch_name" != "*"
+        git branch -d $branch_name
+    else
+        echo "Can't delete current branch."
+    end
 end
 
 # https://gist.github.com/patorash/6e8b33efd4f67690f016
 function peco_kill
-  if set -q $argv
-    ps aux | peco | read proc
-  else
-    ps aux | peco --query $argv | read proc
-  end
-  if test -n "$proc"
-    set -l pid (echo $proc | awk '{print $2}')
-    echo "kill pid: $pid. [$proc]"
-    kill $pid
-  end
-  set -e proc
+    if set -q $argv
+        ps aux | peco | read proc
+    else
+        ps aux | peco --query $argv | read proc
+    end
+    if test -n "$proc"
+        set -l pid (echo $proc | awk '{print $2}')
+        echo "kill pid: $pid. [$proc]"
+        kill $pid
+    end
+    set -e proc
 end
 
 # https://gist.github.com/patorash/6e8b33efd4f67690f016
-#function peco_select_history
-#  if set -q $argv
-#    history | peco | read line; commandline $line
-#  else
-#    history | peco --query $argv | read line; commandline $line
-#  end
-#  set -e line
-#end
+function peco_select_history
+    if set -q $argv
+        history | peco | read line; commandline $line
+    else
+        history | peco --query $argv | read line; commandline $line
+    end
+    set -e line
+end
 
 # http://qiita.com/unlovingly/items/99999271df7eea7bc953
 # https://github.com/yoshiori/fish-peco_select_ghq_repository/blob/master/peco_select_ghq_repository.fish
 function peco_select_ghq_repository
-  set -l query (commandline)
+    set -l query (commandline)
 
-  if test -n $query
-    set peco_flags --query "$query"
-  end
+    if test -n $query
+        set peco_flags --query "$query"
+    end
 
-  ghq list -p | peco $peco_flags | read line
+    ghq list -p | peco $peco_flags | read line
 
-  if [ $line ]
-    cd $line
-    commandline -f repaint
-  end
+    if [ $line ]
+        cd $line
+        commandline -f repaint
+    end
 end
 
 function save_history --on-event fish_preexec

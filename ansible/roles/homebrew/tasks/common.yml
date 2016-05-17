@@ -14,6 +14,7 @@
     - motemen/ghq
     - neovim/neovim
     - sanemat/font
+    - homebrew/services
 # - name: update
 #   homebrew: update_homebrew=yes
 # - name: upgrade
@@ -61,8 +62,8 @@
 
     - ansible
     - docker
+    - docker-machine
     - docker-compose
-    - boot2docker
 
     #
     - mogenerator
@@ -84,3 +85,18 @@
     - ghq
     - jq
     - httpie
+    - awscli
+
+- name: copy ricty fonts
+  copy: src=/usr/local/Cellar/ricty/3.2.4/share/fonts/{{ item }} dest=~/Library/Fonts/
+  with_items:
+    - Ricty-Bold.ttf
+    - Ricty-Regular.ttf
+    - RictyDiscord-Bold.ttf
+    - RictyDiscord-Regular.ttf
+  tags:
+    - work
+
+- command: fc-cache -vf
+  tags:
+    - work

@@ -27,8 +27,9 @@
     #- zoomus
 
     # terminals
+    - iterm2
     - shuttle
-    - totalterminal
+    #- totalterminal
 
     # media players
     - vlc
@@ -36,7 +37,7 @@
     - radiant-player # google play music
 
     # screen capture
-    - simplecap
+    # - simplecap
 
     # device drivers
     - kensington-trackball-works
@@ -80,6 +81,7 @@
     # utils
     # - bettertouchtool
     - karabiner
+    - seil
     #- jitouch
     #- keyremap4macbook
 

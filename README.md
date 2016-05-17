@@ -1,6 +1,20 @@
 Setting up dotfiles
 ===================
 
+Setup ssh
+---------
+
+```
+ssh-keygen -t rsa
+```
+
+Add public key to github
+------------------------
+
+```
+cat ~/.ssh/id_rsa.pub
+```
+
 Install command line developer tools
 ------------------------------------
 
@@ -14,13 +28,7 @@ Install dotfiles
 Install homesick
 
 ```bash
-gem install homesick
-```
-
-rehash
-
-```bash
-rbenv rehash
+sudo gem install homesick
 ```
 
 clone homesick
@@ -33,4 +41,22 @@ Create symlinks
 
 ```bash
 cd ~ && homesick symlink dotfiles
+```
+
+Install Homebrew
+
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+Install Ansible
+
+```bash
+brew install ansible
+```
+
+Install the rest
+
+```bash
+ansible-playbook -i hosts sites.yml -t work
 ```

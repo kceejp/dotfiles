@@ -34,7 +34,7 @@ sudo gem install homesick
 clone homesick
 
 ```bash
-homesick clone KCeejp/dotfiles
+homesick clone kceejp/dotfiles
 ```
 
 Create symlinks

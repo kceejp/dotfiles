@@ -13,5 +13,6 @@ package rbenv
 package ssh-config.d
 package ssh-term-helper
 package thefuck
+package tmux-zen
 package z
 theme default

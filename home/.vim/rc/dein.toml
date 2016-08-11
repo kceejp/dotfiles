@@ -13,20 +13,31 @@ repo = 'Smooth-Scroll'
 # super yank
 repo = 'yanktmp.vim'
 
+#[[plugins]]
+# ctrl-p continuously
+#repo = 'YankRing.vim'
+
 [[plugins]]
 # ctrl-p continuously
-repo = 'YankRing.vim'
+repo = 'LeafCage/yankround.vim'
 
 [[plugins]]
 # ,cc to comment out, ,cu to uncomment
 repo = 'scrooloose/nerdcommenter'
 
 [[plugins]]
+# :OverCommandLine
+repo = 'osyo-manga/vim-over'
+
+[[plugins]]
 # ds' = delete sorrounding ' / S' = sorround selected text with ' / change sorrounding quote char
 repo = 'tpope/vim-surround'
 
+#[[plugins]]
+#repo = 'nathanaelkane/vim-indent-guides.git'
+
 [[plugins]]
-repo = 'nathanaelkane/vim-indent-guides.git'
+repo = 'Yggdroot/indentLine'
 
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
@@ -125,8 +136,8 @@ repo = 'hokaccha/vim-html5validator'
 
 # colorscheme
 [[plugins]]
-repo = 'zenorocha/dracula-theme'
-rtp = 'vim/'
+repo = 'dracula/vim'
+#rtp = 'colors/'
 
 [[plugins]]
 repo = 'ciaranm/inkpot'

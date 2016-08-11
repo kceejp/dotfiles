@@ -4,83 +4,90 @@ scriptencoding utf-8
 """"""""""""""""""""
 " initial
 """"""""""""""""""""
-if filereadable($HOME."/.vimrc.initial")
-  source $HOME/.vimrc.initial
+if filereadable($HOME."/.vim/rc/.vimrc.initial")
+  source $HOME/.vim/rc/.vimrc.initial
 endif
 
 """"""""""""""""""""
 " 一般設定
 """"""""""""""""""""
-if filereadable($HOME."/.vimrc.base")
-  source $HOME/.vimrc.base
+if filereadable($HOME."/.vim/rc/.vimrc.base")
+  source $HOME/.vim/rc/.vimrc.base
 endif
 
 """"""""""""""""""""
 " キーマップ
 """"""""""""""""""""
-if filereadable($HOME."/.vimrc.keymap")
-  source $HOME/.vimrc.keymap
+if filereadable($HOME."/.vim/rc/.vimrc.keymap")
+  source $HOME/.vim/rc/.vimrc.keymap
+endif
+
+""""""""""""""""""""
+" プラグインマネージャ
+""""""""""""""""""""
+if filereadable($HOME."/.vim/rc/.vimrc.dein")
+  source $HOME/.vim/rc/.vimrc.dein
 endif
 
 """"""""""""""""""""
 " プラグイン
 """"""""""""""""""""
-if filereadable($HOME."/.vimrc.plugin")
-  source $HOME/.vimrc.plugin
+if filereadable($HOME."/.vim/rc/.vimrc.plugin")
+  source $HOME/.vim/rc/.vimrc.plugin
+endif
+
+""""""""""""""""""""
+" インデント
+""""""""""""""""""""
+if filereadable($HOME."/.vim/rc/.vimrc.indent")
+  source $HOME/.vim/rc/.vimrc.indent
 endif
 
 """"""""""""""""""""
 " タブ
 """"""""""""""""""""
-if filereadable($HOME."/.vimrc.tab")
-  source $HOME/.vimrc.tab
-endif
-
-""""""""""""""""""""
-" colorscheme
-""""""""""""""""""""
-if filereadable($HOME."/.vimrc.colorscheme")
-  source $HOME/.vimrc.colorscheme
+if filereadable($HOME."/.vim/rc/.vimrc.tab")
+  source $HOME/.vim/rc/.vimrc.tab
 endif
 
 """"""""""""""""""""
 " 色
 """"""""""""""""""""
-if filereadable($HOME."/.vimrc.color")
-  source $HOME/.vimrc.color
+if filereadable($HOME."/.vim/rc/.vimrc.color")
+  source $HOME/.vim/rc/.vimrc.color
 endif
 
 """"""""""""""""""""
 " シンタックス
 """"""""""""""""""""
-if filereadable($HOME."/.vimrc.syntax")
-  source $HOME/.vimrc.syntax
+if filereadable($HOME."/.vim/rc/.vimrc.syntax")
+  source $HOME/.vim/rc/.vimrc.syntax
 endif
 
 """"""""""""""""""""
 " マウス
 """"""""""""""""""""
-if filereadable($HOME."/.vimrc.mouse")
-  source $HOME/.vimrc.mouse
+if filereadable($HOME."/.vim/rc/.vimrc.mouse")
+  source $HOME/.vim/rc/.vimrc.mouse
 endif
 
 """"""""""""""""""""
 " Perl
 """"""""""""""""""""
-if filereadable($HOME."/.vimrc.perl")
-  source $HOME/.vimrc.perl
+if filereadable($HOME."/.vim/rc/.vimrc.perl")
+  source $HOME/.vim/rc/.vimrc.perl
 endif
 
 """"""""""""""""""""
 " 検索
 """"""""""""""""""""
-if filereadable($HOME."/.vimrc.search")
-  source $HOME/.vimrc.search
+if filereadable($HOME."/.vim/rc/.vimrc.search")
+  source $HOME/.vim/rc/.vimrc.search
 endif
 
 """"""""""""""""""""
 " ローカル設定を読み込みます
 """"""""""""""""""""
-if filereadable($HOME."/.vimrc.local")
-  source $HOME/.vimrc.local
+if filereadable($HOME."/.vim/rc/.vimrc.local")
+  source $HOME/.vim/rc/.vimrc.local
 endif

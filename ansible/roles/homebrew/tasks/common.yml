@@ -13,7 +13,7 @@
     - peco/peco
     - motemen/ghq
     - neovim/neovim
-    - sanemat/font
+    #- sanemat/font
     - homebrew/services
 # - name: update
 #   homebrew: update_homebrew=yes
@@ -69,7 +69,7 @@
     - mogenerator
 
     # font
-    - ricty
+    #- ricty
 
     # utils
     - wget
@@ -90,13 +90,15 @@
     - gibo
     - ipcalc
 
-- name: copy ricty fonts
-  copy: src=/usr/local/Cellar/ricty/3.2.4/share/fonts/{{ item }} dest=~/Library/Fonts/
+- name: clone ricty fonts
+  command: ghq get git@github.com:mzyy94/RictyDiminished-for-Powerline.git
+- name: install ricty fonts
+  copy: src=~/.ghq/github.com/mzyy94/RictyDiminished-for-Powerline/{{ item }} dest=~/Library/Fonts/
   with_items:
-    - Ricty-Bold.ttf
-    - Ricty-Regular.ttf
-    - RictyDiscord-Bold.ttf
-    - RictyDiscord-Regular.ttf
+    - RictyDiminished-Bold-Powerline.ttf
+    - RictyDiminished-Regular-Powerline.ttf
+    - RictyDiminishedDiscord-Bold-Powerline.ttf
+    - RictyDiminishedDiscord-Regular-Powerline.ttf
   tags:
     - work
 

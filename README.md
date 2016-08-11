@@ -60,3 +60,9 @@ Install the rest
 ```bash
 ansible-playbook -i hosts sites.yml -t work
 ```
+
+Install omf
+
+```bash
+curl -L http://get.oh-my.fish | fish
+```

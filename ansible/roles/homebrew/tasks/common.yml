@@ -61,9 +61,6 @@
     # - screen
 
     - ansible
-    - docker
-    - docker-machine
-    - docker-compose
 
     #
     - mogenerator

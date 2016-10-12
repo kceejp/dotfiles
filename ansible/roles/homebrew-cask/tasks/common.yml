@@ -1,5 +1,8 @@
+---
 - name: Install libraries with homebrew-cask
   homebrew_cask: name={{ item }} state=present
+  tags:
+    - work
   with_items:
     # japanese input
     - google-japanese-ime
@@ -35,12 +38,14 @@
     - vlc
     - mplayerx
     - radiant-player # google play music
+    - google-play-music-desktop-player
 
     # screen capture
     # - simplecap
 
     # device drivers
     - kensington-trackball-works
+    - teensy
 
     # cloud
     - evernote
@@ -72,8 +77,8 @@
     - cyberduck
 
     # virtual envs
-    - vmware-fusion
-    - virtualbox
+    #- vmware-fusion
+    #- virtualbox
     - vagrant
     - vagrant-manager
     - vagrant-bar

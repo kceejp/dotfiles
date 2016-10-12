@@ -86,6 +86,7 @@
     - git-secrets
     - gibo
     - ipcalc
+    - teensy_loader_cli
 
 - name: clone ricty fonts
   command: ghq get git@github.com:mzyy94/RictyDiminished-for-Powerline.git

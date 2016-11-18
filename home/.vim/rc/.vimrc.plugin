@@ -170,20 +170,6 @@ map <silent> sP :call YanktmpPaste_P()<CR>
 let g:qts_templatedir = "~/.vim/template"
 
 """"""""""""""""""""
-" yankring.vim
-""""""""""""""""""""
-" let g:yankring_history_file = ".vim/tmp/yankring_history" " do not specify $HOME since it'll cause error
-
-" yankround.vim {{{
-"" キーマップ
-nmap p <Plug>(yankround-p)
-nmap P <Plug>(yankround-P)
-"" 履歴取得数
-let g:yankround_dir = '~/.cache/yankround'
-let g:yankround_max_history = 50
-" }}}
-
-""""""""""""""""""""
 " zencoding
 """"""""""""""""""""
 " let g:user_zen_settings = {
@@ -212,6 +198,8 @@ nnoremap U :GundoToggle<CR>
 nmap f [ctrlp]
 nnoremap <silent> [ctrlp]f :<C-u>CtrlP<CR>
 nnoremap <silent> [ctrlp]r :<C-u>CtrlPMRUFiles<CR>
+
+let g:ctrlp_map = ''
 let g:ctrlp_match_window        = 'bottom,order:ttb,min:1,max:20'
 let g:ctrlp_use_migemo          = 1
 let g:ctrlp_clear_cache_on_exit = 0 " 終了時キャッシュをクリアしない
@@ -253,3 +241,21 @@ let g:lightline = {
       \ 'separator': { 'left': '⮀', 'right': '⮂' },
       \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
       \ }
+
+""""""""""""""""""""
+" yankround.vim
+""""""""""""""""""""
+" yankround.vim {{{
+
+"" キーマップ
+nmap p <Plug>(yankround-p)
+nmap P <Plug>(yankround-P)
+
+"" 履歴取得数
+let g:yankround_dir = '~/.cache/yankround'
+let g:yankround_max_history = 50
+
+nnoremap <silent>g<C-p> :<C-u>CtrlPYankRound<CR>
+
+" }}}
+

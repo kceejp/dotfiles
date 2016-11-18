@@ -16,7 +16,7 @@
     sslcainfo = /etc/pki/tls/certs/ca-bundle.crt
     sslVerify = false
 [user]
-	name = KCeejp
-	email = stomachache4988@gmail.com
+    name = kceejp
+    email = stomachache4988@gmail.com
 [core]
-	editor = vim -c \"set fenc=utf-8\"
+    editor = vim -c \"set fenc=utf-8\"

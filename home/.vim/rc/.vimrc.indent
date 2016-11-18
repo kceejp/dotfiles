@@ -2,16 +2,13 @@ set list  " 不可視文字を表示する
 set listchars=tab:^.,trail:.  " タブを ^... 半スペを . で表示する
 
 """"""""""""""""""""
-" indentLine
-""""""""""""""""""""
-let g:indentLine_enabled = 1
-
-""""""""""""""""""""
 " vim-indent-guides
 """"""""""""""""""""
 
-let g:indent_guides_enable_on_vim_startup  =  0 "vim立ち上げ時に自動的にvim-indent-guidesをオンにする
-let g:indent_guides_start_level            =  2 " ガイドをスタートするインデントの量
-let g:indent_guides_auto_colors            =  0 "autoにするとよく見えなかったので自動的に色付けするのはストップ
-let g:indent_guides_color_change_percent   = 10 "色の変化の幅（？）。パーセンテージらしい
-let g:indent_guides_guide_size             =  1 "インデントの色付け幅
+let g:indent_guides_enable_on_vim_startup  =  1 "vim立ち上げ時に自動的にvim-indent-guidesをオンにする
+let g:indent_guides_start_level            =  1 " ガイドをスタートするインデントの量
+let g:indent_guides_guide_size             =  0 "インデントの色付け幅
+let g:indent_guides_auto_colors            =  "auto"
+
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=141
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=61

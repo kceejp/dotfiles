@@ -9,6 +9,7 @@ let g:watchdogs_check_BufWritePost_enables = {
       \   "python" : 1,
       \   "ruby"   : 1,
       \   "php"    : 1,
+      \   "yaml"   : 1,
       \}
 
 " こっちは一定時間キー入力がなかった場合にシンタックスチェックを行う
@@ -20,4 +21,5 @@ let g:watchdogs_check_CursorHold_enables = {
       \   "python" : 1,
       \   "ruby"   : 1,
       \   "php"    : 1,
+      \   "yaml"   : 1,
       \}

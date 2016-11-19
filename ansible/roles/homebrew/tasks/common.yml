@@ -15,6 +15,7 @@
     - neovim/neovim
     #- sanemat/font
     - homebrew/services
+    - homebrew/php/php-cs-fixer
 # - name: update
 #   homebrew: update_homebrew=yes
 # - name: upgrade
@@ -47,6 +48,11 @@
 
     # go
     - go
+
+    # php
+    - homebrew/php/php-cs-fixer
+    - phpmd
+    - php-code-sniffer
 
     # ruby
     - rbenv

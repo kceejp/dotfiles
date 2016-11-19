@@ -31,13 +31,13 @@ if dein#check_install(['vimproc'])
   call dein#install(['vimproc'])
 endif
 
-" アンインストールが必要なものをアンインストール
-" call map(dein#check_clean(), "delete(v:val, 'rf')")
-
-" もし、未インストールものものがあったらインストール
-if dein#check_install()
+" 不足プラグインの自動インストール
+if has('vim_starting') && dein#check_install()
   call dein#install()
 endif
+
+" アンインストールが必要なものをアンインストール
+" call map(dein#check_clean(), "delete(v:val, 'rf')")
 
 " Required:
 filetype plugin indent on

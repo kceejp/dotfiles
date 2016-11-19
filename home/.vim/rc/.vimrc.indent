@@ -1,5 +1,5 @@
 set list  " 不可視文字を表示する
-set listchars=tab:^.,trail:.  " タブを ^... 半スペを . で表示する
+set listchars=tab:»\ ,trail:.  " タブを » 半スペを . で表示する
 
 """"""""""""""""""""
 " vim-indent-guides

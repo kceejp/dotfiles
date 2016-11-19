@@ -30,7 +30,6 @@
     - work
   homebrew: name={{ item }} state=latest
   with_items:
-    - vim --withlua
     # database
     - mysql
 

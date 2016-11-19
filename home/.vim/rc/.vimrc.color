@@ -2,20 +2,11 @@
 syntax enable
 
 if !has('gui_running')
-    set t_Co=256
+  set t_Co=256
 endif
 
 " colorscheme
 colorscheme dracula
-
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"⭤":""}',
-      \ },
-      \ 'separator': { 'left': '⮀', 'right': '⮂' },
-      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
-      \ }
 
 " 全角スペースを視覚化
 highlight DoubleWidthSpace cterm=underline

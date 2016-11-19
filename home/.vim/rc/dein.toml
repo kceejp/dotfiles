@@ -2,9 +2,6 @@
 repo = 'itchyny/lightline.vim'
 
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
-
-[[plugins]]
 # Ctrl-b / Ctrl-f
 repo = 'Smooth-Scroll'
 
@@ -36,62 +33,70 @@ repo = 'bronson/vim-trailing-whitespace'
 repo = 'Lokaltog/vim-easymotion'
 
 [[plugins]]
-# :Tabularize/=
-repo = 'godlygeek/tabular'
+repo = 'terryma/vim-multiple-cursors'
 
 [[plugins]]
 repo = 'vim-scripts/matchit.zip'
 
-[[plugins]]
-repo = 'errormarker.vim'
-
-[[plugins]]
-repo = 'thinca/vim-quickrun'
+# [[plugins]]
+# repo = 'errormarker.vim'
 
 [[plugins]]
 repo = 'osyo-manga/vim-watchdogs'
+depends = [
+  'osyo-manga/shabadou.vim',
+  'thinca/vim-quickrun',
+  'Shougo/vimproc',
+  'cohama/vim-hier',
+  'dannyob/quickfixstatus',
+]
 
 [[plugins]]
 repo = 'osyo-manga/shabadou.vim'
 
 [[plugins]]
-repo = 'rking/ag.vim'
+repo = 'thinca/vim-quickrun'
 
 [[plugins]]
-repo = 'ctrlpvim/ctrlp.vim'
+repo = 'Shougo/vimproc'
+build = 'make'
+
+[[plugins]]
+repo = 'cohama/vim-hier'
+
+[[plugins]]
+repo = 'dannyob/quickfixstatus'
+
+[[plugins]]
+repo = 'rking/ag.vim'
 
 # filer
 [[plugins]]
-repo = 'justinmk/vim-dirvish'
+repo = 'ctrlpvim/ctrlp.vim'
 
 [[plugins]]
-repo = 'terryma/vim-multiple-cursors'
+repo = 'justinmk/vim-dirvish'
 
-[[plugin]]
-repo = 'tell-k/vim-browsereload-mac'
+# Formatting
+[[plugins]]
+# gS(plit) / gJ(oin)
+repo = 'AndrewRadev/splitjoin.vim'
+
+[[plugins]]
+# :Tabularize/=
+repo = 'godlygeek/tabular'
 
 # Git
-# 'tpope/vim-fugitive'
+[[plugin]]
+repo = 'tpope/vim-fugitive'
+
+# colorscheme
+[[plugins]]
+repo = 'dracula/vim'
+
+# Git
 # 'int3/vim-extradite'
 # 'gregsexton/gitv'
-
-# Subversion
-# 'vim-scripts/svn-diff.vim'
-#shows diff when commiting changes
-# 'laurentb/vim-svndiff'
-# 'vcscommand.vim'
-# 'svndiff'
-# 'svndiff.vim'
-# 'svn-diff.vim'
-
-# HTML::Template
-# 'pbrisbin/html-template-syntax'
-
-# 'mbadran/headlights'
-# 'sjl/gundo.vim' " Graphical undo
-
-# template
-# 'qtmplsel.vim'
 
 # 'simplefold'
 # 'smartchr'
@@ -105,15 +110,5 @@ repo = 'tell-k/vim-browsereload-mac'
 # 'vim-scripts/SearchComplete'
 
 # Syntax checker
-[[plugins]]
-repo = 'scrooloose/syntastic'
-
-[[plugins]]
-repo = 'nginx.vim'
-
-[[plugins]]
-repo = 'AndrewRadev/splitjoin.vim'
-
-# colorscheme
-[[plugins]]
-repo = 'dracula/vim'
+# [[plugins]]
+# repo = 'scrooloose/syntastic'

@@ -2,6 +2,10 @@
 repo = 'jiangmiao/auto-pairs'
 on_i = 1 # on insert
 
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+on_i = 1
+
 # Ruby
 [[plugins]]
 repo = 'tpope/vim-endwise'
@@ -89,6 +93,10 @@ repo  = 'vim-scripts/smarty-syntax'
 on_ft = ['html']
 
 [[plugins]]
+repo  = 'mattn/emmet-vim'
+on_ft = ['html']
+
+[[plugins]]
 repo = 'hokaccha/vim-html5validator'
 on_ft = ['html']
 
@@ -103,3 +111,7 @@ on_ft = ['javascript']
 [[plugins]]
 repo = 'hail2u/vim-css3-syntax'
 on_ft = ['css']
+
+[[plugins]]
+repo = 'nginx.vim'
+on_ft = ['nginx']

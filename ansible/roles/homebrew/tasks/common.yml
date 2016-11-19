@@ -88,9 +88,14 @@
     - gibo
     - ipcalc
     - teensy_loader_cli
+    - autossh
+    - textql
+    - cloc
 
 - name: clone ricty fonts
-  command: ghq get git@github.com:mzyy94/RictyDiminished-for-Powerline.git
+  shell: ghq get git@github.com:mzyy94/RictyDiminished-for-Powerline.git
+  tags:
+    - work
 - name: install ricty fonts
   copy: src=~/.ghq/github.com/mzyy94/RictyDiminished-for-Powerline/{{ item }} dest=~/Library/Fonts/
   with_items:

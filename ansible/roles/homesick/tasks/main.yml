@@ -4,6 +4,6 @@
   with_items:
     - homesick
 - name: homesick clone
-  command: homesick clone KCeejp/dotfiles
+  command: homesick clone kceejp/dotfiles
 - name: homesick symlink
   shell: homesick symlink dotfiles chdir=~/

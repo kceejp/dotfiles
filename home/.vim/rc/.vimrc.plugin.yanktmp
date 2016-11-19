@@ -1,0 +1,7 @@
+""""""""""""""""""""
+" yanktmp.vim : enables vim to yank and paste through the multi processes
+" http://www.vim.org/scripts/script.php?script_id=1598
+""""""""""""""""""""
+map <silent> sy :call YanktmpYank()<CR>
+map <silent> sp :call YanktmpPaste_p()<CR>
+map <silent> sP :call YanktmpPaste_P()<CR>

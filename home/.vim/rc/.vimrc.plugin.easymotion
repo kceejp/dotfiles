@@ -1,0 +1,5 @@
+""""""""""""""""""""
+" easymotion
+""""""""""""""""""""
+" ,s<word you want to find>
+map <Leader> <Plug>(easymotion-prefix)

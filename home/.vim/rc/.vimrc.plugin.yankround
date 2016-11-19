@@ -1,0 +1,12 @@
+""""""""""""""""""""
+" yankround.vim
+""""""""""""""""""""
+"" キーマップ
+nmap p <Plug>(yankround-p)
+nmap P <Plug>(yankround-P)
+
+"" 履歴取得数
+let g:yankround_dir = '~/.cache/yankround'
+let g:yankround_max_history = 50
+
+nnoremap <silent>g<C-p> :<C-u>CtrlPYankRound<CR>

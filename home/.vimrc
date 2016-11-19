@@ -44,6 +44,13 @@ if filereadable($HOME."/.vim/rc/.vimrc.indent")
 endif
 
 """"""""""""""""""""
+" カーソルライン
+""""""""""""""""""""
+if filereadable($HOME."/.vim/rc/.vimrc.cursorline")
+  source $HOME/.vim/rc/.vimrc.cursorline
+endif
+
+""""""""""""""""""""
 " タブ
 """"""""""""""""""""
 if filereadable($HOME."/.vim/rc/.vimrc.tab")
@@ -55,6 +62,13 @@ endif
 """"""""""""""""""""
 if filereadable($HOME."/.vim/rc/.vimrc.color")
   source $HOME/.vim/rc/.vimrc.color
+endif
+
+""""""""""""""""""""
+" シンタックス
+""""""""""""""""""""
+if filereadable($HOME."/.vim/rc/.vimrc.filetype")
+  source $HOME/.vim/rc/.vimrc.filetype
 endif
 
 """"""""""""""""""""

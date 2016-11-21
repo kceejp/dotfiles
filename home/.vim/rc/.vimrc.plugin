@@ -1,55 +1,69 @@
 """"""""""""""""""""
+" jedi
+""""""""""""""""""""
+if filereadable($HOME.'/.vim/rc/.vimrc.plugin.jedi')
+  source $HOME/.vim/rc/.vimrc.plugin.jedi
+endif
+
+""""""""""""""""""""
 " neocomplete
 """"""""""""""""""""
-if filereadable($HOME."/.vim/rc/.vimrc.plugin.neocomplete")
+if filereadable($HOME.'/.vim/rc/.vimrc.plugin.neocomplete')
   source $HOME/.vim/rc/.vimrc.plugin.neocomplete
 endif
 
 """"""""""""""""""""
 " ctrlp
 """"""""""""""""""""
-if filereadable($HOME."/.vim/rc/.vimrc.plugin.ctrlp")
+if filereadable($HOME.'/.vim/rc/.vimrc.plugin.ctrlp')
   source $HOME/.vim/rc/.vimrc.plugin.ctrlp
 endif
 
 """"""""""""""""""""
 " lightline
 """"""""""""""""""""
-if filereadable($HOME."/.vim/rc/.vimrc.plugin.lightline")
+if filereadable($HOME.'/.vim/rc/.vimrc.plugin.lightline')
   source $HOME/.vim/rc/.vimrc.plugin.lightline
 endif
 
 """"""""""""""""""""
 " watchdogs
 """"""""""""""""""""
-if filereadable($HOME."/.vim/rc/.vimrc.plugin.watchdogs")
+if filereadable($HOME.'/.vim/rc/.vimrc.plugin.watchdogs')
   source $HOME/.vim/rc/.vimrc.plugin.watchdogs
 endif
 
 """"""""""""""""""""
 " yanktmp
 """"""""""""""""""""
-if filereadable($HOME."/.vim/rc/.vimrc.plugin.yamktmp")
+if filereadable($HOME.'/.vim/rc/.vimrc.plugin.yamktmp')
   source $HOME/.vim/rc/.vimrc.plugin.yanktmp
 endif
 
 """"""""""""""""""""
 " yankround
 """"""""""""""""""""
-if filereadable($HOME."/.vim/rc/.vimrc.plugin.yankround")
+if filereadable($HOME.'/.vim/rc/.vimrc.plugin.yankround')
   source $HOME/.vim/rc/.vimrc.plugin.yankround
 endif
 
 """"""""""""""""""""
 " easymotion
 """"""""""""""""""""
-if filereadable($HOME."/.vim/rc/.vimrc.plugin.easymotion")
+if filereadable($HOME.'/.vim/rc/.vimrc.plugin.easymotion')
   source $HOME/.vim/rc/.vimrc.plugin.easymotion
 endif
 
 """"""""""""""""""""
 " hier
 """"""""""""""""""""
-if filereadable($HOME."/.vim/rc/.vimrc.plugin.hier")
+if filereadable($HOME.'/.vim/rc/.vimrc.plugin.hier')
   source $HOME/.vim/rc/.vimrc.plugin.hier
+endif
+
+""""""""""""""""""""
+" tagbar
+""""""""""""""""""""
+if filereadable($HOME.'/.vim/rc/.vimrc.plugin.tagbar')
+  source $HOME/.vim/rc/.vimrc.plugin.tagbar
 endif

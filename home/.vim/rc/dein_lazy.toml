@@ -6,6 +6,10 @@ on_i = 1 # on insert
 repo = 'Shougo/neocomplete.vim'
 on_i = 1
 
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+on_i = 1
+
 # Ruby
 [[plugins]]
 repo = 'tpope/vim-endwise'

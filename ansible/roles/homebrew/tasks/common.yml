@@ -96,6 +96,7 @@
     - autossh
     - textql
     - cloc
+    - ctags
 
 - name: clone ricty fonts
   shell: ghq get git@github.com:mzyy94/RictyDiminished-for-Powerline.git

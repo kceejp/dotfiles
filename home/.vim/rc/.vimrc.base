@@ -1,12 +1,12 @@
 " Pressing ,v opens the vimrc file in a new tab.
 " http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/
-let mapleader = ","
+let mapleader = ','
 nmap <leader>v :tabedit $MYVIMRC<CR>
 nmap <leader>r :source $MYVIMRC<CR>
 
 " Source the vimrc file after saving it
 " http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/
-if has("autocmd")
+if has('autocmd')
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
@@ -117,7 +117,7 @@ set complete+=k
 
 " ファイルの前回閉じたときの場所を記憶
 " http://blog.livedoor.jp/sasata299/archives/51179057.html
-if has("autocmd")
+if has('autocmd')
     autocmd BufReadPost *
     \ if line("'\"") > 0 && line ("'\"") <= line("$") |
     \   exe "normal! g'\"" |

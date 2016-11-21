@@ -12,10 +12,10 @@ let g:hier_highlight_group_loc  = 'SpellBad'
 let g:hier_highlight_group_locw = 'SpellLocal'
 let g:hier_highlight_group_loci = 'SpellRare'
 
-if !exists("g:quickrun_config")
+if !exists('g:quickrun_config')
   let g:quickrun_config = {}
 endif
 
-let g:quickrun_config["watchdogs_checker/_"] = {
-      \ "outputter/quickfix/open_cmd" : "",
+let g:quickrun_config['watchdogs_checker/_'] = {
+      \ 'outputter/quickfix/open_cmd' : '',
       \ }

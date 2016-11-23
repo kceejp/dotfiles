@@ -16,6 +16,7 @@
     #- sanemat/font
     - homebrew/services
     - homebrew/php/php-cs-fixer
+    - tkengo/highway
 # - name: update
 #   homebrew: update_homebrew=yes
 # - name: upgrade
@@ -97,6 +98,7 @@
     - textql
     - cloc
     - ctags
+    - highway
 
 - name: clone ricty fonts
   shell: ghq get git@github.com:mzyy94/RictyDiminished-for-Powerline.git

@@ -12,7 +12,8 @@ let g:ctrlp_clear_cache_on_exit =   0 " 終了時キャッシュをクリアし�
 let g:ctrlp_mruf_max            = 500 " MRUの最大記録数
 let g:ctrlp_open_new_file       =   1 " 新規ファイル作成時にタブで開く
 let g:ctrlp_working_path_mode   = 'ra'
-let g:ctrlp_extensions = ['mru']
+let g:ctrlp_extensions          = ['mru']
+let g:ctrlp_user_command        = 'ag %s -l'
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows

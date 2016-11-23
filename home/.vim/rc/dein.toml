@@ -41,6 +41,9 @@ repo = 'vim-scripts/matchit.zip'
 [[plugins]]
 repo = 'majutsushi/tagbar'
 
+[[plugins]]
+repo = 'ConradIrwin/vim-bracketed-paste'
+
 # [[plugins]]
 # repo = 'errormarker.vim'
 

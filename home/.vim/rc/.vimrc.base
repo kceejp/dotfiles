@@ -126,3 +126,6 @@ endif
 
 " デフォルトで fold を全部展開しちゃう
 set foldlevelstart=20
+
+" マルチバイト文字ずれる対策
+set ambiwidth=double

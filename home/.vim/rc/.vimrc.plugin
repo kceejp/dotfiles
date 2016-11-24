@@ -67,3 +67,10 @@ endif
 if filereadable($HOME.'/.vim/rc/.vimrc.plugin.tagbar')
   source $HOME/.vim/rc/.vimrc.plugin.tagbar
 endif
+
+""""""""""""""""""""
+" splitjoin
+""""""""""""""""""""
+if filereadable($HOME.'/.vim/rc/.vimrc.plugin.splitjoin')
+  source $HOME/.vim/rc/.vimrc.plugin.splitjoin
+endif

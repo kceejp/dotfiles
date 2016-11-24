@@ -94,7 +94,7 @@ on_ft = ['yaml']
 
 [[plugins]]
 repo  = 'vim-scripts/smarty-syntax'
-on_ft = ['html']
+on_ft = ['smarty']
 
 [[plugins]]
 repo  = 'mattn/emmet-vim'

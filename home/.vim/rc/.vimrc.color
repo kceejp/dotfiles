@@ -16,4 +16,4 @@ highlight LineLength cterm=underline
 match LineLength /.\%>79v/
 
 " ,cで色見本を出す
-nmap <leader>c :so $VIMRUNTIME/syntax/colortest.vim<CR>
+" nmap <leader>c :so $VIMRUNTIME/syntax/colortest.vim<CR>

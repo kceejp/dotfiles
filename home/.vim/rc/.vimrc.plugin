@@ -74,3 +74,10 @@ endif
 if filereadable($HOME.'/.vim/rc/.vimrc.plugin.splitjoin')
   source $HOME/.vim/rc/.vimrc.plugin.splitjoin
 endif
+
+""""""""""""""""""""
+" nerdcommenter
+""""""""""""""""""""
+if filereadable($HOME.'/.vim/rc/.vimrc.plugin.nerdcommenter')
+  source $HOME/.vim/rc/.vimrc.plugin.nerdcommenter
+endif

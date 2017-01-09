@@ -16,7 +16,7 @@
     # browsers
     - google-chrome
     - firefox
-    - flash
+    - flash-player
 
     # calendars
     - day-o
@@ -33,6 +33,7 @@
     - iterm2
     - shuttle
     #- totalterminal
+    - hosts
 
     # media players
     - vlc

@@ -41,6 +41,7 @@ set -gx PATH $GOPATH/bin $PATH # go
 set -gx PATH /usr/local/heroku/bin $PATH # heroku toolbelt
 
 ### npm
+set -gx PATH $PATH `npm bin -g`
 set -gx PATH /usr/local/share/npm/bin $PATH
 set -gx PATH $HOME/.npm/bin $PATH
 set -gx NODE_PATH $HOME/.npm/libraries $NODE_PATH
@@ -98,6 +99,25 @@ function peco_select_history
     set -e line
 end
 
+# https://github.com/riichard/fish-git-branch/blob/master/peco-git.fish
+# Shows an interactive prompt to select a git branch to checkout to
+function peco-git-branch-checkout --description "Check out a branch interactively"
+    git branch -a | peco --prompt="Checkout branch:" | tr -d ' ' > /tmp/branchname
+    set selected_branch_name (cat /tmp/branchname)
+
+    # Remove remote/ if its part of the branchname
+    switch $selected_branch_name
+    case '*-\>*'
+        set selected_branch_name (echo $selected_branch_name | perl -ne 's/^.*->(.*?)\/(.*)$/\2/;print')
+    case 'remotes*'
+        set selected_branch_name (echo $selected_branch_name | perl -ne 's/^.*?remotes\/(.*?)\/(.*)$/\2/;print')
+    end
+
+    # Do the actual checkout
+    echo "Checking out $selected_branch_name"
+    git checkout $selected_branch_name
+end
+
 # http://qiita.com/unlovingly/items/99999271df7eea7bc953
 # https://github.com/yoshiori/fish-peco_select_ghq_repository/blob/master/peco_select_ghq_repository.fish
 function peco_select_ghq_repository
@@ -115,6 +135,22 @@ function peco_select_ghq_repository
     end
 end
 
+# https://gist.github.com/patorash/377268ef75f012318279
+function peco_ssh
+  awk '
+    tolower($1)=="host" {
+      for(i=2;i<=NF; i++) {
+        if ($i !~ "[*?]") {
+          print $i
+        }
+      }
+    }
+  ' ~/.ssh/config | sort | peco | read -l hostname
+  if test -n "$hostname"
+    ssh $hostname
+  end
+end
+
 function save_history --on-event fish_preexec
     history --save
 end
@@ -126,4 +162,7 @@ function fish_user_key_bindings
     bind \cr peco_select_history
     bind \e\e 'thefuck-command-line'  # Bind EscEsc to thefuck
     bind \ck peco_kill
+    bind \cs peco_ssh
+    bind \cb peco-git-branch-checkout
 end
+

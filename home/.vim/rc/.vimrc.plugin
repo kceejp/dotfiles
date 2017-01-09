@@ -81,3 +81,10 @@ endif
 if filereadable($HOME.'/.vim/rc/.vimrc.plugin.nerdcommenter')
   source $HOME/.vim/rc/.vimrc.plugin.nerdcommenter
 endif
+
+""""""""""""""""""""
+" vim-json
+""""""""""""""""""""
+if filereadable($HOME.'/.vim/rc/.vimrc.plugin.vim-json')
+  source $HOME/.vim/rc/.vimrc.plugin.vim-json
+endif

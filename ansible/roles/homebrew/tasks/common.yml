@@ -25,7 +25,7 @@
 - name: Install vim with Lua and Python3
   tags:
     - work
-  homebrew: name=vim state=latest install_options=with-lua,with-python3,override-system-vi
+  homebrew: name=vim state=latest install_options=with-lua,with-python3,with-override-system-vi
 
 - name: Install libraries with homebrew
   tags:

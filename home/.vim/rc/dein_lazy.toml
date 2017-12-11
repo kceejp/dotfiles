@@ -6,10 +6,6 @@ on_i = 1 # on insert
 repo = 'Shougo/neocomplete.vim'
 on_i = 1
 
-[[plugins]]
-repo = 'davidhalter/jedi-vim'
-on_i = 1
-
 # Ruby
 [[plugins]]
 repo = 'tpope/vim-endwise'
@@ -34,6 +30,10 @@ repo = 'JavaScript-syntax'
 on_ft = ['javascript']
 
 [[plugins]]
+repo = 'jelera/vim-javascript-syntax'
+on_ft = ['javascript']
+
+[[plugins]]
 repo = 'jQuery'
 on_ft = ['javascript']
 
@@ -45,15 +45,14 @@ on_ft = ['javascript']
 repo = 'kchmck/vim-coffee-script'
 on_ft = ['coffee']
 
+[[plugins]]
+repo = 'elzr/vim-json'
+on_ft = ['json']
+
 # golang
 [[plugins]]
 repo  = 'vim-jp/vim-go-extra'
 on_ft = ['go']
-
-# python
-[[plugins]]
-repo  = 'yuroyoro/vim-python'
-on_ft = ['python']
 
 # markdown
 repo  = 'tpope/vim-markdown'
@@ -69,14 +68,6 @@ on_ft = ['markdown', 'mkd']
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = ['toml']
-
-[[plugins]]
-repo = 'elzr/vim-json'
-on_ft = ['json']
-
-[[plugins]]
-repo = 'hynek/vim-python-pep8-indent'
-on_ft = ['python']
 
 [[plugins]]
 repo = 'vim-ruby/vim-ruby'
@@ -109,13 +100,49 @@ repo = 'othree/html5.vim'
 on_ft = ['html']
 
 [[plugins]]
-repo = 'jelera/vim-javascript-syntax'
-on_ft = ['javascript']
-
-[[plugins]]
 repo = 'hail2u/vim-css3-syntax'
 on_ft = ['css']
 
 [[plugins]]
 repo = 'nginx.vim'
 on_ft = ['nginx']
+
+# fish
+[[plugins]]
+repo = 'dag/vim-fish'
+on_ft = ['fish']
+
+# pub / jade
+[[plugins]]
+repo = 'digitaltoad/vim-pug'
+on_ft = ['pug']
+
+# python
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+on_ft = ['python']
+
+# [[plugins]]
+# repo = 'python-mode/python-mode'
+# on_ft = ['python']
+
+# [[plugins]]
+# repo = 'tmhedberg/SimpylFold'
+# on_ft = ['python']
+
+#[[plugins]]
+#repo = 'Valloric/YouCompleteMe'
+#on_ft = ['python']
+
+#[[plugins]]
+#repo = 'mitsuhiko/vim-jinja'
+#on_ft = [['python', 'jinja']]
+
+#[[plugins]]
+#repo = 'hynek/vim-python-pep8-indent'
+#on_i = 1
+#on_ft = 'python'
+
+#[[plugins]]
+#repo = 'vim-scripts/python.vim--Vasiliev'
+#on_ft = [['python', 'django']]

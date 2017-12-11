@@ -114,7 +114,3 @@ repo = 'dracula/vim'
 
 # 'vim-scripts/ShowMarks'
 # 'vim-scripts/SearchComplete'
-
-# Syntax checker
-# [[plugins]]
-# repo = 'scrooloose/syntastic'

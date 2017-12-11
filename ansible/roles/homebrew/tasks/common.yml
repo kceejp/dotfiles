@@ -10,13 +10,16 @@
 - name: tap
   homebrew_tap: tap={{ item }} state=present
   with_items:
-    - peco/peco
+    # - peco/peco
     - motemen/ghq
     - neovim/neovim
     #- sanemat/font
     - homebrew/services
     - homebrew/php/php-cs-fixer
     - tkengo/highway
+    - fisherman/tap
+    - minerva1129/homebrew-anyenv
+    - mackerelio/mackerel-agent
 # - name: update
 #   homebrew: update_homebrew=yes
 # - name: upgrade
@@ -25,7 +28,7 @@
 - name: Install vim with Lua and Python3
   tags:
     - work
-  homebrew: name=vim state=latest install_options=with-lua,with-python3,with-override-system-vi
+  homebrew: name=vim state=latest install_options=with-lua,with-python3,with-python,with-override-system-vi
 
 - name: Install libraries with homebrew
   tags:
@@ -42,16 +45,19 @@
 
     # shells
     - bash
-    - zsh
     - fish
+    - fisherman
 
+    - anyenv --HEAD
     # - neovim
 
     # go
     - go
+    - glide
 
     # php
     - homebrew/php/php-cs-fixer
+    - homebrew/php/composer
     - phpmd
     - php-code-sniffer
 
@@ -77,20 +83,29 @@
 
     # utils
     - wget
+    - curl
+    - httpie
+    - jq
+
     - tree
+
     - ack
+    - highway
     - ag
+
     - nkf
     - gnu-sed
-    - colordiff
     - z
     - thefuck
     - peco
     - ghq
-    - jq
-    - httpie
+
+
     - awscli
+    - amazon-ecs-cli
+    - stormssh
     - git-secrets
+    - hub
     - gibo
     - ipcalc
     - teensy_loader_cli
@@ -98,7 +113,12 @@
     - textql
     - cloc
     - ctags
-    - highway
+
+    - grc
+    - colordiff
+
+    - heroku
+    - mkr
 
 - name: clone ricty fonts
   shell: ghq get git@github.com:mzyy94/RictyDiminished-for-Powerline.git

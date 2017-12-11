@@ -1,15 +1,17 @@
 # Path to Oh My Fish install.
-set -gx OMF_PATH $HOME/.local/share/omf
+#set -gx OMF_PATH $HOME/.local/share/omf
 
 # Customize Oh My Fish configuration path.
 #set -gx OMF_CONFIG "$HOME/.config/omf"
 set -g Z_SCRIPT_PATH (brew --prefix)/etc/profile.d/z.sh
 
 # Load oh-my-fish configuration.
-source $OMF_PATH/init.fish
+#source $OMF_PATH/init.fish
 
 # set fish_greeting to null, so that the message won't appear
 set fish_greeting
+
+#set fish_theme fishface
 
 # Env values
 set -gx LANG ja_JP.UTF-8
@@ -28,17 +30,13 @@ set -gx DOTVIM_DIR $HOMESICK_DOTFILES_HOME/.vim
 set -gx GOPATH $HOME/go
 
 ### PATH
-
 set -gx PATH /usr/bin $PATH
 set -gx PATH /usr/sbin $PATH
 set -gx PATH /usr/local/bin $PATH
 set -gx PATH /usr/local/sbin $PATH
 set -gx PATH $HOME/local/bin $PATH
-set -gx PATH $HOME/.rbenv/bin $PATH
-set -gx PATH $HOME/.rbenv/shims $PATH
-rbenv rehash >/dev/null ^&1
 set -gx PATH $GOPATH/bin $PATH # go
-set -gx PATH /usr/local/heroku/bin $PATH # heroku toolbelt
+#set -gx PATH /usr/local/heroku/bin $PATH # heroku toolbelt
 
 ### npm
 set -gx PATH $PATH `npm bin -g`
@@ -47,11 +45,6 @@ set -gx PATH $HOME/.npm/bin $PATH
 set -gx NODE_PATH $HOME/.npm/libraries $NODE_PATH
 set -gx MANPATH $HOME/.npm/man $MANPATH
 # set -gx PATH eval "npm bin" $PATH
-
-### boot2docker
-#if [ "`boot2docker status`" = "running" ]; then
-#    $(boot2docker shellinit)
-#fi
 
 alias vi "vim -p"
 
@@ -63,93 +56,6 @@ function peco
     command peco --layout=bottom-up $argv
 end
 
-# https://gist.github.com/patorash/6e8b33efd4f67690f016
-function peco_delete_branch
-    git branch | peco | read line
-    set -l branch_name (echo $line | awk '{print $1}')
-    if test "$branch_name" != "*"
-        git branch -d $branch_name
-    else
-        echo "Can't delete current branch."
-    end
-end
-
-# https://gist.github.com/patorash/6e8b33efd4f67690f016
-function peco_kill
-    if set -q $argv
-        ps aux | peco | read proc
-    else
-        ps aux | peco --query $argv | read proc
-    end
-    if test -n "$proc"
-        set -l pid (echo $proc | awk '{print $2}')
-        echo "kill pid: $pid. [$proc]"
-        kill $pid
-    end
-    set -e proc
-end
-
-# https://gist.github.com/patorash/6e8b33efd4f67690f016
-function peco_select_history
-    if set -q $argv
-        history | peco | read line; commandline $line
-    else
-        history | peco --query $argv | read line; commandline $line
-    end
-    set -e line
-end
-
-# https://github.com/riichard/fish-git-branch/blob/master/peco-git.fish
-# Shows an interactive prompt to select a git branch to checkout to
-function peco-git-branch-checkout --description "Check out a branch interactively"
-    git branch -a | peco --prompt="Checkout branch:" | tr -d ' ' > /tmp/branchname
-    set selected_branch_name (cat /tmp/branchname)
-
-    # Remove remote/ if its part of the branchname
-    switch $selected_branch_name
-    case '*-\>*'
-        set selected_branch_name (echo $selected_branch_name | perl -ne 's/^.*->(.*?)\/(.*)$/\2/;print')
-    case 'remotes*'
-        set selected_branch_name (echo $selected_branch_name | perl -ne 's/^.*?remotes\/(.*?)\/(.*)$/\2/;print')
-    end
-
-    # Do the actual checkout
-    echo "Checking out $selected_branch_name"
-    git checkout $selected_branch_name
-end
-
-# http://qiita.com/unlovingly/items/99999271df7eea7bc953
-# https://github.com/yoshiori/fish-peco_select_ghq_repository/blob/master/peco_select_ghq_repository.fish
-function peco_select_ghq_repository
-    set -l query (commandline)
-
-    if test -n $query
-        set peco_flags --query "$query"
-    end
-
-    ghq list -p | peco $peco_flags | read line
-
-    if [ $line ]
-        cd $line
-        commandline -f repaint
-    end
-end
-
-# https://gist.github.com/patorash/377268ef75f012318279
-function peco_ssh
-  awk '
-    tolower($1)=="host" {
-      for(i=2;i<=NF; i++) {
-        if ($i !~ "[*?]") {
-          print $i
-        }
-      }
-    }
-  ' ~/.ssh/config | sort | peco | read -l hostname
-  if test -n "$hostname"
-    ssh $hostname
-  end
-end
 
 function save_history --on-event fish_preexec
     history --save
@@ -166,3 +72,7 @@ function fish_user_key_bindings
     bind \cb peco-git-branch-checkout
 end
 
+# Load anyenv automatically by adding
+# the following to ~/.config/fish/config.fish:
+status --is-interactive; and source (anyenv init -|psub)
+status --is-login; and status --is-interactive; and exec byobu-launcher

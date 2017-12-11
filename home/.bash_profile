@@ -31,3 +31,4 @@ else
 fi
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+_byobu_sourced=1 . /usr/local/Cellar/byobu/5.123/bin/byobu-launch 2>/dev/null || true

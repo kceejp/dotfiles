@@ -1,7 +1,7 @@
 autocmd FileType python setlocal omnifunc=jedi#completions
 
 let g:jedi#auto_vim_configuration = 0
-let g:jedi#use_tabs_not_buffers = 1
+let g:jedi#use_tabs_not_buffers   = 1
 
 if !exists('g:neocomplete#force_omni_input_patterns')
   let g:neocomplete#force_omni_input_patterns = {}

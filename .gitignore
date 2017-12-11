@@ -20,3 +20,11 @@ home/.config/fish/generated_completions
 /home/.vim/.netrwhist
 /home/.vim/tmp/
 /home/.vim/bundle/*
+home/.config/vim/yankround/history
+
+__pycache__
+
+home/.config/fisherman/
+home/.config/fish/functions/
+home/.config/fish/conf.d/
+home/.config/fish/completions/

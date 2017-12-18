@@ -11,15 +11,16 @@
   homebrew_tap: tap={{ item }} state=present
   with_items:
     # - peco/peco
-    - motemen/ghq
+    #- motemen/ghq
     - neovim/neovim
     #- sanemat/font
     - homebrew/services
-    - homebrew/php/php-cs-fixer
+      #- homebrew/php/php-cs-fixer
     - tkengo/highway
     - fisherman/tap
     - minerva1129/homebrew-anyenv
     - mackerelio/mackerel-agent
+    - sanemat/font
 # - name: update
 #   homebrew: update_homebrew=yes
 # - name: upgrade
@@ -28,19 +29,34 @@
 - name: Install vim with Lua and Python3
   tags:
     - work
-  homebrew: name=vim state=latest install_options=with-lua,with-python3,with-python,with-override-system-vi
+  homebrew: name=vim state=latest options=with-lua,with-python3,with-python,with-override-system-vi
+
+- name: Install Ricty
+  tags:
+    - work
+  homebrew: name=ricty state=latest options=powerline,vim-powerline
+- name: Copy font file
+  shell: cp -f $(brew --cellar ricty)/*/share/fonts/Ricty*.ttf ~/Library/Fonts/
+  args:
+    creates: ~/Library/Fonts/Ricty-Bold.ttf
+- name: fc-cache
+  shell: fc-cache -vf
 
 - name: Install libraries with homebrew
   tags:
     - work
   homebrew: name={{ item }} state=latest
   with_items:
+    - mas
     # database
     - mysql
 
     # git
     - git
     - tig
+    - hub
+    - git-secrets
+    - gibo
     # - git-flow
 
     # shells
@@ -48,7 +64,7 @@
     - fish
     - fisherman
 
-    - anyenv --HEAD
+      #- anyenv --HEAD
     # - neovim
 
     # go
@@ -56,10 +72,10 @@
     - glide
 
     # php
-    - homebrew/php/php-cs-fixer
-    - homebrew/php/composer
-    - phpmd
-    - php-code-sniffer
+    # - homebrew/php/php-cs-fixer
+    # - homebrew/php/composer
+    # - phpmd
+    # - php-code-sniffer
 
     # ruby
     - rbenv
@@ -70,16 +86,14 @@
     - npm
 
     # miscellaneous
+    - byobu
     - tmux
     # - screen
 
     - ansible
 
     #
-    - mogenerator
-
-    # font
-    #- ricty
+    # - mogenerator
 
     # utils
     - wget
@@ -100,15 +114,11 @@
     - peco
     - ghq
 
-
     - awscli
     - amazon-ecs-cli
-    - stormssh
-    - git-secrets
-    - hub
-    - gibo
+      #- stormssh
     - ipcalc
-    - teensy_loader_cli
+      #- teensy_loader_cli
     - autossh
     - textql
     - cloc
@@ -117,23 +127,5 @@
     - grc
     - colordiff
 
-    - heroku
+      #- heroku
     - mkr
-
-- name: clone ricty fonts
-  shell: ghq get git@github.com:mzyy94/RictyDiminished-for-Powerline.git
-  tags:
-    - work
-- name: install ricty fonts
-  copy: src=~/.ghq/github.com/mzyy94/RictyDiminished-for-Powerline/{{ item }} dest=~/Library/Fonts/
-  with_items:
-    - RictyDiminished-Bold-Powerline.ttf
-    - RictyDiminished-Regular-Powerline.ttf
-    - RictyDiminishedDiscord-Bold-Powerline.ttf
-    - RictyDiminishedDiscord-Regular-Powerline.ttf
-  tags:
-    - work
-
-- command: fc-cache -vf
-  tags:
-    - work

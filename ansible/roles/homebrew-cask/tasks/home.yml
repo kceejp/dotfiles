@@ -4,7 +4,7 @@
   tags:
     - home
   with_items:
-    - google-photos-backup
+    - google-photos-backup-and-sync
     - music-manager
     - obs # broadcasting tool
     - tunnelbear
@@ -12,10 +12,10 @@
     - ripit
     - burn
     - handbrake
-    - fairmount
+      #- fairmount
     - boxofsnoo-fairmount
     - makemkv
-    - magician
+      #- magician
     - monolingual
-    - bittorrent-sync
-    - gopro
+      #- bittorrent-sync
+      #- gopro

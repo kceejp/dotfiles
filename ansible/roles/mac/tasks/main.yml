@@ -1,8 +1,25 @@
 ---
-- name: install homebrew
-  shell: ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+# - name: install homebrew
+#   shell: ruby -e '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
 
-- name: install oh-my-fish
-  shell: curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
-- name: install omf modules
-  shell: omf install
+- name: install appstore applications
+  command: mas install "{{ item.id }}"
+  with_items:
+    - name: PopClip
+      id: 445189367
+    - name: Skitch - Snap. Mark Up. Send.
+      id: 425955336
+    - name: Magnet
+      id: 441258766
+    - name: Xcode
+      id: 497799835
+    - name: Apple Configurator 2
+      id: 1037126344
+    - name: Linguan
+      id: 477163052
+    - name: ForkLift - File Manager and FTP/SFTP/WebDAV/Amazon S3 client
+      id: 412448059
+    - name: Sip
+      id: 507257563
+    - name: LINE
+      id: 539883307

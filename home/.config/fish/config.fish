@@ -74,5 +74,5 @@ end
 
 # Load anyenv automatically by adding
 # the following to ~/.config/fish/config.fish:
-status --is-interactive; and source (anyenv init -|psub)
-status --is-login; and status --is-interactive; and exec byobu-launcher
+# status --is-interactive; and source (anyenv init -|psub)
+# status --is-login; and status --is-interactive; and exec byobu-launcher

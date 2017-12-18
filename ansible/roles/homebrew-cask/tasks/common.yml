@@ -15,8 +15,8 @@
 
     # browsers
     - google-chrome
-    - firefox
-    - flash-player
+      #- firefox
+      #- flash-player
 
     # calendars
     - day-o
@@ -31,28 +31,28 @@
 
     # terminals
     - iterm2
-    - shuttle
+      #- shuttle
     #- totalterminal
     - hosts
 
     # media players
     - vlc
-    - mplayerx
-    - radiant-player # google play music
-    - google-play-music-desktop-player
+      #- mplayerx
+      # - radiant-player # google play music
+      # - google-play-music-desktop-player
 
     # screen capture
     # - simplecap
 
     # device drivers
-    - kensington-trackball-works
-    - teensy
+    #- kensington-trackball-works
+      #- teensy
 
     # cloud
-    - evernote
+    #- evernote
     - dropbox
-    - google-drive
-    - cloud
+      #- google-drive
+      #- cloud
 
     # codecs
     # - flip4mac
@@ -66,7 +66,8 @@
     #- brackets
 
     # markdown editors
-    - macdown
+    - boostnote
+    #- macdown
     #- kobito
     #- mou
     #- lightpaper
@@ -75,19 +76,19 @@
     #- atext
 
     # scp, ftp, sftp
-    - cyberduck
+    #- cyberduck
 
     # virtual envs
     #- vmware-fusion
     #- virtualbox
-    - vagrant
-    - vagrant-manager
-    - vagrant-bar
+    #- vagrant
+    #- vagrant-manager
+    #- vagrant-bar
 
     # utils
     # - bettertouchtool
-    - karabiner
-    - seil
+    - karabiner-elements
+      #- seil
     #- jitouch
     #- keyremap4macbook
 
@@ -98,9 +99,9 @@
     #- inkscape
 
     # ios dev
-    - reveal
-    - appcode
-    - simpholders
+    #- reveal
+      #- appcode
+      #- simpholders
     # - fabric
     # - testflight
     # - crashlytics
@@ -112,13 +113,13 @@
     # - yorufukurou
 
     # prototyping
-    - invisionsync
+    #- invisionsync
 
     # miscellaneous
-    - totalfinder
-    - appcleaner
+    #- totalfinder
+      #- appcleaner
     # - flux # display light
-    - hazel
+    #- hazel
     # - macid
     #- adobe-reader
     #- bartender
@@ -126,3 +127,4 @@
     #- notifyr
     #- cloudytabs
     #- fluid
+    - toggl

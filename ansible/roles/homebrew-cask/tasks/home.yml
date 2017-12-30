@@ -19,3 +19,5 @@
     - monolingual
       #- bittorrent-sync
       #- gopro
+    - airflow
+    - arq

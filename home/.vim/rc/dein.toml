@@ -3,12 +3,12 @@ repo = 'itchyny/lightline.vim'
 
 [[plugins]]
 # Ctrl-b / Ctrl-f
-repo = 'Smooth-Scroll'
+repo = 'vim-scripts/Smooth-Scroll'
 
 # Yank
 [[plugins]]
 # super yank
-repo = 'yanktmp.vim'
+repo = 'vim-scripts/yanktmp.vim'
 
 [[plugins]]
 # ctrl-p continuously

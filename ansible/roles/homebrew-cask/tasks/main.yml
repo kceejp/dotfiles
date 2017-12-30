@@ -1,4 +1,4 @@
 ---
-- include: common.yml
-- include: home.yml
-- include: work.yml
+- import_tasks: common.yml
+- import_tasks: home.yml
+- import_tasks: work.yml

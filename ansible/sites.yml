@@ -3,7 +3,7 @@
   connection: local
   gather_facts: false
   roles:
-    - mac
     - homebrew
     - homebrew-cask
+    - mac
     - homesick

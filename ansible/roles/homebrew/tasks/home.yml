@@ -5,6 +5,6 @@
   with_items:
     # data recovery
     - testdisk
-    - youtube-dl
 
+    - youtube-dl
     - libdvdcss

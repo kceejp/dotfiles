@@ -3,9 +3,12 @@
   homebrew_cask: name={{ item }} state=present
   tags:
     - work
+    - home
   with_items:
     # japanese input
     - google-japanese-ime
+
+    - iterm2
 
     # launcher
     - alfred
@@ -24,13 +27,13 @@
     # avoid .DS_Store creation
     - deathtodsstore
 
+    - karabiner-elements
+
     # messaging / conferencing
-    - slack
     #- skype
     #- zoomus
 
     # terminals
-    - iterm2
       #- shuttle
     #- totalterminal
     - hosts
@@ -87,7 +90,6 @@
 
     # utils
     # - bettertouchtool
-    - karabiner-elements
       #- seil
     #- jitouch
     #- keyremap4macbook
@@ -127,4 +129,5 @@
     #- notifyr
     #- cloudytabs
     #- fluid
-    - toggl
+    - fantastical
+    - raindropio

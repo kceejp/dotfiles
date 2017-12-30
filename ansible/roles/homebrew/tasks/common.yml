@@ -10,17 +10,15 @@
 - name: tap
   homebrew_tap: tap={{ item }} state=present
   with_items:
-    # - peco/peco
-    #- motemen/ghq
-    - neovim/neovim
-    #- sanemat/font
     - homebrew/services
-      #- homebrew/php/php-cs-fixer
     - tkengo/highway
     - fisherman/tap
     - minerva1129/homebrew-anyenv
     - mackerelio/mackerel-agent
-    - sanemat/font
+    # - peco/peco
+    #- motemen/ghq
+    #- neovim/neovim
+    #- homebrew/php/php-cs-fixer
 # - name: update
 #   homebrew: update_homebrew=yes
 # - name: upgrade
@@ -29,103 +27,6 @@
 - name: Install vim with Lua and Python3
   tags:
     - work
+    - home
   homebrew: name=vim state=latest options=with-lua,with-python3,with-python,with-override-system-vi
 
-- name: Install Ricty
-  tags:
-    - work
-  homebrew: name=ricty state=latest options=powerline,vim-powerline
-- name: Copy font file
-  shell: cp -f $(brew --cellar ricty)/*/share/fonts/Ricty*.ttf ~/Library/Fonts/
-  args:
-    creates: ~/Library/Fonts/Ricty-Bold.ttf
-- name: fc-cache
-  shell: fc-cache -vf
-
-- name: Install libraries with homebrew
-  tags:
-    - work
-  homebrew: name={{ item }} state=latest
-  with_items:
-    - mas
-    # database
-    - mysql
-
-    # git
-    - git
-    - tig
-    - hub
-    - git-secrets
-    - gibo
-    # - git-flow
-
-    # shells
-    - bash
-    - fish
-    - fisherman
-
-      #- anyenv --HEAD
-    # - neovim
-
-    # go
-    - go
-    - glide
-
-    # php
-    # - homebrew/php/php-cs-fixer
-    # - homebrew/php/composer
-    # - phpmd
-    # - php-code-sniffer
-
-    # ruby
-    - rbenv
-    - ruby-build
-
-    # node
-    - node
-    - npm
-
-    # miscellaneous
-    - byobu
-    - tmux
-    # - screen
-
-    - ansible
-
-    #
-    # - mogenerator
-
-    # utils
-    - wget
-    - curl
-    - httpie
-    - jq
-
-    - tree
-
-    - ack
-    - highway
-    - ag
-
-    - nkf
-    - gnu-sed
-    - z
-    - thefuck
-    - peco
-    - ghq
-
-    - awscli
-    - amazon-ecs-cli
-      #- stormssh
-    - ipcalc
-      #- teensy_loader_cli
-    - autossh
-    - textql
-    - cloc
-    - ctags
-
-    - grc
-    - colordiff
-
-      #- heroku
-    - mkr

@@ -1,0 +1,17 @@
+---
+- name: tap
+  homebrew_tap: tap={{ item }} state=present
+  with_items:
+    - sanemat/font
+
+- name: Install Ricty
+  tags:
+    - work
+    - home
+  homebrew: name=ricty state=latest options=powerline,vim-powerline
+- name: Copy font file
+  shell: cp -f $(brew --cellar ricty)/*/share/fonts/Ricty*.ttf ~/Library/Fonts/
+  args:
+    creates: ~/Library/Fonts/Ricty-Bold.ttf
+- name: fc-cache
+  shell: fc-cache -vf

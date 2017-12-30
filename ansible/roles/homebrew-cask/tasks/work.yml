@@ -4,4 +4,6 @@
   tags:
     - work
   with_items:
+    - toggl
+    - slack
     - docker

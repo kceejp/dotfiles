@@ -17,6 +17,7 @@ oh-my-fish/plugin-grc
 oh-my-fish/marlin
 oh-my-fish/plugin-osx
 oh-my-fish/plugin-peco
+# https://gist.github.com/kceejp/6fdb4365ec5f6e97c14881c32a99a3c2
 yoshiori/fish-peco_select_ghq_repository
 oh-my-fish/plugin-python
 oh-my-fish/plugin-rails

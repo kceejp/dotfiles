@@ -2,3 +2,12 @@
 - import_tasks: common.yml
 - import_tasks: home.yml
 - import_tasks: work.yml
+- import_tasks: quick_look_plugins.yml
+- import_tasks: screensaver.yml
+
+- import_tasks: browsers.yml
+
+- import_tasks: development_common.yml
+- import_tasks: development_web.yml
+- import_tasks: development_ios.yml
+- import_tasks: development_android.yml

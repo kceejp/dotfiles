@@ -1,9 +1,9 @@
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 
-[[plugins]]
+#[[plugins]]
 # Ctrl-b / Ctrl-f
-repo = 'vim-scripts/Smooth-Scroll'
+#repo = 'vim-scripts/Smooth-Scroll'
 
 # Yank
 [[plugins]]

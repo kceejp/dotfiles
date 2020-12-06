@@ -15,11 +15,12 @@
 home/.config/fish/fish_history
 home/.config/fish/fishd.*
 home/.config/fish/generated_completions
+home/.config/fisher
 
 # /.vim 以下
-/home/.vim/.netrwhist
-/home/.vim/tmp/
-/home/.vim/bundle/*
+home/.vim/.netrwhist
+home/.vim/tmp/
+home/.vim/bundle/*
 home/.config/vim/yankround/history
 
 __pycache__
@@ -28,3 +29,6 @@ home/.config/fisherman/
 home/.config/fish/functions/
 home/.config/fish/conf.d/
 home/.config/fish/completions/
+
+# yarn
+home/.config/yarn/global/node_modules

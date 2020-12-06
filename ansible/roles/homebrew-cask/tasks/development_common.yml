@@ -1,0 +1,8 @@
+---
+- name: Install libraries with homebrew-cask
+  homebrew_cask: name={{ item }} state=present
+  tags:
+    - work
+  with_items:
+    #- iterm2
+    - hyper

@@ -20,7 +20,6 @@
     - bash
     - fish
     - fisherman
-
       #- anyenv --HEAD
     # - neovim
 
@@ -48,6 +47,7 @@
     # - screen
 
     - ansible
+    - terraform
 
     #
     # - mogenerator
@@ -57,18 +57,22 @@
     - curl
     - httpie
     - jq
+    - fx
 
     - tree
 
+    - fd
     - ack
     - highway
     - ag
+    - ripgrep
 
     - nkf
     - gnu-sed
     - z
     - thefuck
     - peco
+    - fzf
     - ghq
 
     - awscli
@@ -83,7 +87,14 @@
 
     - grc
     - colordiff
-
       #- heroku
     - mkr
     - carthage
+    - terminal-notifier
+
+    - yarn
+    - mitmproxy
+
+    - bat
+    - exa
+    - fd

@@ -2,37 +2,23 @@
 " lightline
 """"""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"⭤":""}',
-      \ },
-      \ 'separator': { 'left': '⮀', 'right': '⮂' },
-      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
-      \ }
-
-let g:lightline = {
       \   'colorscheme': 'wombat',
       \   'active': {
       \     'left': [
       \         [ 'mode', 'paste' ],
       \         [ 'readonly', 'filename', 'modified' ],
       \     ],
-      \   },
-      \   'component': {
-      \     'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
-      \     'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}'
-      \   },
-      \   'component_visible_condition': {
-      \     'readonly': '(&filetype!="help"&& &readonly)',
-      \     'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
+      \     'right': [
+      \         [ 'fileformat', 'fileencoding', 'filetype' ],
+      \     ],
       \   },
       \   'separator': {
-      \     'left' : '⮀',
-      \     'right': '⮂',
+      \     'left' : "\uE0C4",
+      \     'right': "\uE0C5",
       \   },
       \   'subseparator': {
-      \     'left' : '⮁',
-      \     'right': '⮃',
+      \     'left' : "\uE0C4",
+      \     'right': "\uE0C5",
       \   },
       \ }
 

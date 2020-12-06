@@ -87,9 +87,9 @@ on_ft = ['yaml']
 repo  = 'vim-scripts/smarty-syntax'
 on_ft = ['smarty']
 
-[[plugins]]
-repo  = 'mattn/emmet-vim'
-on_ft = ['html']
+#[[plugins]]
+#repo  = 'mattn/emmet-vim'
+#on_ft = ['html']
 
 [[plugins]]
 repo = 'hokaccha/vim-html5validator'

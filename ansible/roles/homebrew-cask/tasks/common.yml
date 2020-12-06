@@ -8,68 +8,59 @@
     # japanese input
     - google-japanese-ime
 
-    - iterm2
-
     # launcher
     - alfred
 
     # security
     - 1password
 
-    # browsers
-    - google-chrome
-      #- firefox
-      #- flash-player
-
     # calendars
-    - day-o
+    # - day-o
+    #- timing
 
     # avoid .DS_Store creation
     - deathtodsstore
 
-    - karabiner-elements
+    #- karabiner-elements
+    - cmd-eikana
 
     # messaging / conferencing
     #- skype
     #- zoomus
 
     # terminals
-      #- shuttle
+    #- shuttle
     #- totalterminal
     - hosts
+    - paw
 
     # media players
     - vlc
       #- mplayerx
       # - radiant-player # google play music
       # - google-play-music-desktop-player
-
     # screen capture
     # - simplecap
 
     # device drivers
     #- kensington-trackball-works
-      #- teensy
+    #- teensy
 
     # cloud
     #- evernote
     - dropbox
       #- google-drive
       #- cloud
-
     # codecs
     # - flip4mac
     # - perian
-
     # emailing
     # - mailbox
-
     # editors
     #- atom
     #- brackets
-
     # markdown editors
-    - boostnote
+    #- boostnote
     #- macdown
     #- kobito
     #- mou
@@ -77,49 +68,41 @@
     #- notational-velocity
     #- nvalt
     #- atext
-
     # scp, ftp, sftp
     #- cyberduck
-
     # virtual envs
     #- vmware-fusion
     #- virtualbox
     #- vagrant
     #- vagrant-manager
     #- vagrant-bar
-
     # utils
     # - bettertouchtool
-      #- seil
+    #- seil
     #- jitouch
     #- keyremap4macbook
-
     # image editors
     #- skitch
     #- sketch
+    #- sketchpacks
     #- ember # visual scrapbook
     #- inkscape
-
     # ios dev
     #- reveal
-      #- appcode
-      #- simpholders
+    #- appcode
+    #- simpholders
     # - fabric
     # - testflight
     # - crashlytics
-
     # pinboard.in
     # - shiori
-
     # twitter
     # - yorufukurou
-
     # prototyping
     #- invisionsync
-
     # miscellaneous
     #- totalfinder
-      #- appcleaner
+    #- appcleaner
     # - flux # display light
     #- hazel
     # - macid
@@ -129,5 +112,10 @@
     #- notifyr
     #- cloudytabs
     #- fluid
-    - fantastical
-    - raindropio
+    #- fantastical
+    #- raindropio
+    #- keycastr
+    #- rocket
+    - vanilla
+    #- soundflower
+    - blackhole

@@ -6,18 +6,41 @@
   with_items:
     - google-photos-backup-and-sync
     - music-manager
-    - obs # broadcasting tool
+
+    # VPN
     - tunnelbear
+
     - tinyumbrella
+      #- bittorrent-sync
+      #- gopro
+    - airflow
+    - arq
+    - rescuetime
+    - dynalist
+    - kindle
+    - synergy
+    - notion
+
+    # コミュニケーション
+    - discord
+
+    # サウンド
+    - soundsource
+    # メンテナンス
+    #- magician
+    #- onyx
+    - monolingual
+    # 動画
     - ripit
     - burn
     - handbrake
       #- fairmount
     - boxofsnoo-fairmount
     - makemkv
-      #- magician
-    - monolingual
-      #- bittorrent-sync
-      #- gopro
-    - airflow
-    - arq
+    # カメラ
+    - canon-eos-utility
+    # 配信
+    - obs # broadcasting tool
+    - obs-virtualcam
+    - snapcamera
+    - philips-hue-sync

@@ -1,6 +1,7 @@
 [user]
-    name = kceejp
-    email = stomachache4988@gmail.com
+	useConfigOnly = true
+	name = kceejp
+	email = hi@kcee.jp
 [color]
     ui = auto
 [alias]
@@ -14,3 +15,10 @@
 [core]
     editor = vim -c \"set fenc=utf-8\"
 
+[ghq]
+	root = /Users/keishi/.ghq
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

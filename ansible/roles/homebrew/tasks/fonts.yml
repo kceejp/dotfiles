@@ -2,13 +2,44 @@
 - name: tap
   homebrew_tap: tap={{ item }} state=present
   with_items:
+    - caskroom/fonts
     - sanemat/font
 
+- name: Install xquartz
+  tags:
+    - work
+    - home
+  homebrew_cask: name=xquartz state=present
+- name: Install Ricty Diminished
+  tags:
+    - work
+    - home
+  homebrew_cask: name=font-ricty-diminished state=present
+- name: Install Source Han Code JP
+  tags:
+    - work
+    - home
+  homebrew_cask: name=font-source-han-code-jp state=present
+- name: Install Fira Code
+  tags:
+    - work
+    - home
+  homebrew_cask: name=font-fira-code state=present
+- name: Install Myrica
+  tags:
+    - work
+    - home
+  homebrew_cask: name=font-myrica state=present
+- name: Install Cica
+  tags:
+    - work
+    - home
+  homebrew_cask: name=font-cica state=present
 - name: Install Ricty
   tags:
     - work
     - home
-  homebrew: name=ricty state=latest options=powerline,vim-powerline
+  homebrew: name=ricty state=present options=with-powerline
 - name: Copy font file
   shell: cp -f $(brew --cellar ricty)/*/share/fonts/Ricty*.ttf ~/Library/Fonts/
   args:

@@ -1,0 +1,11 @@
+---
+- name: Install libraries with homebrew
+  tags:
+    - work
+  homebrew: name={{ item }} state=latest
+  with_items:
+    - git
+    - envchain
+    - bat
+    - gettext
+    - ktlint

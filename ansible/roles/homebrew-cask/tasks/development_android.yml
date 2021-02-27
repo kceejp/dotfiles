@@ -1,8 +1,9 @@
 ---
-- name: Install libraries with homebrew-cask
-  homebrew_cask: name={{ item }} state=present
+- name: Install Android Stuff
   tags:
     - work
-  with_items:
-    - android-studio
-    - java
+  homebrew_cask:
+    name:
+      - android-studio
+      #- java
+      #- ktlint

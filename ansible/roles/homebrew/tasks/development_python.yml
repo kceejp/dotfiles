@@ -2,7 +2,7 @@
 - name: Install libraries with homebrew
   tags:
     - work
-  homebrew: name={{ item }} state=latest
-  with_items:
-    - pyenv-virtualenv
-    - flake8
+  homebrew:
+    name:
+      - pyenv-virtualenv
+      - flake8

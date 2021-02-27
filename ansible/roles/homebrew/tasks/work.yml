@@ -2,99 +2,99 @@
 - name: Install libraries with homebrew
   tags:
     - work
-  homebrew: name={{ item }} state=latest
-  with_items:
-    - mas
-    # database
-    - mysql
+  homebrew:
+    name:
+      - mas
+      # database
+      - mysql
 
-    # git
-    - git
-    - tig
-    - hub
-    - git-secrets
-    - gibo
-    # - git-flow
+      # git
+      - git
+      - tig
+      - hub
+      - git-secrets
+      - gibo
+      # - git-flow
 
-    # shells
-    - bash
-    - fish
-    - fisherman
-      #- anyenv --HEAD
-    # - neovim
+      # shells
+      - bash
+      - fish
+        #- fisherman
+        #- anyenv --HEAD
+      # - neovim
 
-    # go
-    - go
-    - glide
+      # go
+      - go
+        #- glide
 
-    # php
-    # - homebrew/php/php-cs-fixer
-    # - homebrew/php/composer
-    # - phpmd
-    # - php-code-sniffer
+      # php
+      # - homebrew/php/php-cs-fixer
+      # - homebrew/php/composer
+      # - phpmd
+      # - php-code-sniffer
 
-    # ruby
-    - rbenv
-    - ruby-build
+      # ruby
+      - rbenv
+      - ruby-build
 
-    # node
-    - node
-    - npm
+      # node
+      - node
+      - npm
 
-    # miscellaneous
-    - byobu
-    - tmux
-    # - screen
+      # miscellaneous
+      - byobu
+      - tmux
+      # - screen
 
-    - ansible
-    - terraform
+      - ansible
+        #- terraform
 
-    #
-    # - mogenerator
+      #
+      # - mogenerator
 
-    # utils
-    - wget
-    - curl
-    - httpie
-    - jq
-    - fx
+      # utils
+      - wget
+      - curl
+      - httpie
+      - jq
+      - fx
 
-    - tree
+      - tree
 
-    - fd
-    - ack
-    - highway
-    - ag
-    - ripgrep
+      - fd
+      - ack
+        #- highway
+      - ag
+      - ripgrep
 
-    - nkf
-    - gnu-sed
-    - z
-    - thefuck
-    - peco
-    - fzf
-    - ghq
+      - nkf
+      - gnu-sed
+      - z
+      - thefuck
+      - peco
+      - fzf
+      - ghq
 
-    - awscli
-    - amazon-ecs-cli
-      #- stormssh
-    - ipcalc
-      #- teensy_loader_cli
-    - autossh
-    - textql
-    - cloc
-    - ctags
+      - awscli
+        #- amazon-ecs-cli
+        #- stormssh
+      - ipcalc
+        #- teensy_loader_cli
+      - autossh
+        #- textql
+      - cloc
+      - ctags
 
-    - grc
-    - colordiff
-      #- heroku
-    - mkr
-    - carthage
-    - terminal-notifier
+      - grc
+      - colordiff
+        #- heroku
+        #- mkr
+      - carthage
+      - terminal-notifier
 
-    - yarn
-    - mitmproxy
+      - yarn
+      - mitmproxy
 
-    - bat
-    - exa
-    - fd
+      - bat
+      - exa
+      - fd

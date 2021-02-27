@@ -1,13 +1,13 @@
 ---
-- name: Install libraries with homebrew-cask
-  homebrew_cask: name={{ item }} state=present
-  with_items:
-    - qlcolorcode
-    - qlstephen
-    - qlmarkdown
-    - quicklook-json
-    - qlimagesize
-    - webpquicklook
-    - suspicious-package
-    - quicklookase
-    - qlvideo
+- name: Install Quick Look Plugins
+  homebrew_cask:
+    name:
+      - qlcolorcode
+      - qlstephen
+      - qlmarkdown
+      - quicklook-json
+      - qlimagesize
+      - webpquicklook
+      - suspicious-package
+      - quicklookase
+      - qlvideo

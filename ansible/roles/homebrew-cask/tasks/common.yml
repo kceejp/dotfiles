@@ -1,121 +1,115 @@
 ---
-- name: Install libraries with homebrew-cask
-  homebrew_cask: name={{ item }} state=present
+- name: Install Security Stuff
   tags:
     - work
     - home
-  with_items:
-    # japanese input
-    - google-japanese-ime
+  homebrew_cask:
+    name:
+      - 1password
 
-    # launcher
-    - alfred
+- name: Install libraries with homebrew-cask
+  tags:
+    - work
+    - home
+  homebrew_cask:
+    name:
+      # calendars
+      # - day-o
+      #- timing
 
-    # security
-    - 1password
+      #- karabiner-elements
 
-    # calendars
-    # - day-o
-    #- timing
+      # terminals
+      #- shuttle
+      #- totalterminal
+      #- hosts
 
-    # avoid .DS_Store creation
-    - deathtodsstore
+      # media players
+      - vlc
+        #- mplayerx
+        # - radiant-player # google play music
+        # - google-play-music-desktop-player
+      # screen capture
+      # - simplecap
 
-    #- karabiner-elements
-    - cmd-eikana
+      # device drivers
+      #- kensington-trackball-works
+      #- teensy
 
-    # messaging / conferencing
-    #- skype
-    #- zoomus
+      # cloud
+      #- evernote
+        #- google-drive
+        #- cloud
+      # codecs
+      # - flip4mac
+      # - perian
+      # emailing
+      # - mailbox
+      # editors
+      #- atom
+      #- brackets
+      # markdown editors
+      #- boostnote
+      #- macdown
+      #- kobito
+      #- mou
+      #- lightpaper
+      #- notational-velocity
+      #- nvalt
+      #- atext
+      # scp, ftp, sftp
+      #- cyberduck
+      # virtual envs
+      #- vmware-fusion
+      #- virtualbox
+      #- vagrant
+      #- vagrant-manager
+      #- vagrant-bar
+      # utils
+      # - bettertouchtool
+      #- seil
+      #- jitouch
+      #- keyremap4macbook
+      # image editors
+      #- skitch
+      #- sketch
+      #- sketchpacks
+      #- ember # visual scrapbook
+      #- inkscape
+      # ios dev
+      #- reveal
+      #- appcode
+      #- simpholders
+      # - fabric
+      # - testflight
+      # - crashlytics
+      # pinboard.in
+      # - shiori
+      # twitter
+      # - yorufukurou
+      # prototyping
+      #- invisionsync
+      # miscellaneous
+      #- totalfinder
+      #- appcleaner
+      # - flux # display light
+      #- hazel
+      # - macid
+      #- adobe-reader
+      #- bartender
+      #- cheatsheet
+      #- notifyr
+      #- cloudytabs
+      #- fluid
+      #- fantastical
+      #- raindropio
+      #- keycastr
+      #- rocket
+      #- soundflower
+      #- blackhole
 
-    # terminals
-    #- shuttle
-    #- totalterminal
-    - hosts
-    - paw
-
-    # media players
-    - vlc
-      #- mplayerx
-      # - radiant-player # google play music
-      # - google-play-music-desktop-player
-    # screen capture
-    # - simplecap
-
-    # device drivers
-    #- kensington-trackball-works
-    #- teensy
-
-    # cloud
-    #- evernote
-    - dropbox
-      #- google-drive
-      #- cloud
-    # codecs
-    # - flip4mac
-    # - perian
-    # emailing
-    # - mailbox
-    # editors
-    #- atom
-    #- brackets
-    # markdown editors
-    #- boostnote
-    #- macdown
-    #- kobito
-    #- mou
-    #- lightpaper
-    #- notational-velocity
-    #- nvalt
-    #- atext
-    # scp, ftp, sftp
-    #- cyberduck
-    # virtual envs
-    #- vmware-fusion
-    #- virtualbox
-    #- vagrant
-    #- vagrant-manager
-    #- vagrant-bar
-    # utils
-    # - bettertouchtool
-    #- seil
-    #- jitouch
-    #- keyremap4macbook
-    # image editors
-    #- skitch
-    #- sketch
-    #- sketchpacks
-    #- ember # visual scrapbook
-    #- inkscape
-    # ios dev
-    #- reveal
-    #- appcode
-    #- simpholders
-    # - fabric
-    # - testflight
-    # - crashlytics
-    # pinboard.in
-    # - shiori
-    # twitter
-    # - yorufukurou
-    # prototyping
-    #- invisionsync
-    # miscellaneous
-    #- totalfinder
-    #- appcleaner
-    # - flux # display light
-    #- hazel
-    # - macid
-    #- adobe-reader
-    #- bartender
-    #- cheatsheet
-    #- notifyr
-    #- cloudytabs
-    #- fluid
-    #- fantastical
-    #- raindropio
-    #- keycastr
-    #- rocket
-    - vanilla
-    #- soundflower
-    - blackhole
+      - alfred
+      - vanilla
+      - rectangle
+      - brewlet
+      - deathtodsstore

@@ -1,0 +1,11 @@
+---
+- name: Install Communication Tools
+  tags:
+    - work
+    - home
+  homebrew_cask:
+    name:
+      - slack
+      - discord
+      - zoom
+      # - skype

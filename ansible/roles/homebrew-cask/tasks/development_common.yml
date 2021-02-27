@@ -1,8 +1,17 @@
 ---
-- name: Install libraries with homebrew-cask
-  homebrew_cask: name={{ item }} state=present
+- name: Install Terminals
   tags:
     - work
-  with_items:
-    #- iterm2
-    - hyper
+  homebrew_cask:
+    name:
+      #- iterm2
+      - hyper
+
+- name: Install Network Stuff
+  tags:
+    - work
+  homebrew_cask:
+    name:
+      - paw
+      - proxyman
+      - postman

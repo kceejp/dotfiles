@@ -1,4 +1,5 @@
 ---
 - import_tasks: development_common.yml
+- import_tasks: development_vcs.yml
 - import_tasks: development_ios.yml
 - import_tasks: development_python.yml

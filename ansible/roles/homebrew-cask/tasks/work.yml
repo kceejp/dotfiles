@@ -1,20 +1,20 @@
 ---
 - name: Install libraries with homebrew-cask
-  homebrew_cask: name={{ item }} state=present
   tags:
     - work
-  with_items:
-    - toggl
-    - slack
-    - docker
-    - dash
-    - zeplin
-    - figma
-    - postman
-    - poedit
-    - stand
-    - paw
-    - proxyman
-    - timely
-    - memory
-    - github
+  homebrew_cask:
+    name:
+      #- toggl
+      - docker
+      - dash
+      - poedit
+      - stand
+      - github
+
+- name: Install Time Management Tools
+  tags:
+    - work
+  homebrew_cask:
+    name:
+      - timely
+      - memory

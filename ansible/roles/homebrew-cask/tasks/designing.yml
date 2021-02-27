@@ -1,0 +1,9 @@
+---
+- name: Install Designing Tools
+  tags:
+    - work
+  homebrew_cask:
+    name:
+      - zeplin
+      - figma
+      - icons8

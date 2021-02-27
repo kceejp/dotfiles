@@ -1,12 +1,12 @@
 ---
-- name: Install libraries with homebrew-cask
-  homebrew_cask: name={{ item }} state=present
+- name: Install Screensavers
   tags:
     - work
     - home
-  with_items:
-    - webviewscreensaver
-    - google-trends
-    - fliqlo
-    - aerial
-    - brooklyn
+  homebrew_cask:
+    name:
+      - webviewscreensaver
+      - google-trends
+      - fliqlo
+      - aerial
+      - brooklyn

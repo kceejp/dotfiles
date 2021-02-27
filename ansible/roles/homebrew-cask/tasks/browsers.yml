@@ -1,10 +1,8 @@
 ---
-- name: Install libraries with homebrew-cask
-  homebrew_cask: name={{ item }} state=present
+- name: Install Web Browsers
   tags:
     - work
-  with_items:
-    # browsers
-    - google-chrome
+  homebrew_cask:
+    name:
+      - google-chrome
       #- firefox
-      #- flash-player

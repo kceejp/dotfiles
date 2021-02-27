@@ -1,9 +1,15 @@
 ---
+- import_tasks: input.yml
 - import_tasks: common.yml
+- import_tasks: communication.yml
+- import_tasks: cloud_storage.yml
 - import_tasks: home.yml
 - import_tasks: work.yml
 - import_tasks: quick_look_plugins.yml
 - import_tasks: screensaver.yml
+- import_tasks: designing.yml
+- import_tasks: device_drivers.yml
+- import_tasks: streaming.yml
 
 - import_tasks: browsers.yml
 

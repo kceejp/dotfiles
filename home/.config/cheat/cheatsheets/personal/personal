@@ -1,0 +1,29 @@
+# cheat を編集
+cheat -e personal
+
+# ツイートを追加
+git add tweets.yaml; git commit -m "ツイートを追加"; git push;
+
+# Xcode のバージョンを変更
+envchain keishi rbenv exec bundle exec xcversion select
+
+# アルカナの Fastlane
+envchain arcana-ios rbenv exec bundle exec fastlane
+
+# Payme の Fastlane
+envchain payme-ios rbenv exec bundle exec fastlane
+
+# 直前のコミットを取り消し
+git reset --soft HEAD^
+
+# 直前のコミットを取り消し
+git reset --soft HEAD~1
+
+# pod install
+arch -x86_64 pod install
+
+# django のコマンドライン
+pyenv exec pipenv run manage.py
+
+# アプリをセットアップ
+cd ~/.homesick/repos/dotfiles/ansible/; ansible-playbook -i hosts sites.yml -t work; cd;

@@ -24,8 +24,8 @@
 # - name: upgrade
 #   homebrew: upgrade_all=yes
 
-- name: Install vim with Lua and Python3
-  tags:
-    - work
-    - home
-  homebrew: name=vim state=latest options=with-lua,with-python3,with-python,with-override-system-vi
+      # - name: Install vim with Lua and Python3
+      #   tags:
+      #     - work
+      #     - home
+      #   homebrew: name=vim state=latest options=with-lua,with-python3,with-python,with-override-system-vi

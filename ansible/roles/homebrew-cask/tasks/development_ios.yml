@@ -1,10 +1,9 @@
 ---
-- name: Install libraries with homebrew-cask
-  homebrew_cask: name={{ item }} state=present
+- name: Install iOS Stuff
   tags:
     - work
-  with_items:
-    - swiftybeaver
-    - pusher
-    - knuff
-    - icons8
+  homebrew_cask:
+    name:
+      - swiftybeaver
+      - pusher
+      - knuff

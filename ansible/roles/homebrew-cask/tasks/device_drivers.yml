@@ -1,0 +1,9 @@
+---
+- name: Install Device Drivers
+  tags:
+    - work
+    - home
+  homebrew_cask:
+    name:
+      - canon-eos-utility
+      - canon-eos-webcam-utility

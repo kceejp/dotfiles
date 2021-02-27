@@ -23,12 +23,40 @@ home/.vim/tmp/
 home/.vim/bundle/*
 home/.config/vim/yankround/history
 
+# python
 __pycache__
 
+# fish
 home/.config/fisherman/
+home/.config/fish/fish_variables
 home/.config/fish/functions/
 home/.config/fish/conf.d/
 home/.config/fish/completions/
 
 # yarn
 home/.config/yarn/global/node_modules
+
+# atom
+home/.atom/.apm
+home/.atom/.node-gyp
+home/.atom/compile-cache
+home/.atom/packages
+home/.atom/recovery
+home/.atom/storage
+home/.atom/.atom-socket-secret*
+home/.atom/blob-store
+
+# cheat
+home/.config/cheat/cheatsheets/community/
+
+# tmux
+home/.tmux/plugins/
+
+# byobu
+home/.byobu/.ssh-agent
+
+# anyenv
+home/.config/anyenv/
+
+#
+home/.config/configstore/update-notifier-npm.json

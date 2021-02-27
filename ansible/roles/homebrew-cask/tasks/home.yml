@@ -1,46 +1,48 @@
 ---
 - name: Install libraries with homebrew-cask
-  homebrew_cask: name={{ item }} state=present
   tags:
     - home
-  with_items:
-    - google-photos-backup-and-sync
-    - music-manager
+  homebrew_cask:
+    name:
+      - google-photos-backup-and-sync
+      - music-manager
 
-    # VPN
-    - tunnelbear
+      # VPN
+      - tunnelbear
 
-    - tinyumbrella
-      #- bittorrent-sync
-      #- gopro
-    - airflow
-    - arq
-    - rescuetime
-    - dynalist
-    - kindle
-    - synergy
-    - notion
+      - tinyumbrella
+        #- bittorrent-sync
+        #- gopro
+      - airflow
+      - rescuetime
+      - dynalist
+      - kindle
+      - synergy
+      - notion
+      - monolingual
 
-    # コミュニケーション
-    - discord
+      # メンテナンス
+      #- magician
+      #- onyx
+      # 動画
+      - philips-hue-sync
 
-    # サウンド
-    - soundsource
-    # メンテナンス
-    #- magician
-    #- onyx
-    - monolingual
-    # 動画
-    - ripit
-    - burn
-    - handbrake
-      #- fairmount
-    - boxofsnoo-fairmount
-    - makemkv
-    # カメラ
-    - canon-eos-utility
-    # 配信
-    - obs # broadcasting tool
-    - obs-virtualcam
-    - snapcamera
-    - philips-hue-sync
+
+- name: Install Sound Stuff
+  tags:
+    - home
+  homebrew_cask:
+    name:
+      - soundsource
+
+- name: Install Video Editing Stuff
+  tags:
+    - home
+  homebrew_cask:
+    name:
+      - ripit
+      - burn
+      - handbrake
+        #- fairmount
+      - boxofsnoo-fairmount
+      - makemkv

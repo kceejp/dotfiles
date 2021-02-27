@@ -1,0 +1,9 @@
+---
+- name: Install Input Related Stuff
+  tags:
+    - work
+    - home
+  homebrew_cask:
+    name:
+      - google-japanese-ime
+      - cmd-eikana

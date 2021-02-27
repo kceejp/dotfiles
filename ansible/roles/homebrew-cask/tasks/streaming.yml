@@ -1,0 +1,9 @@
+---
+- name: Install Streaming Stuff
+  tags:
+    - home
+  homebrew_cask:
+    name:
+      - obs
+      - obs-virtualcam
+      - snapcamera

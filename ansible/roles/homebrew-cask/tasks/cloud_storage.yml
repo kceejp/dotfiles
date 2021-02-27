@@ -1,0 +1,10 @@
+---
+- name: Install Cloud Storage Services
+  tags:
+    - work
+    - home
+  homebrew_cask:
+    name:
+      - dropbox
+      - google-drive-file-stream
+      #- arq

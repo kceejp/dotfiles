@@ -9,11 +9,10 @@ module.exports = {
     updateChannel: "canary",
 
     // default font size in pixels for all tabs
-    fontSize: 24,
+    fontSize: 16,
 
     // font family with optional fallbacks
-    fontFamily:
-      'Cica, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: "'Source Han Code JP', 'mplus Nerd Font', Menlo, Monaco, 'Courier New', monospace",
 
     // default font weight: 'normal' or 'bold'
     fontWeight: "normal",

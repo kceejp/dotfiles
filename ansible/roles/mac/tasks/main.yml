@@ -2,40 +2,70 @@
 # - name: install homebrew
 #   shell: ruby -e '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
 
-- name: install appstore applications
+- name: Install Apps from Apple App Store
   command: mas install "{{ item.id }}"
+  tags:
+    - work
+    - home
   with_items:
-    - name: PopClip
-      id: 445189367
-    - name: Skitch - Snap. Mark Up. Send.
-      id: 425955336
-    - name: Magnet
-      id: 441258766
+    - name: Spark - Love your email again
+      id: 1176895641
+    - name: Drafts
+      id: 1435957248
+    - name: Trello
+      id: 1278508951
+
+    - name: Adobe Lightroom
+      id: 1451544217
+    - name: MindNode – Mind Map & Outline
+      id: 1289197285
+
+    # Social Media
+    - name: Twitter
+      id: 1482454543
+    - name: TweetDeck by Twitter
+      id: 485812721
+    - name: LINE
+      id: 539883307
+
+    # Apple
     - name: Xcode
       id: 497799835
+    - name: Apple Developer
+      id: 640199958
+    - name: Transporter
+      id: 1450874784
     - name: Apple Configurator 2
       id: 1037126344
+
+    # Utils
+    - name: Hidden Bar
+      id: 1452453066
+    - name: Dato
+      id: 1470584107
+    - name: Skitch - Snap. Mark Up. Send.
+      id: 425955336
+    - name: DisplayMenu
+      id: 549083868
+
+    - name: PopClip
+      id: 445189367
     - name: Linguan
       id: 477163052
     - name: ForkLift - File Manager and FTP/SFTP/WebDAV/Amazon S3 client
       id: 412448059
     - name: Sip
       id: 507257563
-    - name: LINE
-      id: 539883307
-    - name: Spark - Love your email again
-      id: 1176895641
-    - name: isHUD
-      id: 484757536
-    - name: ATOK Pad
-      id: 460883588
-    - name: Drafts
-      id: 1435957248
     - name: Dropover
       id: 1355679052
-    - name: Dato
-      id: 1470584107
     - name: MARKETSPEED
       id: 946680495
-    - name: Reeder 3
-      id: 880001334
+
+    # - name: isHUD
+    #   id: 484757536
+    # - name: ATOK Pad
+    #   id: 460883588
+    # - name: Magnet
+    #   id: 441258766
+    # - name: Reeder 3
+    #   id: 880001334

@@ -1,0 +1,42 @@
+"*":
+  "atom-toolbar": {}
+  core:
+    disabledPackages: [
+      "welcome"
+      "language-gfm"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "dracula-ui"
+      "dracula-syntax"
+    ]
+  editor:
+    defaultFontSize: 16
+    fontFamily: "'Source Han Code JP', 'mplus Nerd Font', Menlo, Monaco, 'Courier New', monospace"
+    fontSize: 16
+    softWrap: true
+  "exception-reporting":
+    userId: "3f0d5b38-ed9b-41a3-8b7a-9abba4100180"
+  "flex-tool-bar":
+    persistentProjectToolBar: true
+  fonts:
+    fontFamily: "FiraCode"
+  "one-dark-ui":
+    fontSize: 16
+  "pinned-tabs":
+    visualstudio:
+      enable: true
+  "sync-settings":
+    gistId: "ea468dce8c85362e540297aebc0a9365"
+    hiddenSettings:
+      _lastBackupTime: "2021-02-27T15:16:32Z"
+    personalAccessToken: "6630874b8ced6ae937e0e34b24dc68b3f879dd12"
+  "tool-bar":
+    iconSize: "16px"
+  "vertical-tabs": {}
+  welcome:
+    showOnStartup: false
+".source.yaml":
+  editor:
+    showIndentGuide: true
+    showInvisibles: true

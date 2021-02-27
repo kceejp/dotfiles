@@ -60,3 +60,6 @@ home/.config/anyenv/
 
 #
 home/.config/configstore/update-notifier-npm.json
+home/.config/configstore/update-notifier-gatsby-cli.json
+home/.config/yarn/global/yarn-error.log
+home/.config/gatsby

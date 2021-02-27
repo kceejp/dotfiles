@@ -18,3 +18,18 @@
     name:
       - timely
       - memory
+      - slack
+      #- docker
+      #- dash
+
+      # design
+      - zeplin
+      - figma
+
+      # network debugging
+      - postman
+      - paw
+      - proxyman
+
+      # time management
+      - toggl

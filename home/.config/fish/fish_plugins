@@ -6,10 +6,12 @@ oh-my-fish/plugin-balias
 edc/bass
 oh-my-fish/plugin-bundler
 oh-my-fish/plugin-cask
-oh-my-fish/theme-cmorrell.com
 oh-my-fish/plugin-composer
 oh-my-fish/plugin-config
 oh-my-fish/plugin-foreign-env
+brgmnn/fish-docker-compose
+zenorocha/dracula-theme
+oh-my-fish/plugin-expand
 oh-my-fish/plugin-gem
 riichard/fish-git-branch
 oh-my-fish/plugin-gityaw
@@ -17,6 +19,9 @@ oh-my-fish/plugin-grc
 oh-my-fish/marlin
 oh-my-fish/plugin-osx
 oh-my-fish/plugin-python
+oh-my-fish/plugin-peco
+# https://gist.github.com/kceejp/6fdb4365ec5f6e97c14881c32a99a3c2
+#yoshiori/fish-peco_select_ghq_repository
 oh-my-fish/plugin-rails
 oh-my-fish/plugin-ssh
 tuvistavie/fish-ssh-agent
@@ -25,3 +30,9 @@ oh-my-fish/plugin-vi-mode
 jorgebucaran/fisher
 tsub/fish-fzf-git-recent-branch
 dracula/fish
+matchai/spacefish
+joseluisq/gitnow
+jethrokuan/z
+decors/fish-ghq
+jethrokuan/fzf
+rafaelrinaldi/pure

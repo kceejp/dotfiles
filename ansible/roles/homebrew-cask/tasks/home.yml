@@ -27,7 +27,6 @@
       # 動画
       - philips-hue-sync
 
-
 - name: Install Sound Stuff
   tags:
     - home
@@ -46,3 +45,14 @@
         #- fairmount
       - boxofsnoo-fairmount
       - makemkv
+      # メンテナンス
+      #- magician
+      #- onyx
+      #- monolingual
+      # カメラ
+      - canon-eos-utility
+      - canon-eos-webcam-utility
+      # 配信
+      - obs # broadcasting tool
+      - obs-virtualcam
+      - snapcamera

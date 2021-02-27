@@ -2,6 +2,7 @@
 bind generic G none
 
 set tab-size = 2
+set wrap-lines = yes
 set main-view = id date author commit-title:graph=yes,refs=yes
 set split-view-height = 80%
 

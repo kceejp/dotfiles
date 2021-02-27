@@ -11,3 +11,4 @@
       - envchain
       - direnv
       - cheat
+      - ktlint

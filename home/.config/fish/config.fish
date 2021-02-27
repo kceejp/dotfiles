@@ -16,16 +16,32 @@ starship init fish | source
 #set fish_theme fishface
 
 # Env values
-set -gx LANG ja_JP.UTF-8
+set -U LANG ja_JP.UTF-8
+set -U LC_ALL ja_JP.UTF-8
 
-set -gx EDITOR vi
-set -gx PAGER  less
+set -U fish_emoji_width 1
+set -U fish_ambiguous_width 1
+
+set -U EDITOR vi
+set -U PAGER less
+
+### fzf
+set -U FZF_LEGACY_KEYBINDINGS 0
+set -U FZF_TMUX 0
+set -U FZF_TMUX_HEIGHT 40%
+set -U FZF_DEFAULT_OPTS "--ansi --reverse --border --height 40% --preview 'cat {}'"
+set -U FZF_DEFAULT_COMMAND 'ag -g ""'
+#fzf_key_bindings_uninstall
+
+### fish-ghq
+set -U GHQ_SELECTOR fzf
+set -U GHQ_SELECTOR_OPTS $FZF_DEFAULT_OPTS
 
 set -gx CHEAT_USE_FZF true
 
 ### homesick
-set -gx HOMESICK_DOTFILES $HOME/.homesick/repos/dotfiles
-set -gx HOMESICK_DOTFILES_HOME $HOME/.homesick/repos/dotfiles/home
+set -U HOMESICK_DOTFILES $HOME/.homesick/repos/dotfiles
+set -U HOMESICK_DOTFILES_HOME $HOME/.homesick/repos/dotfiles/home
 
 set -gx PATH /opt/homebrew/bin $PATH
 
@@ -49,38 +65,39 @@ set -gx PKG_CONFIG_PATH "/opt/homebrew/opt/readline/lib/pkgconfig" $PKG_CONFIG_P
 set -gx DOTVIM_DIR $HOMESICK_DOTFILES_HOME/.vim
 
 ### go
-set -gx GOPATH $HOME/go
+set -U GOPATH $HOME/go
 
 ### PATH
-set -gx PATH /usr/bin $PATH
-set -gx PATH /usr/sbin $PATH
-set -gx PATH /usr/local/bin $PATH
-set -gx PATH /usr/local/sbin $PATH
-set -gx PATH $HOME/local/bin $PATH
-set -gx PATH $GOPATH/bin $PATH # go
+set -U fish_user_paths ''
+set -U fish_user_paths /usr/bin $fish_user_paths
+set -U fish_user_paths /usr/sbin $fish_user_paths
+set -U fish_user_paths /usr/local/bin $fish_user_paths
+set -U fish_user_paths /usr/local/sbin $fish_user_paths
+set -U fish_user_paths $HOME/local/bin $fish_user_paths
+set -U fish_user_paths $GOPATH/bin $fish_user_paths # go
 #set -gx PATH /usr/local/heroku/bin $PATH # heroku toolbelt
 
 ### npm
-set -gx PATH $PATH `npm bin -g`
-set -gx PATH /usr/local/share/npm/bin $PATH
-set -gx PATH $HOME/.npm/bin $PATH
-set -gx NODE_PATH $HOME/.npm/libraries $NODE_PATH
-set -gx MANPATH $HOME/.npm/man $MANPATH
+#set -gx PATH $PATH (npm bin -g)
+set -U fish_user_paths /usr/local/share/npm/bin $fish_user_paths
+set -U fish_user_paths $HOME/.npm/bin $fish_user_paths
+set -U NODE_PATH $HOME/.npm/libraries $NODE_PATH
+set -U MANPATH $HOME/.npm/man $MANPATH
 # set -gx PATH eval "npm bin" $PATH
 
 # Android
 set -gx PATH $HOME/Library/Android/sdk/platform-tools $PATH
 
 ### anyenv
-set -x PATH $HOME/.anyenv/bin $PATH
-anyenv init - fish | source
+#set -x PATH $HOME/.anyenv/bin $PATH
+#anyenv init - fish | source
 
 ### thefuck
 thefuck --alias | source
 
 alias vi "atom"
-alias cat "bat"
-alias ls "exa --icons"
+balias cat "bat"
+balias ls "exa --icons --long --group-directories-first --all --git"
 alias tree "exa --icons --tree"
 
 #test $TERM != "screen"; and exec tmux -2
@@ -96,6 +113,8 @@ function save_history --on-event fish_preexec
 end
 
 fish_default_key_bindings
+
+bind \t 'complete'
 
 function fish_user_key_bindings
     bind \c] peco_select_ghq_repository
@@ -151,3 +170,49 @@ end
 set -gx PATH "/opt/homebrew/opt/openssl@1.1/bin" $PATH
 set -gx PATH "/opt/homebrew/opt/readline/bin" $PATH
 set -gx PATH "/opt/homebrew/opt/readline/bin" $PATH
+
+# pyenv-virtualenv
+#
+# https://github.com/pyenv/pyenv-virtualenv
+status --is-interactive; and pyenv init - | source
+status --is-interactive; and pyenv virtualenv-init - | source
+
+# https://github.com/junegunn/fzf/wiki/Examples-(fish)
+function fco -d "Fuzzy-find and checkout a branch"
+  git branch --all | grep -v HEAD | string trim | fzf-tmux | read -l result; and git checkout "$result"
+end
+
+# https://github.com/junegunn/fzf/wiki/Examples-(fish)
+function fcoc -d "Fuzzy-find and checkout a commit"
+  git log --pretty=oneline --abbrev-commit --reverse | fzf-tmux --tac +s -e | awk '{print $1;}' | read -l result; and git checkout "$result"
+end
+
+# https://github.com/junegunn/fzf/wiki/Examples-(fish)
+function fzf-bcd-widget -d 'cd backwards'
+	pwd | awk -v RS=/ '/\n/ {exit} {p=p $0 "/"; print p}' | tac | eval (__fzfcmd) +m --select-1 --exit-0 $FZF_BCD_OPTS | read -l result
+	[ "$result" ]; and cd $result
+	commandline -f repaint
+end
+
+# https://github.com/junegunn/fzf/wiki/Examples-(fish)
+function fzf-cdhist-widget -d 'cd to one of the previously visited locations'
+	# Clear non-existent folders from cdhist.
+	set -l buf
+	for i in (seq 1 (count $dirprev))
+		set -l dir $dirprev[$i]
+		if test -d $dir
+			set buf $buf $dir
+		end
+	end
+	set dirprev $buf
+	string join \n $dirprev | tac | sed 1d | eval (__fzfcmd) +m --tiebreak=index --toggle-sort=ctrl-r $FZF_CDHIST_OPTS | read -l result
+	[ "$result" ]; and cd $result
+	commandline -f repaint
+end
+
+
+# anyenv
+#
+# https://github.com/anyenv/anyenv
+set -Ux fish_user_paths $HOME/.anyenv/bin $fish_user_paths
+status --is-interactive; and source (anyenv init -|psub)

@@ -18,6 +18,8 @@
       #- timing
 
       #- karabiner-elements
+      - cmd-eikana
+      - abyssoft-teleport
 
       # terminals
       #- shuttle
@@ -26,9 +28,9 @@
 
       # media players
       - vlc
-        #- mplayerx
-        # - radiant-player # google play music
-        # - google-play-music-desktop-player
+      #- mplayerx
+      # - radiant-player # google play music
+      # - google-play-music-desktop-player
       # screen capture
       # - simplecap
 
@@ -38,8 +40,8 @@
 
       # cloud
       #- evernote
-        #- google-drive
-        #- cloud
+      #- google-drive
+      #- cloud
       # codecs
       # - flip4mac
       # - perian
